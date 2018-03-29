@@ -10,7 +10,7 @@ body {
     font-family: "Microsoft YaHei";
     font-size: 62.5% !important;
     font-size: 10px !important;
-    background-color: #f6f6f6f6;
+    background-color: #F4F6FB !important;
 }
 
 input,
@@ -239,7 +239,7 @@ nz-datepicker {
 }
 
 
-/* 
+/*
 img::after {
     content: "";
     position: absolute;

@@ -1,12 +1,15 @@
 .rebody {
     /* padding: 0 10px; */
-    color: #7c7c7c;
-    background-color: #ffffff;
+    color: #ACB3C9;
 }
 
 .gutter-box {
-    border-top: 1px solid #d9d9d9;
-    padding: 8px 0px;
+  background: #ffffff;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 15px 3% 10px;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .re-img {
@@ -37,7 +40,7 @@
 .re-content-desc {
     line-height: 0;
     position: absolute;
-    top: 44%;
+    top: 46%;
 }
 
 .re-content-desc>label {

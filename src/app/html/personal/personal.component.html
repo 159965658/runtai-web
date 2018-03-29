@@ -24,7 +24,9 @@
             <ul>
                 <li class="navigation">
                     <div class="order_form" [routerLink]="['/myorder/stay']">
-                        <img src="../../../assets/imgs/dingdan.png" class="alignment" />
+                        <div class="associated_children order">
+                          <img src="../../../assets/imgs/be_paid.png" />
+                        </div>
                         <p class="f_form">待支付订单</p>
                         <a class="f_form">
                                 {{res.bePaidCount}}
@@ -32,7 +34,9 @@
                     </div>
                     <div class="order_form_xian"></div>
                     <div class="order_form" [routerLink]="['/main/study/my-course']" [queryParams]="{id:0}">
-                        <img src="../../../assets/imgs/zaixue.png" />
+                        <div class="children_course order">
+                           <img src="../../../assets/imgs/learning.png" />
+                        </div>
                         <p class="f_form">在学课程</p>
                         <a class="f_form">
                                 {{res.beingCount}}
@@ -41,7 +45,9 @@
                     <div class="order_form_xian"></div>
 
                     <div class="order_form" [routerLink]="['/main/study/my-course']" [queryParams]="{id:1}">
-                        <img src=" ../../../assets/imgs/wancheng.png " />
+                        <div class="abnormal_attendance order">
+                          <img src="../../../assets/imgs/complete.png" />
+                        </div>
                         <p class="f_form ">完成课程</p>
                         <a class="f_form ">
                                {{res.finishCount}}
@@ -49,28 +55,28 @@
                     </div>
                 </li>
                 <li class="list " [routerLink]="[ '/myorder'] ">
-                    <img src="../../../assets/imgs/wodedingdan.png " />
+                    <img src="../../../assets/imgs/Order.png " />
                     <span class="left8 ">
                         我的订单
                     </span>
                     <img src="../../../assets/imgs/you.png " class="right ">
                 </li>
                 <li class="list " [routerLink]="[ '/main/study/my-course'] ">
-                    <img src="../../../assets/imgs/kecheng.png " class="alignment " />
+                    <img src="../../../assets/imgs/curriculum.png " class="alignment " />
                     <span class="left8 ">
                         我的课程
                     </span>
                     <img src="../../../assets/imgs/you.png " class="right ">
                 </li>
                 <li class="list " [routerLink]="[ '/message']">
-                    <img src="../../../assets/imgs/xiaoxi.png " class="alignment " />
+                    <img src="../../../assets/imgs/news.png " class="alignment " />
                     <span class="left8 ">
                         我的消息
                     </span>
                     <img src="../../../assets/imgs/you.png " class="right ">
                 </li>
                 <li class="list margin-top10 " [routerLink]="[ '/p-d' ]">
-                    <img src="../../../assets/imgs/geren.png " class="alignment " />
+                    <img src="../../../assets/imgs/my.png " class="alignment " />
                     <span class="left8 ">
                         个人资料
                     </span>

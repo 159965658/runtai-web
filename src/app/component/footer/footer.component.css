@@ -4,7 +4,7 @@ nz-footer {
   /* height: 4.16rem; */
   width: 100%;
   background-color: #fff;
-  border-top: 1px solid #a0a0a0;
+  box-shadow: 0px 0px 8px rgba(108, 150, 211, 0.2);
   left: 0;
 }
 
@@ -15,7 +15,7 @@ nz-footer > ul > li {
 }
 nz-footer > ul > li > label {
   display: block;
-  color: #000;
+  color: #acb3c9;
 }
 nz-footer > ul > li > div {
   background-size: 100%;
@@ -40,7 +40,7 @@ nz-footer > ul > li > div {
 .activeCheckxk > label,
 .activeCheckxx > label,
 .activeCheckwd > label {
-  color: #108ee9 !important;
+  color: #6c96d3 !important;
 }
 .activeCheck > .sy {
   background-image: url(../../../assets/imgs/syxz.png) !important;

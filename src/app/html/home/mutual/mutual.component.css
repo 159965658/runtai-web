@@ -11,13 +11,13 @@
   }
   .titleTab {
     height: 50px;
-    box-shadow: 0px 5px 7px 1px rgba(14, 14, 14, 0.2);
+    box-shadow: 0px 5px 5px rgba(108, 150, 211, 0.2);
     background-color: #fff;
     color: #353535;
     border-radius: 8px;
   }
   .titleTab2{
-    box-shadow: 0px 0px 0px 0px rgba(14, 14, 14, 0.2) !important;
+    box-shadow: 5px 5px 10px rgba(108, 150, 211, 0.2) !important;
     width: 100% !important;
     border-radius: 0% !important;
   }
@@ -40,7 +40,6 @@
   .bm-hover > .titleTab-bm {
     color: #3497e8;
   }
-  
- 
-  
-  
+
+
+

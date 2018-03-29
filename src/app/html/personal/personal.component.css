@@ -32,6 +32,7 @@
 
 .personal_title img {
     border-radius: 50px;
+    border: 2px solid#FFFFFF;
 }
 
 .f_tit {
@@ -49,27 +50,20 @@
 }
 
 .personal_details {
-    width: 95%;
-    margin: 0 auto 0 auto;
-    background: #f6f6f6;
-    border-radius: 8px;
-    box-shadow: 1px 1px 5px #C0C0C0;
     line-height: 20px;
 }
 
 .navigation {
     background: #FFFFFF;
     width: 100%;
-    height: 95px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    height: 120px;
     margin-bottom: 10px;
 }
 
 .order_form {
     width: 33%;
     float: left;
-    margin-top: 17px;
+    margin-top: 26px;
     text-align: center;
 }
 
@@ -109,7 +103,25 @@
     margin-bottom: 1px;
     position: relative;
 }
-
+.list img{
+    vertical-align: sub;
+}
+.order{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    line-height: 50px;
+    margin: 0 auto 5px;
+}
+.associated_children{
+    background: #3bcbab;
+}
+.children_course{
+    background: #3281e8;
+}
+.abnormal_attendance{
+    background: #f6df84;
+}
 .left8 {
     padding-left: 8px;
     font-size: 14px;
