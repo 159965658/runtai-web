@@ -1,0 +1,41 @@
+.header {
+    height: 37px;
+    width: 100%;
+    position: fixed;
+    padding: 5px 10px 0px 0;
+    background-color: #fff;
+    z-index: 1000;
+    left: 0px;
+}
+
+.header2 {
+    position: static !important;
+}
+
+.search {
+    /* border: none; */
+    padding-left: 25px;
+    font-size: 1.2rem;
+    background-color: #f0f0f0;
+    border-color: transparent;
+}
+
+.searchicon {
+    position: absolute;
+    left: 9px;
+    top: 8px;
+}
+
+.searchCen {
+    font-size: 1.3rem;
+    margin-top: 6px;
+    color: #353535;
+}
+
+.anticon-my-message {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: url(../../../assets/imgs/pl.png);
+    background-size: 100%;
+}

@@ -1,0 +1,33 @@
+<app-go-back [titleDetails]='"关联"'>
+</app-go-back>
+<div class="info">
+    <!--未创建-->
+    <div class="no_Prompt" *ngIf="res.length == 0">
+        <img class="head_sculpture" src="../../../../assets/imgs/guanlian.jpg" />
+        <p class="f_Prompt14">
+            您还未添加关联哦！
+        </p>
+    </div>
+    <!--已创建-->
+    <div class="Prompt" *ngIf="!(res.length == 0)">
+        <div *ngFor="let item of res" [routerLink]='["/p-home/son-details"]' [queryParams]='{id:item.i_id,l:res.length}'>
+            <div class="add_relation location">
+                <img class="associated_head_image" src="{{url+item?.s_image}}" appErrorImg='s_user' />
+                <span class="f_d fa">{{item.s_real_name}}  </span>
+                <img class="arrow" src="../../../../assets/imgs/you.png" />
+            </div>
+            <div class="prompt_info">
+                <span class="f_d"> ID:{{item.s_loginName}}</span>
+                <span class="f_d padding-left15">年级：{{item?.s_grade | myGradeSub}}</span>
+            </div>
+        </div>
+    </div>
+    <!--添加创建-->
+    <div class="add_relation padding-left15" style="text-align: center; padding: 0;">
+        <img class="alignment" src="../../../../assets/imgs/tianjia.png" />
+        <a href="javascript:void()" class="f_b14 padding-left15" [routerLink]="['/p-home/son-add']">添加孩子 </a>
+    </div>
+</div>
+
+
+<app-loading [isInput]='isInput'></app-loading>

@@ -1,0 +1,81 @@
+.my-content {
+  padding: 0px 5px;
+  background: url(../../../assets/imgs/login.png) no-repeat center;
+  height: 100%;
+  background-size: 101% 101%;
+  -moz-background-size:101% 101%;
+  min-height: 500px;
+}
+.my-login-header {
+  padding-top: 50px;
+  margin-bottom: 140px;
+  text-align: center;
+}
+
+
+.my-login-input{
+  height: 32px;
+  padding-left: 25px;
+  border-color: #d9d9d9;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.my-login-divbutton {
+  margin: 25px 0px;
+}
+
+.my-login-button {
+  height: 32px;
+  background-color: #3497e7;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.my-hr {
+  height: 1px;
+  background-color: #d9d9d9;
+  padding: 0px 5px;
+  margin: 11px 0px;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #d9d9d9;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #d9d9d9;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #d9d9d9;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+
+
+
+
+
+
+.login-form {
+  max-width: 300px;
+  margin:0 auto;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}

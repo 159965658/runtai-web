@@ -1,0 +1,68 @@
+<p class="titleCourse">
+    课程安排
+</p>
+
+<div class="pad" *ngIf="type==0">
+    <div nz-row [nzGutter]="8">
+        <div class="con" nz-col [nzSpan]="8" [nzOffset]="0">
+            日期
+        </div>
+        <div class="con" nz-col [nzSpan]="8" [nzOffset]="0">
+            上课时间
+        </div>
+        <div class="con" nz-col [nzSpan]="8" [nzOffset]="0">
+            课时数
+        </div>
+    </div>
+    <div class="conf-c">
+        <div nz-row [nzGutter]="8" class="conf" *ngFor="let item of listModel">
+            <div class="" nz-col [nzSpan]="8" [nzOffset]="0">
+                {{item.d_class_time | myTimestamp}}
+            </div>
+            <div class="" nz-col [nzSpan]="8" [nzOffset]="0">
+                {{item.d_class_time*1000 | date:'HH:mm'}} - {{item.d_downclass_time*1000 | date:'HH:mm'}}
+            </div>
+            <div class="" nz-col [nzSpan]="8" [nzOffset]="0">
+                {{item.i_coursetime_num}}
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="pad" *ngIf="type==2">
+    <nz-collapseset nzAccordion nzBordered=false class="c">
+        <nz-collapse *ngFor="let list of listModel;index as i" [nzTitle]="list.i_course_name" [nzActive]="i==0">
+            <div class="padi">
+                <div *ngIf="list?.data&&list.data != []">
+                    <div nz-row [nzGutter]="8">
+                        <div class="con" nz-col [nzSpan]="8" [nzOffset]="0">
+                            日期
+                        </div>
+                        <div class="con" nz-col [nzSpan]="8" [nzOffset]="0">
+                            上课时间
+                        </div>
+                        <div class="con" nz-col [nzSpan]="8" [nzOffset]="0">
+                            课时数
+                        </div>
+                    </div>
+                    <div *ngFor="let item of list.data | jsonParse">
+                        <div nz-row [nzGutter]="8" class="conf">
+                            <div class="" nz-col [nzSpan]="8" [nzOffset]="0">
+                                {{item.d_class_time*1000 | date:'yyyy/MM/dd'}}
+                            </div>
+                            <div class="" nz-col [nzSpan]="8" [nzOffset]="0">
+                                {{item.d_class_time*1000 | date:'HH:mm'}} - {{item.d_downclass_time*1000 | date:'HH:mm'}}
+                            </div>
+                            <div class="" nz-col [nzSpan]="8" [nzOffset]="0">
+                                {{item.i_coursetime_num}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nz-collapse>
+    </nz-collapseset>
+</div>

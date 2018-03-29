@@ -1,0 +1,30 @@
+<ul *ngIf="!list.s_Absenteeism else elseBlock">
+    <li class="f12_h statistics">
+        旷课：否
+    </li>
+    <li class="f12_h statistics">
+        迟到：{{list.s_Late ? list.s_LateTime+'min' : '否'}}
+    </li>
+    <li class="f12_h statistics">
+        早退：{{list.LeaveEarly ? list.s_LeaveEarlyTime+'min' : '否'}}
+    </li>
+    <li class="f12_h statistics">
+        漏签：{{list.s_MissedSign ? '是' : '否'}}
+    </li>
+</ul>
+<ng-template #elseBlock>
+    <ul>
+        <li class="f12_h statistics">
+            旷课：是
+        </li>
+        <li class="f12_h statistics">
+            迟到：- -
+        </li>
+        <li class="f12_h statistics">
+            早退：- -
+        </li>
+        <li class="f12_h statistics">
+            漏签：- -
+        </li>
+    </ul>
+</ng-template>

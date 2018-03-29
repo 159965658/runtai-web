@@ -1,0 +1,187 @@
+.t-header {
+    height: 240px;
+    position: relative;
+}
+
+
+/* .bg {
+    background: url('../../../assets/imgs/skms2.png');
+} */
+
+.bg-blur {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    height: 100%;
+    position: absolute;
+    /* background-image: url('../../../assets/imgs/skms2.png') */
+}
+
+.content-front {
+    padding-top: 67px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.content-front>img {
+    border-radius: 5px;
+    float: left;
+}
+
+.t-info {
+    float: left;
+    margin-left: 14px;
+    font-size: 1.5rem;
+    color: #353535;
+    padding-top: 20px;
+    width: 45%;
+}
+
+.t-info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 99%;
+}
+
+.t-info-de {
+    font-size: 1.4rem;
+    padding-top: 20px;
+}
+
+.t-info-de span {
+    padding: 0 5px;
+}
+
+.titleTab-body {
+    position: absolute;
+    width: 100%;
+    top: 217px;
+    z-index: 100000;
+}
+
+.titleTab {
+    height: 50px;
+    box-shadow: 0px 5px 7px 1px rgba(14, 14, 14, 0.2);
+    background-color: #fff;
+    color: #353535;
+    border-radius: 8px;
+    line-height: 50px !important;
+    font-size: 1.6rem;
+}
+
+.titleTab>ul {
+    height: 100% !important;
+}
+
+.titleTab-bm {
+    padding-left: 3px;
+    height: 100% !important;
+}
+
+.titleTab-bm>a {
+    color: #353535;
+}
+
+.bm-hover {
+    color: #3497e8 !important;
+}
+
+.anticon-my-t,
+.anticon-my-c {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 55px);
+}
+
+.anticon-my-t {
+    background-image: url(../../../assets/imgs/msjj.png);
+}
+
+.bm-hover .anticon-my-t {
+    background-image: url(../../../assets/imgs/msjjxuanzhong.png);
+}
+
+.anticon-my-c {
+    background-image: url(../../../assets/imgs/suoshoukecheng.png);
+}
+
+.bm-hover .anticon-my-c {
+    background-image: url(../../../assets/imgs/suoshoukechengxuanzhong.png);
+}
+
+.explain {
+    padding-top: 50px;
+}
+
+.explain>h2 {
+    font-size: 1.6rem;
+}
+
+.explain-info {
+    padding-top: 20px;
+    /* padding-bottom: 100px; */
+}
+
+:host ::ng-deep a.ant-anchor-link-title:hover,
+:host ::ng-deep a.ant-anchor-link-title:active {
+    color: inherit;
+}
+
+:host ::ng-deep .ant-anchor-ink-ball {
+    display: none !important;
+    width: 0px;
+    height: 0px;
+}
+
+:host ::ng-deep .bm-hover .ant-anchor-link-title {
+    color: #3497e8;
+}
+
+:host ::ng-deep .ant-affix {
+    left: 0px !important;
+    height: 50px;
+    box-shadow: 0px 5px 7px 1px rgba(14, 14, 14, 0.2);
+    background-color: #fff;
+    color: #353535;
+    border-radius: 8px;
+    line-height: 50px !important;
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+:host ::ng-deep .ant-anchor-link {
+    display: inline-block;
+}
+
+:host ::ng-deep .ant-anchor-link {
+    padding: 0;
+    width: 48%;
+    text-align: center;
+}
+
+:host ::ng-deep .ant-anchor-link-active {
+    color: #3497e8;
+}
+
+.ant-anchor-link-active .anticon-my-t {
+    background-image: url(../../../assets/imgs/msjjxuanzhong.png);
+}
+
+.ant-anchor-link-active .anticon-my-c {
+    background-image: url(../../../assets/imgs/suoshoukechengxuanzhong.png);
+}

@@ -1,0 +1,46 @@
+.titleTab-body {
+    position: absolute;
+    width: 100%;
+    top: 212px;
+    z-index: 100000;
+  }
+  .titleTab-body2{
+    position: fixed;
+    top: 37px;
+    left: 0px;
+  }
+  .titleTab {
+    height: 50px;
+    box-shadow: 0px 5px 7px 1px rgba(14, 14, 14, 0.2);
+    background-color: #fff;
+    color: #353535;
+    border-radius: 8px;
+  }
+  .titleTab2{
+    box-shadow: 0px 0px 0px 0px rgba(14, 14, 14, 0.2) !important;
+    width: 100% !important;
+    border-radius: 0% !important;
+  }
+  .titleTab-bm {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.6rem;
+  }
+  .bm-hover > .titleTab-bm::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 58px;
+    background: #3497e8;
+    margin: 0 auto;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+  }
+  .bm-hover > .titleTab-bm {
+    color: #3497e8;
+  }
+  
+ 
+  
+  

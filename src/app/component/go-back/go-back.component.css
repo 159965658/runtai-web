@@ -1,0 +1,41 @@
+:host ::ng-deep .ant-affix {
+    width: 100%;
+}
+
+.header {
+    background-color: #fff;
+    height: 45px;
+    width: 100%;
+    font-size: 1.8rem;
+    color: #353535;
+    line-height: 45px;
+    box-shadow: 0px 0px 8px rgba(108, 150, 211, 0.2);
+}
+
+.header i {
+    color: #d9d9d9;
+    font-size: 2.5rem;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+.header2 {
+    background-color: #3497e7;
+    color: #ffffff;
+    height: 80px;
+}
+
+.header2 i {
+    color: #ffffff;
+}
+
+.header3 {
+    border-bottom: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 100;
+}
+
+.header3 i {
+    color: #a0a0a0;
+}

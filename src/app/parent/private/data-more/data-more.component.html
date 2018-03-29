@@ -1,0 +1,8 @@
+<app-go-back [titleDetails]='"课堂数据"'>
+</app-go-back>
+<div class="contents">
+    <div class="class_data_info">
+        <app-class-data-list [id]='id' [pageIndex]='pageIndex' (dataLength)='endList($event)'></app-class-data-list>
+    </div>
+</div>
+<app-study-list (changeScroll)='changeScroll()'></app-study-list>

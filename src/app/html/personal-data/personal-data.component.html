@@ -1,0 +1,51 @@
+<div class="header">
+    <h2 class="h-t">个人资料</h2>
+    <div class="h-c ant-col-offsetpad-1 ant-col-offsetright-1 clearfix">
+        <div class="hed-img">
+            <img src="{{user.s_head_portrait}}" appErrorImg='s_user' style="width: 100%;
+            height: 100%;
+            border-radius: 50%">
+            <i class="iconfont icon-bianji" style="position: absolute;
+            top: -6px;
+            right: -9px;" (click)='fileLoad()'></i>
+            <input type="file" (change)="fileChange($event)" id='fileUpload' style="display:none" class="upload" placeholder="Upload file" accept=".png,.jpg">
+        </div>
+        <div class="hed-user ant-col-offsetpad-1">
+            <h2>{{user.UserName}}</h2>
+            <h2>ID:{{user.s_login_account}}</h2>
+            <div class="address">
+                <span>区域：{{user.s_region == null ? '未知' :user.s_region }}</span>
+                <span>{{user.s_school_abbreviation}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="u-i ant-col-offsetpad-1 ant-col-offsetright-1">
+    <ul class="box-a">
+        <li>
+            <span>邮箱</span>
+            <span>{{user.s_email}}</span>
+        </li>
+        <li [routerLink]='["/p-home/cp"]'>
+            <span>手机</span>
+            <span>{{user.ChildPhone}}</span>
+        </li>
+
+    </ul>
+    <ul class="box-b ">
+        <li class="wx box-a">
+            <span>微信</span>
+            <span>关联账号</span>
+        </li>
+    </ul>
+    <ul class="box-b box-c">
+        <li class="box-a" [routerLink]="['/c-password']">
+            修改密码
+        </li>
+    </ul>
+    <ul class="box-b box-c">
+        <li class="box-a" [routerLink]="['/main/personal']">
+            个人中心
+        </li>
+    </ul>
+</div>

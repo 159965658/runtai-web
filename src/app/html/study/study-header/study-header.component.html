@@ -1,0 +1,45 @@
+<div class="head_background" [ngClass]="{'head_background2':!calendar}">
+    <div class="navigation" nz-row>
+        <div class="" nz-col [nzSpan]="5"></div>
+        <div class="my-tcenter" style='margin-top: 2px;' nz-col [nzSpan]="7" [nzOffset]="0">
+            <a class="course_item" [routerLink]="[ '/main/study/table' ]" routerLinkActive="sc_itemhover"> 我的课表 </a>
+        </div>
+        <div class="my-tcenter" nz-col [nzSpan]="7" style='margin-top: 2px;' [nzOffset]="0">
+            <a class="course_item" [routerLink]="[ '/main/study/my-course' ]" routerLinkActive="sc_itemhover"> 我的课程 </a>
+        </div>
+        <div class="" nz-col [nzSpan]="5"></div>
+    </div>
+    <div class="cal" [hidden]="!calendar">
+        <div class="sc_title" id='aasd'>
+
+            <div class="month">
+                <nz-datepicker [nzPlaceHolder]="'选择时间'" (ngModelChange)="_endDate=$event;_endValueChange()" [ngModel]="_endDate" [nzMode]="'month'" [nzFormat]="'YYYY-MM'"></nz-datepicker>
+                <span> {{calendatList.month}}	</span>
+            </div>
+            <div class="year">
+                <p>
+                    {{calendatList.year}}
+                </p>
+                <p>
+                    月
+                </p>
+            </div>
+        </div>
+        <div class="sc_week">
+            <div class="sc_item" style="transition: all 100ms ease;">
+                <div class="sc_days_item sc_week_item" *ngFor="let item of calendatList.weekdays" [ngStyle]="{'width': widthS+'px'}">
+                    {{item}}
+                </div>
+            </div>
+        </div>
+        <div class="sc_days">
+            <div class="sc_item" style="transition: all 100ms ease;">
+                <div class="sc_days_item" *ngFor="let item of calendatList.monthArr" [ngClass]="{'sc_days_itemH':item == this.calendatList.day}" (click)='daysClick($event,item)' [ngStyle]="{'width': widthS+'px','height':widthS+'px','line-height':widthS+'px'}">
+
+                    {{item}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

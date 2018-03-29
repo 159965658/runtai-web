@@ -1,0 +1,31 @@
+<div class="reply">
+    <div class="dis-content clearfix" *ngFor="let item of list">
+        <div class="dis-headerimg">
+            <img src="{{url+item?.s_appraise_head_portrait}}" appErrorImg='s_user'>
+        </div>
+        <div class="dis-body">
+            <h2>{{item?.i_appraise_name}}</h2>
+            <p>{{item?.s_appraise_text}}</p>
+            <div class="dis-time">
+                <p> {{item?.i_appraise_time*1000 | date:'yyyy/MM/dd'}}</p>
+                <div>
+                    <i class="iconfont icon-dianzan" style="font-size: 22px;
+                    /* height: 15px; */
+                    /* width: 18px; */
+                    line-height: 10px;
+                    vertical-align: sub;" (click)='CourseAppraiseLike(item?.i_id)'></i> [{{item?.i_point}}]
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-study-list [isScroll]="'true'" (changeScroll)='changeScroll()'></app-study-list>
+<!-- 增加评论 -->
+<div *ngIf="flag">
+    <app-affix [isAffix]='isAffix' (affixClick)='affixClick($event)'></app-affix>
+</div>
+<app-addinput [isInput]="input" (changeAddinput)='changeInput($event)'></app-addinput>
+<app-load [getListFlag]="load"></app-load>
+<app-loading [isInput]='loadding'></app-loading>

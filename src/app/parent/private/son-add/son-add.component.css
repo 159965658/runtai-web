@@ -1,0 +1,98 @@
+.info {
+    height: 100%;
+    background: #f4f6fb;
+    padding-top: 20px;
+}
+
+.f_information {
+    font-size: 1.4rem;
+    color: #353535;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.return {
+    position: absolute;
+    left: 15px;
+    top: 22px;
+}
+
+.remind {
+    margin: 0px auto 10px;
+    text-align: center;
+}
+
+.cipher_box {
+    text-align: center;
+}
+
+.input_box {
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid #FFF;
+    color: #8992A3;
+    width: 60%;
+    position: absolute;
+    left: 30%;
+    top: -1px;
+}
+
+.verification {
+    padding-left: 10px;
+    height: 40px;
+    width: 50%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF
+}
+
+.bind_button {
+    margin-left: 2%;
+    width: 27%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.binding {
+    color: #3497E7;
+    border: 1px solid #3497E7;
+    background: #FFFFFF;
+}
+
+.unbound {
+    margin-left: 2%;
+    border: 1px solid #d2d9e7;
+    background: #d2d9e7;
+    color: #FFFFFF;
+}
+
+.determine {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    padding-left: 10px;
+    margin: 10px auto 0 auto;
+    height: 40px;
+    width: 93%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #d2d9e7;
+    border: 1px solid #d2d9e7;
+}
+
+.determineH {
+    background-color: #3497E7;
+    border: 1px solid #3497E7
+}
+
+.imformation {
+    padding-left: 10px;
+    margin: 0px auto 10px;
+    height: 40px;
+    width: 80%;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background: none repeat scroll 0% 0% #FFF;
+    position: relative;
+}

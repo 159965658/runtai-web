@@ -1,0 +1,96 @@
+<div class="centrality">
+
+    <div class="centrality_head">
+        <div class="head_info">
+            <div class="class_head">
+                <div class="user_portrait">
+                    <img class="head_portrait" src="{{url+childList?.s_image}}" appErrorImg='s_user' />
+                </div>
+                <div class="user_info">
+                    <span class="user"> {{childHoverText.s_real_name}}   </span>
+                    <nz-popover [nzTrigger]="'click'" [(nzVisible)]="visible" [nzPlacement]="'bottomLeft'">
+                        <div nz-popover style="line-height: 23px;">
+
+                            <img class="" src="../../../../assets/imgs/qiehuan.png" style="margin-left:8px;" />
+                        </div>
+                        <ng-template #nzTemplate>
+                            <div class="switchlist">
+                                <p class="ov" *ngFor="let item of childList" (click)='switchChild(item)' [ngClass]="{'childActive':item.i_id == childHoverText.i_id}"> {{item.s_real_name}}</p>
+                            </div>
+                        </ng-template>
+                    </nz-popover>
+                    <!-- <span class="user">{{user?.UserName}}</span> -->
+                    <div class="user_details">
+                        <img src="../../../../assets/imgs/School.png" class="alignment" />
+                        <span>{{childHoverText?.s_schoolName}}</span>
+                        <img src="../../../../assets/imgs/grade.png" class="alignment left15" />
+                        <span>{{childHoverText?.s_grade | myGradeSub}}</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Statistics_info">
+                <span class="f_time">          参与课数：{{childHoverText?.coursecount }}门	        </span>
+                <span class="f_time left15">          学习时长：{{childHoverText?.coursetime  }}min（超过{{childHoverText?.good}}%同龄人）        </span>
+            </div>
+
+        </div>
+
+        <div class="data_tit">
+
+            <nz-anchor [nzOffsetTop]='180'>
+                <nz-link nzHref="#a">
+                    <ng-template #nzTemplate>
+                        <div class="abnormal_attendance">
+                            <div class="abnormal_attendance_tit abnormal_attendance_a">
+                                <span class="left15">异常考勤 </span>
+                            </div>
+                        </div>
+                    </ng-template>
+                </nz-link>
+                <nz-link nzHref="#b">
+                    <ng-template #nzTemplate>
+                        <div class="class_data">
+                            <div class="class_data_tit abnormal_attendance_tit">
+                                <span class="left15">课堂数据</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                </nz-link>
+            </nz-anchor>
+        </div>
+
+    </div>
+
+    <div class="centrality_inof">
+        <div class="centrality_blank" id='a'>
+        </div>
+        <div class="data_info">
+            <div class="data_info_background">
+                <div class="abnormal_attendance_info">
+                    <app-error-work-count #childWorkCount (clickDom)='clickDom($event)'></app-error-work-count>
+                    <app-course-list [list]='list'></app-course-list>
+                    <app-load [getListFlag]='getListFlag'></app-load>
+                    <div style="height:1px;" id='b'></div>
+                    <div class="more" *ngIf="!moreBtn1">
+                        <a [routerLink]='["/p-home/love-more"]' [queryParams]="{id:childHoverText.i_id}">  点击查看更多  </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="data_info_background">
+                <div class="class_data_info" style="    font-size: 1.4rem;">
+                    <app-class-data-list [id]='childHoverText.i_id' [pageIndex]='pageIndex' (dataLength)='more($event)'></app-class-data-list>
+                </div>
+
+                <div class="more" *ngIf="!moreBtn">
+                    <a [routerLink]='["/p-home/data-more"]' [queryParams]="{id:childHoverText.i_id}">点击查看更多</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

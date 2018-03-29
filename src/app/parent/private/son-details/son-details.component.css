@@ -1,0 +1,198 @@
+.list50 {
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+
+.return {
+    position: absolute;
+    left: 15px;
+    top: 22px;
+}
+
+.personal {
+    height: 170px;
+    background: url(../../../../assets/imgs/background_learning.jpg) no-repeat scroll 0% 0% / 100% auto transparent;
+    position: relative;
+}
+
+.personal_head {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    position: relative;
+    color: #FFFFFF;
+    padding-top: 27px;
+}
+
+.f_head {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.personal_title {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.personal_title img {
+    border-radius: 50px;
+    border: 2px solid#FFFFFF;
+}
+
+.f_tit {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.top10 {
+    margin-top: 10px;
+}
+
+.top5 {
+    background: #aec3d3;
+    width: 45%;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.personal_details {
+    margin: 0 auto 0 auto;
+    background: #f4f6fb;
+    line-height: 20px;
+    margin-top: -8px;
+}
+
+.right {
+    margin-left: 55%;
+    right: 10%;
+    position: absolute;
+    color: #c7cdd8;
+}
+
+.list {
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #FFFFFF;
+    height: 44px;
+    line-height: 44px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+.left8 {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.margin-top10 {
+    margin-top: 10px;
+}
+
+.alignment {
+    vertical-align: sub;
+}
+
+.center {
+    text-align: center;
+}
+
+.exit_logon {
+    font-size: 14px;
+    color: #7c7c7c;
+}
+
+.blank {
+    height: 65px;
+}
+
+.personal_info {
+    position: absolute;
+    width: 100%;
+}
+
+.contents {
+    position: relative;
+    height: 100%;
+    background: #f4f6fb;
+}
+
+.order {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    line-height: 50px;
+    margin: 0 auto 5px;
+}
+
+.associated_children {
+    background: #3bcbab;
+}
+
+.children_course {
+    background: #3281e8;
+}
+
+.abnormal_attendance {
+    background: #f6df84;
+}
+
+.Popup {
+    background: rgba(53, 53, 53, .25);
+    position: fixed;
+    backface-visibility: hidden;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    min-width: 1024px;
+    height: 100%;
+    z-index: 2000;
+}
+
+.Popup_info {
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    max-width: 200px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.f_Popup_problem {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.4rem;
+    color: #353535;
+}
+
+.f_Popup_no {
+    margin-left: 20px;
+    background: #c7cdd8;
+    height: 30px;
+    font-size: 1.6rem;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    float: left;
+    padding: 0px 5px;
+}
+
+.f_Popup_yes {
+    margin-right: 20px;
+    background: #335f97;
+    width: 60px;
+    height: 30px;
+    font-size: 1.6rem;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+    float: right;
+}

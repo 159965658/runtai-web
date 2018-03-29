@@ -1,0 +1,12 @@
+.statistics {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.2rem;
+    color: #acb3c9;
+    width: 24%;
+    text-align: center;
+    background: #e1e4ea;
+    border-radius: 4px;
+    cursor: pointer;
+}

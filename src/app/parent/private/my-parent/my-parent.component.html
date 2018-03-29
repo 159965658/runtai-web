@@ -1,0 +1,100 @@
+<div class="personal">
+    <div class="personal_title">
+        <ul>
+            <li>
+                <img [src]="url+user.s_head_portrait" appErrorImg='s_user' width="55" height="55" />
+            </li>
+            <li class="top10">
+                <span class="f_tit">
+                  {{user?.UserName}}
+        </span>
+            </li>
+
+        </ul>
+    </div>
+
+</div>
+
+<div class="personal_info top40">
+    <div class="top5">
+        <span class="f_tit">
+        ID: {{user?.s_login_account}}
+      </span>
+    </div>
+    <div class="top_border"></div>
+    <div class="personal_details">
+        <ul>
+            <li class="navigation">
+                <div class="order_form" [routerLink]="['/p-home/sonlist']">
+                    <div class="associated_children order">
+                        <img src="../../../../assets/imgs/guanlianhaizi.png" />
+                    </div>
+                    <p class="f_form">关联孩子</p>
+                    <p class="f_form">
+                        <a href=" javascript:void(0) "> {{uc.sonCount}}名 </a>
+                    </p>
+                </div>
+                <div class="order_form_xian"></div>
+
+                <div class="order_form" [routerLink]="['/p-home/main']">
+                    <div class="children_course order">
+                        <img src="../../../../assets/imgs/children_course.png" />
+                    </div>
+                    <p class="f_form">孩子课程</p>
+                    <p class="f_form">
+                        <a href=" javascript:void(0) ">  {{uc.courseCount}} 门 </a>
+                    </p>
+                </div>
+                <div class="order_form_xian"></div>
+
+                <div class="order_form" [routerLink]='["/p-home/love-more"]' [queryParams]="{id:0}">
+                    <div class="abnormal_attendance order">
+                        <img src="../../../../assets/imgs/abnormal_attendance_.png" />
+                    </div>
+                    <p class="f_form">异常考勤</p>
+                    <p class="f_form">
+                        <a href=" javascript:void(0) "> {{uc.errorCount}} 次 </a>
+                    </p>
+                </div>
+            </li>
+            <li class="list " [routerLink]="[ '/p-home/sonlist'] ">
+                <img src="../../../../assets/imgs/wodedingdan.png " class="alignment " />
+                <span class="left8 ">          关联孩子        </span>
+                <img src="../../../../assets/imgs/you.png " class="right ">
+            </li>
+            <li class="list " [routerLink]="[ '/p-home/cp'] ">
+                <img src="../../../../assets/imgs/phone.png " class="alignment " />
+                <span class="left8 ">          更改电话        </span>
+                <img src="../../../../assets/imgs/you.png " class="right ">
+            </li>
+            <li class="list " [routerLink]="[ '/c-password'] ">
+                <img src="../../../../assets/imgs/mima.png " class="alignment " />
+                <span class="left8 ">
+          更改密码
+        </span>
+                <img src="../../../../assets/imgs/you.png " class="right ">
+            </li>
+            <li class="list margin-top10 center " (click)='loginOut()'>
+                <a href="javascript:void(0) " class="exit_logon ">
+          退出登录
+        </a>
+            </li>
+        </ul>
+    </div>
+    <div class="blank "></div>
+</div>
+
+
+<div class="Popup " style="display: none; ">
+    <div class="Popup_info ">
+        <p class="f_Popup_problem ">
+            确认要退出登录吗？
+        </p>
+        <span class="f_Popup_no ">
+      取消
+    </span>
+        <span class="f_Popup_yes ">
+      确认
+    </span>
+    </div>
+</div>

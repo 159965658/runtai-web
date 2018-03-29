@@ -1,0 +1,12 @@
+nz-carousel{
+  height: auto;
+  /* margin: 8px 0px; */
+  /* margin-top: 37px; */
+  padding: 8px 0px;
+  padding-top: 43px;
+}
+
+.ant-carousel .slick-slide img {
+  width: 100%;
+  height: 200px;
+}

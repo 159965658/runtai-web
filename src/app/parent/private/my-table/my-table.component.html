@@ -1,0 +1,109 @@
+<style>
+    .ant-popover-placement-bottom>.ant-popover-content>.ant-popover-arrow {
+        margin-left: 26px;
+    }
+</style>
+<div class="schedule_head">
+    <div class="head_info"></div>
+    <div class="head_information">
+        <div class="date">
+            <ul>
+                <li class="date top_bottom15 top_bottom10">
+                    <img class="img" src="../../../../assets/imgs/zuo_white.png" (click)='reduceDate()' />
+                    <span class="f16_b">            {{dateArr.date}}/{{dateArr.day}}          </span>
+                    <img class="img" src="../../../../assets/imgs/you_white.png" (click)='addDate()' />
+                </li>
+                <li class="user">
+                    <div class="information">
+
+                        <nz-popover [nzTrigger]="'click'" [(nzVisible)]="visible" [nzPlacement]="'bottom'">
+                            <!-- <span nz-popover class="f16_b" class="ov" style="color:#fff;height:17px;">
+                                        {{childHoverText?.name}}
+                                      </span> -->
+                            <div nz-popover style="line-height: 23px;">
+                                <span class="f16_b" class="ov" style="color:#fff;height:17px;">
+                                            {{childHoverText?.name}}
+                                          </span>
+                                <img class="" src="../../../../assets/imgs/qiehuan.png" />
+                            </div>
+                            <ng-template #nzTemplate>
+                                <div class="switchlist">
+                                    <p class="ov" *ngFor="let item of childList" (click)='switchChild(item.i_id,item.s_real_name)' [ngClass]="{'childActive':item.i_id == childHoverText.id}"> {{item.s_real_name}}</p>
+                                </div>
+                            </ng-template>
+                        </nz-popover>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="week">
+            <!-- x星期 -->
+            <ul>
+                <li class="f16_b wide14" *ngFor="let item of dateArr.dayArr">
+                    {{ getWeeks(item.v) }}
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="schedule_info">
+    <div class="calendar top_bottom15">
+        <ul #daysDom style="transition: all 500ms ease;">
+            <li class="f16_h wide14" *ngFor="let item of dateArr.dayArr">
+                <p class="day" [attr.data-value]='item.v' [ngClass]="{'dayActive':hover == item.v}">
+                    {{ getDay(item.v) }}
+                    <span [hidden]='true'>{{item.v}}</span>
+                </p>
+                <div class="news" *ngIf="getChildCount(item.v)">
+                    {{childCountNum}}
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="course_details top_bottom10" *ngFor="let item of list">
+        <div class="course_details_date f14_qh padding">
+            <span>       {{item.d_course_endtime*1000 | date:'yyyy/MM/dd'}}      </span>
+            <span class="left10">       星期{{getWeeks()}}      </span>
+            <span class="left10">       {{childHoverText?.name}}      </span>
+        </div>
+        <div class="course padding top_bottom15">
+            <div class="course_information">
+                <div class="surriculum_state">
+                    <div class="surriculum_img">
+                        <img class="img_radius" src="{{url+item.s_course_img}}" appErrorImg/>
+                        <div class="class_time">
+                            <div [ngSwitch]="item.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm:ss' | switchDate:item.d_course_time">
+                                <p class="f12_b" *ngSwitchCase="1">尚未开始</p>
+                                <p class="f12_b" *ngSwitchCase="2">已经结束</p>
+                                <p class="f12_b" *ngSwitchCase="3">上课中</p>
+                            </div>
+                            <p class="f12_b">
+                                {{item.d_course_time*1000 | date:'HH:mm'}} - {{item.d_course_endtime*1000 | date:'HH:mm'}}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="course_info">
+                    <p class="f14_h top_bottom10">
+                        {{item.s_course_name}}
+                    </p>
+                    <span class="f12_h">
+            进度：{{item.i_course_endtime}}/{{item.i_course_time}}课时
+          </span>
+                    <span class="f12_h">
+            主讲：{{item.s_teacher_name}}
+          </span>
+                </div>
+            </div>
+        </div>
+        <div class="course_statistics">
+            <app-courser-list-footer [list]='getfooter(item.s_Absenteeism,item.s_Late,item.s_LeaveEarly,item.s_MissedSign,item.s_LateTime,item.s_LeaveEarlyTime)'></app-courser-list-footer>
+        </div>
+    </div>
+    <app-load [getListFlag]='getListFlag'></app-load>
+</div>

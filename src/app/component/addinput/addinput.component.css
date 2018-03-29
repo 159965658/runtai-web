@@ -1,0 +1,53 @@
+/* .addput {
+    position: fixed;
+    bottom: 0px;
+    z-index: 100000;
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    left: 0;
+} */
+
+.nz-input {
+    width: 70%;
+    margin-left: 5%;
+}
+
+:host ::ng-deep nz-input>.ant-input,
+.ant-btn {
+    height: 100%;
+    color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+}
+
+.ant-btn {
+    border: none;
+    height: 28px;
+    background-color: rgba(64, 129, 182, .8);
+    color: #fff;
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+    color: inherit;
+    background-color: inherit;
+    border-color: inherit;
+}
+
+:host ::ng-deep .ant-modal {
+    background-color: transparent;
+    height: 0px;
+    transform: none;
+    transform-origin: none !important;
+}
+
+:host ::ng-deep .ant-modal-body {
+    position: fixed;
+    bottom: 0px;
+    padding: 11px;
+    z-index: 100000;
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    left: 0;
+}

@@ -1,0 +1,85 @@
+.remind {
+    margin: 10px auto 1px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.cipher_box {
+    text-align: center;
+}
+
+.input_box {
+    padding-left: 10px;
+    height: 1.4rem;
+    width: 80%;
+    margin: 5px 0px;
+    border-radius: 8px;
+    border: 1px solid #f4f6fb;
+    color: #8992a3;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    padding-top: 22px;
+    padding-bottom: 20px;
+}
+
+.ant-form-item {
+    margin-bottom: 0px;
+}
+
+.ant-form-explain {
+    color: red;
+    text-align: left;
+    padding-left: 11%;
+}
+
+.determine {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    padding-left: 10px;
+    margin: 10px auto 0 auto;
+    height: 40px;
+    width: 90%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #3497E7;
+    border: 1px solid #3497E7
+}
+
+.determinedis {
+    background: #d2d9e7;
+    border: 1px solid #d2d9e7;
+}
+
+.binding {
+    color: #3497E7;
+    border: 1px solid #3497E7;
+    background: #FFFFFF;
+    display: inline-block;
+    line-height: 35px;
+}
+
+.bind_button {
+    margin-left: 2%;
+    width: 27%;
+    height: 35px;
+    border-radius: 8px;
+    margin-top: -5px;
+    vertical-align: middle;
+}
+
+.input_b {
+    width: 50%;
+}
+
+.bind_buttond {
+    color: #fff;
+    background-color: #d2d9e7;
+    border: 1px solid #d2d9e7;
+}
+
+.determinedis {
+    background: #d2d9e7;
+    border: 1px solid #d2d9e7;
+}

@@ -1,0 +1,32 @@
+<div class="rebody gutter-example">
+    <div nz-row>
+        <div nz-col class="gutter-row" [nzSpan]="24" [nzOffset]="0">
+            <div class="gutter-box" nz-row *ngFor="let item of courseList" (click)='href(item.i_course_id?item.i_course_id:item.i_id,item.i_course_type)'>
+                <div class="re-img" nz-col [nzSpan]="8" [nzOffset]="1">
+                    <img src="{{url+item.s_course_img}}" appErrorImg>
+                    <div class="course-type" *ngIf="item.i_course_type != 1">
+                        {{item.i_course_type | mySaleFrom}}
+                    </div>
+                </div>
+                <div class="re-content" nz-col [nzSpan]="14" [nzOffset]="1">
+                    <h2 class="my-size14">{{item.s_course_name}}</h2>
+                    <div class="re-content-desc">
+                        <label for="" *ngIf=" item?.i_grade != '' ">{{item?.i_grade | myGradeSub}}</label>
+                        <label for="" *ngIf=" item?.i_grade != '' ">|</label>
+                        <label for="">{{  item?.i_subject | mySubjectType}}</label>
+                        <label for="">|</label>
+                        <label for="">共{{item.i_course_time}}课时</label>
+                    </div>
+                    <div class="re-dec">
+                        <p>技术服务费
+                            <label>{{item.i_present_price == 0 ? '免费' :'￥'+(item.i_present_price | number:'1.2-2')}}</label>
+                            <em *ngIf="item?.i_present_price != item?.i_original_price">￥{{item.i_original_price | number:'1.2-2'}}</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div nz-col [nzSpan]="1">
+        </div>
+    </div>
+</div>

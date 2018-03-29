@@ -1,0 +1,363 @@
+.alignment {
+    vertical-align: bottom;
+}
+
+.align {
+    vertical-align: text-bottom;
+}
+
+.left15 {
+    padding-left: 15px;
+}
+
+.left5 {
+    padding-left: 5px;
+}
+
+.right {
+    float: right;
+}
+
+.margin-top3 {
+    margin-top: 3px;
+}
+
+.padding-top5 {
+    padding-top: 5px;
+}
+
+.padding-top10 {
+    padding-top: 10px;
+}
+
+a {
+    color: #353535;
+}
+
+.margin-left2 {
+    margin-left: 1%;
+}
+
+.centrality_title {
+    height: 55px;
+    text-align: center;
+    line-height: 65px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.tp_zuo {
+    float: left;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+.tp_you {
+    float: right;
+    padding-top: 25px;
+    padding-right: 10px;
+}
+
+.f_toubu {
+    /*margin-left: -21px;*/
+    font-size: 1.6rem;
+}
+
+.head_info {
+    background: url(../../../../assets/imgs/background_learning.jpg) no-repeat scroll 0% 0% / 100% auto transparent;
+}
+
+.centrality_blank {
+    height: 185px;
+}
+
+.centrality_head {
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    z-index: 100;
+}
+
+.centrality_inof {
+    max-width: 530px;
+    margin: 0 auto;
+}
+
+.user_portrait {
+    position: relative;
+    left: 10%;
+    top: 25px;
+}
+
+.head_portrait {
+    border-radius: 50px;
+}
+
+.user_info {
+    position: absolute;
+    left: 30%;
+    top: 0px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.user {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+
+.user_details {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    padding-top: 10px;
+}
+
+.class_head {
+    height: 90px;
+    position: relative;
+}
+
+.Statistics_info {
+    padding-left: 3%;
+    margin: 10px auto 10px;
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+.learn {
+    width: 100%;
+}
+
+.learn_status {
+    width: 24%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+    font-size: 1.2rem;
+    color: #8992a3;
+    background: #e1e4ea;
+    border-radius: 4px;
+}
+
+.xian {
+    width: 1px;
+    height: 2px;
+    background: #d9d9d9;
+    float: left;
+    height: 14px;
+    margin-top: 2px;
+}
+
+.f_time {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.data_tit {
+    position: relative;
+}
+
+.abnormal_attendance {
+    background: none repeat scroll 0% 0% #FFF;
+    box-shadow: 0px 0px 8px rgba(108, 150, 211, .4);
+    width: 45%;
+    position: absolute;
+    margin: -40px auto 0px;
+    left: 3%;
+    border-radius: 5px;
+}
+
+
+/* .abnormal_attendance:hover {
+    background: #6c96d3;
+} */
+
+
+/* .abnormal_attendance_tit:active {
+    width: 50%;
+    text-align: center;
+    padding-left: 10px;
+    float: left;
+    line-height: 50px;
+    font-size: 1.4rem;
+    color: #777;
+    background: url(../../../../assets/imgs/Abnormal_attendance.png) no-repeat 0 center;
+    margin-left: 25%;
+} */
+
+
+/* 
+.abnormal_attendance_tit:hover {
+    color: #FFFFFF;
+    background: url(../../../../assets/imgs/Abnormal_attendance_click.png) no-repeat 0 center;
+} */
+
+.abnormal_attendance_tit {
+    text-align: center;
+    padding-left: 10px;
+    line-height: 50px;
+    font-size: 1.6rem;
+    color: #777;
+}
+
+.abnormal_attendance_a {
+    background: url(../../../../assets/imgs/Abnormal_attendance.png) no-repeat;
+    background-position: 27% 18px;
+}
+
+.class_data {
+    width: 45%;
+    position: absolute;
+    right: 3%;
+    box-shadow: 0px 0px 8px rgba(108, 150, 211, .4);
+    border-radius: 5px;
+    background: none repeat scroll 0% 0% #FFF;
+    margin: -40px auto 0px;
+}
+
+
+/* 
+.class_data:hover {
+    background: #6c96d3;
+} */
+
+.class_data_tit {
+    background: url(../../../../assets/imgs/Class_data.png) no-repeat;
+    background-position: 27% 18px;
+}
+
+
+/* .class_data_tit:hover {
+    color: #FFFFFF;
+    background: url(../../../../assets/imgs/Class_data_click.png) no-repeat 0 center;
+} */
+
+.abnormal_attendance_navigation {
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 50px;
+}
+
+.abnormal_attendance_info {
+    margin: 0 auto;
+}
+
+
+/* .absenteeism_info_img:hover {
+    background: #a7c2e8;
+    box-shadow: 0px 0px 8px rgba(167, 194, 232, .6);
+} */
+
+.data_info_background {
+    padding-bottom: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    /* height: 500px; */
+    min-height: 330px;
+}
+
+
+/* .data_info:first-child {
+    padding-top: 185px;
+} */
+
+.data_info {
+    margin-bottom: 45px;
+    background-color: #f4f6fb;
+}
+
+.course_img {
+    border-radius: 8px;
+    left: 4%;
+    display: block;
+    width: 35%;
+}
+
+.course_img img {
+    width: 100%;
+}
+
+.class_data_info {
+    padding-bottom: 3px;
+}
+
+.first_level {
+    padding-left: 10px;
+}
+
+.f_three_click {
+    color: #8992a3;
+}
+
+.more {
+    background: none repeat scroll 0% 0% #FFF;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #8992A3;
+}
+
+:host ::ng-deep .ant-anchor-link {
+    padding: 0px;
+}
+
+:host ::ng-deep .ant-anchor-link-title {
+    overflow: unset;
+}
+
+:host ::ng-deep .ant-anchor-ink-ball.visible {
+    display: none !important;
+}
+
+:host ::ng-deep .ant-anchor-link-active .abnormal_attendance_tit,
+.ant-anchor-link-active .class_data {
+    background-color: #6c96d3;
+    border-radius: 5px;
+    /* background: url(../../../../assets/imgs/Abnormal_attendance.png) no-repeat 0 center; */
+}
+
+:host ::ng-deep .ant-anchor-link-active .abnormal_attendance_tit {
+    color: #FFF;
+}
+
+nz-popover {
+    display: inline-block;
+}
+
+.ov {
+    overflow: hidden;
+    width: 70px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.childActive {
+    color: #d9d9d9 !important;
+}
+
+.switchlist {
+    background-color: #fff;
+    font-size: 1.6rem;
+    margin: 0px 5px;
+    padding-bottom: 2px;
+}
+
+.switchlist>p {
+    border-bottom: 1px solid #d9d9d9;
+    height: 30px;
+    width: 100px;
+    padding: 2px 14px;
+    color: #353535;
+    text-align: center;
+}
+
+.switchlist>p:last-child {
+    border-bottom: none;
+}

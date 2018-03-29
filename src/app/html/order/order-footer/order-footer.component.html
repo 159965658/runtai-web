@@ -1,0 +1,6 @@
+<div class="footer">
+
+    <!-- <button [routerLink]="['/order',id]">立即报名</button> -->
+    <label>合计金额：<span class="price">{{price  == 0 ? '免费' :'￥'+(price | number:'1.2')}}</span> </label>
+    <button (click)="clickOrder()">{{butTxt}}</button>
+</div>

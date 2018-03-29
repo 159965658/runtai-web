@@ -1,0 +1,8 @@
+<app-go-back [titleDetails]='inputModel.title' [style]='headerStyle'>
+
+</app-go-back>
+<div class="order-content">
+    <router-outlet></router-outlet>
+
+</div>
+<app-order-footer (clickOrderEmit)="orderConfirm()" [price]='inputModel.price' [butTxt]='inputModel.butTxt'></app-order-footer>

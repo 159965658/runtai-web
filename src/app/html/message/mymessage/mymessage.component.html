@@ -1,0 +1,23 @@
+<ul class="msg clearfix">
+    <li class="ant-col-offsetpad-1 phover" *ngFor="let item of messageList" [routerLink]="['/message/mes-details']" [queryParams]='{id:item.i_id}'>
+        <p>{{item.s_title}}</p>
+        <span>{{item.d_input_time*1000 | date:'yyyy/MM/dd HH:mm:ss'}}</span>
+    </li>
+    <!-- <li class="ant-col-offsetpad-1 phover">
+        <p>集合的概念》即将开课，请及时登录网《集合的概念》即将开课，请及时登录网</p>
+        <span>2018/2/2 14:01:48</span>
+    </li>
+    <li class="ant-col-offsetpad-1">
+        <p>《集合的概念》即将开课，请及时登录网《集合的概念》即将开课，请及时登录网</p>
+        <span>2018/2/2 14:01:48</span>
+    </li>
+    <li class="ant-col-offsetpad-1">
+        <p>《集合的概念》即将开课，请及时登录网《集合的概念》即将开课，请及时登录网</p>
+        <span>2018/2/2 14:01:48</span>
+    </li>
+    <li class="ant-col-offsetpad-1">
+        <p>《集合的概念》即将开课，请及时登录网《集合的概念》即将开课，请及时登录网</p>
+        <span>2018/2/2 14:01:48</span>
+    </li> -->
+</ul>
+<app-loading [isInput]='isLoading'></app-loading>

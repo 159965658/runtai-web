@@ -1,0 +1,36 @@
+<app-go-back [titleDetails]='"添加孩子"'>
+</app-go-back>
+
+<!--未解绑界面-->
+
+<div class="info">
+    <div class="remind">
+        <img src="../../../../assets/imgs/remind.png" />
+        <span class="f_a">
+      请填好内容信息，不能为空
+    </span>
+    </div>
+    <form class="cipher_box" [formGroup]='sonAdd' (submit)="onSubmit()">
+        <div class="imformation">
+            <span class="f_information">
+        学生姓名
+      </span>
+            <input class="input_box" placeholder="*必填项" type="text" formControlName='name'>
+        </div>
+        <div class="imformation">
+            <span class="f_information">
+        学生账号
+      </span>
+            <input class="input_box" placeholder="*必填项" type="text" formControlName='account'>
+        </div>
+        <div class="imformation">
+            <span class="f_information">
+        学生密码
+      </span>
+            <input class="input_box" placeholder="*必填项" type="password" formControlName='password'>
+        </div>
+        <input class="determine" value="绑定" [disabled]='!sonAdd.valid' type="submit" [ngClass]="{'determineH':sonAdd.valid}">
+    </form>
+</div>
+
+<app-loading [isInput]='isInput'></app-loading>

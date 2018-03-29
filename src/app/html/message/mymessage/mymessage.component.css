@@ -1,0 +1,46 @@
+.msg {
+    height: 100%;
+    background-color: #f6f6f6;
+}
+
+.msg>li {
+    height: 69px;
+    margin: 8px 0px;
+    line-height: 24px;
+    padding-top: 12px;
+    background: #fff url(../../../../assets/imgs/you.png) no-repeat 90% 30px;
+}
+
+.msg>li>p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%;
+    font-size: 1.6rem;
+    color: #353535;
+    position: relative;
+    padding-left: 10px;
+}
+
+.phover>p::before {
+    background-color: #3497e7 !important;
+}
+
+.msg>li>p::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #7c7c7c;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.msg>li>span {
+    font-size: 1.4rem;
+    color: #7c7c7c;
+    padding-left: 10px;
+    margin-top: 8px;
+}

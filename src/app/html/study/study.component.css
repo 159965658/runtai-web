@@ -1,0 +1,30 @@
+ .mytimetable {
+     width: 100%;
+ }
+ /*导航*/
+ /* 
+div:focus {
+    schedule: hover
+} */
+ 
+ .mytimetable_head {
+     width: 100%;
+ }
+ /*导航_结束*/
+ 
+ .date_other {
+     height: 37px;
+     width: 95.4%;
+     padding-left: 4.6%;
+     line-height: 37px;
+     border-bottom: 1px solid #ededed;
+     font-size: 0.75em;
+     color: #7c7c7c;
+     text-align: left;
+     background: #FFFFFF;
+     margin-top: 9px;
+ }
+ 
+ .mytimetable_info {
+     margin-bottom: 78px;
+ }

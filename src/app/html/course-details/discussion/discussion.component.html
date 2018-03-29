@@ -1,0 +1,30 @@
+<div class="header" #divTarget>
+    <nz-dropdown [nzTrigger]="'click'">
+        <a href class="ant-dropdown-link" nz-dropdown>
+          排序
+        </a>
+        <ul nz-menu>
+            <li nz-menu-item (click)='order(1)'>动态</li>
+            <li nz-menu-item (click)='order(2)'>评论数</li>
+            <li nz-menu-item (click)='order(3)'>点赞数</li>
+        </ul>
+    </nz-dropdown>
+    <nz-radio-group [nzSize]="'small'">
+        <label nz-radio-button [nzValue]="'A'">
+              <span>教师参与</span>
+            </label>
+        <label nz-radio-button [nzValue]="'B'">
+              <span>我参与</span>
+            </label>
+    </nz-radio-group>
+</div>
+<div *ngIf="flag">
+    <app-affix [isAffix]='isAffix' (affixClick)='affixClick($event)'></app-affix>
+</div>
+<div *ngFor="let item of _getList()">
+    <app-dis-list [list]='item' (addClick)='clickAdd($event)'></app-dis-list>
+</div>
+<app-load [getListFlag]="load"></app-load>
+<app-study-list [isScroll]='isScroll' (changeScroll)='changeScroll()'></app-study-list>
+<app-addinput [isInput]="input" (changeAddinput)='changeInput($event)'></app-addinput>
+<app-loading [isInput]='loadding'></app-loading>

@@ -1,0 +1,8 @@
+<app-go-back [titleDetails]='"异常考勤"'>
+</app-go-back>
+<div class="contents">
+    <app-error-work-count #childWorkCount (clickDom)='clickDom($event)'></app-error-work-count>
+    <app-course-list [list]='list'></app-course-list>
+    <app-load [getListFlag]='getListFlag'></app-load>
+</div>
+<app-study-list (changeScroll)='changeScroll()'></app-study-list>

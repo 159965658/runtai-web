@@ -1,0 +1,40 @@
+.con,
+.conf {
+    text-align: center;
+    height: 35px;
+    background-color: #e1f0fb;
+    line-height: 35px;
+    color: #353535;
+    font-size: 1.5rem;
+}
+
+.conf-c {
+    margin-top: 5px;
+}
+
+.conf:nth-child(even) {
+    background: #f0f0f0;
+}
+
+.conf:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.con:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px
+}
+
+.con:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px
+}
+
+.padi {
+    padding-top: 20px
+}
+
+
+/* .ant-collapse-header {
+    color: red !important;
+} */

@@ -1,0 +1,9 @@
+<nz-modal [nzStyle]='style' [nzVisible]="isInput" [nzContent]="modalContent" (nzOnCancel)="handleCancel($event)" [nzClosable]='false' [nzFooter]='false' (nzOnOk)="handleOk($event)">
+    <ng-template #modalContent>
+        <form class="addput" nz-form [formGroup]="formModel" (submit)="handleCancel($event)">
+            <input nz-input [(ngModel)]="inputValue" class="nz-input" placeholder="我要问答" #addInput formControlName='inputValue' />
+            <button nz-button>发送</button>
+            <!-- (ngModelChange)="_console($event)" -->
+        </form>
+    </ng-template>
+</nz-modal>

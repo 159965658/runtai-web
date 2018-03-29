@@ -1,0 +1,6 @@
+<nz-carousel [nzAutoPlay]="true" [nzDots]="false">
+    <a nz-carousel-content *ngFor="let index of array" href="{{index?.s_url}}">
+
+        <img src="{{url+index?.s_picture_url}}" alt="" srcset="">
+    </a>
+</nz-carousel>

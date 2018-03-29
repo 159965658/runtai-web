@@ -1,0 +1,67 @@
+.titleTab-body {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    z-index: 100000;
+}
+
+.titleTab {
+    height: 50px;
+    box-shadow: 0px 5px 7px 1px rgba(14, 14, 14, 0.2);
+    background-color: #fff;
+    color: #353535;
+    border-radius: 8px;
+    line-height: 50px;
+    font-size: 1.6rem;
+}
+
+.titleTab-bm {
+    padding-left: 20px;
+}
+
+.bm-hover {
+    color: #3497e8;
+}
+
+.anticon-my-orderall,
+.anticon-my-ordersuccess,
+.anticon-my-orderpay {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    position: absolute;
+    top: 14px;
+    left: 0%;
+}
+
+.anticon-my-orderpay {
+    background-image: url(../../../../assets/imgs/dzfdd.png);
+}
+
+.anticon-my-orderall {
+    background-image: url(../../../../assets/imgs/dida.png);
+    /* left: -5%; */
+}
+
+.anticon-my-ordersuccess {
+    background-image: url(../../../../assets/imgs/yiwancheng.png);
+}
+
+.bm-hover .anticon-my-orderall {
+    background-image: url(../../../../assets/imgs/didaxuanzhong.png);
+}
+
+.bm-hover .anticon-my-orderpay {
+    background-image: url(../../../../assets/imgs/dzfddxuanzhong.png);
+}
+
+.bm-hover .anticon-my-ordersuccess {
+    background-image: url(../../../../assets/imgs/yiwanchengxuanzhong.png);
+}
+
+.outlet {
+    margin-top: 10%;
+    background-color: #f6f6f6;
+    height: 90%;
+}

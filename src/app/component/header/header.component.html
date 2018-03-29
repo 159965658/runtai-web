@@ -1,0 +1,12 @@
+<div class="header" nz-row>
+    <div nz-col [nzSpan]="17" [nzOffset]="2">
+        <input type="text" value="{{inputValue}}" #searchInput placeholder="搜索" (click)="clickSearch($event)" [formControl]="titleFilter" [ngClass]="'search'" nz-input [nzSize]="'large'" />
+        <span class="searchicon">
+      <i class="anticon anticon-search ant-input-search-icon" style="font-size: 1.5rem;"></i>
+    </span>
+    </div>
+    <div nz-col [nzSpan]="3" [nzOffset]="2">
+        <i *ngIf="msgLocal" [routerLink]="[ '/message']" class="anticon anticon-my-message" style="font-size: 2rem;margin-top: 9px;"></i>
+        <span class="searchCen" *ngIf="!msgLocal" (click)="goBack()">取消</span>
+    </div>
+</div>

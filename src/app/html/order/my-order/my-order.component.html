@@ -1,0 +1,31 @@
+<app-go-back [titleDetails]='"我的订单"' [style]='"2"'>
+
+</app-go-back>
+<div class="titleTab-body">
+    <div nz-row>
+        <div nz-col [nzSpan]="1">
+        </div>
+        <div nz-col [nzSpan]="22" class="titleTab ">
+            <ul nz-row>
+                <li nz-col [nzSpan]="7" [nzOffset]="2" class=" titleTab-bm" [routerLink]="[ '/myorder/all' ]" routerLinkActive=" bm-hover">
+                    <i class="anticon anticon-my-orderall"></i>
+                    <label class="">全部订单</label>
+                </li>
+                <li nz-col [nzSpan]="7" [nzOffset]="1" class=" titleTab-bm" [routerLink]="[ '/myorder/stay' ]" routerLinkActive=" bm-hover">
+                    <i class="anticon  anticon-my-orderpay"></i>
+                    <label class="">待支付</label>
+                </li>
+                <li nz-col [nzSpan]="7" [nzOffset]="0" class=" titleTab-bm" [routerLink]="[ '/myorder/success' ]" routerLinkActive=" bm-hover">
+                    <i class="anticon  anticon-my-ordersuccess"></i>
+                    <label class="">已完成</label>
+                </li>
+            </ul>
+        </div>
+        <div nz-col [nzSpan]="1">
+
+        </div>
+    </div>
+</div>
+<div class="outlet">
+    <router-outlet></router-outlet>
+</div>

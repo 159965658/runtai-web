@@ -1,0 +1,37 @@
+<!--当天-->
+<div class="days_select">
+    <div class="date">
+        <span>{{dateTitle?.date}} </span>
+        <span class="left10"> {{dateTitle?.week}}	</span>
+    </div>
+    <div class="trip" *ngFor="let item of dataList">
+
+        <div class="trip_time">
+            <p class="f_a">
+                {{item.d_course_time*1000 | date:'yyyy/MM/dd' | today}}
+            </p>
+            <p class="f_b">
+                {{item.d_course_time*1000 | date:'HH:mm' }}
+            </p>
+            <div [ngSwitch]="item.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm:ss' | switchDate:item.d_course_time">
+                <p class="f_d" *ngSwitchCase="1">尚未开始</p>
+                <p class="f_d" *ngSwitchCase="2">已经结束</p>
+                <a class="f_c" (click)='hrefCode(item.s_s_web_url,item.i_courseWare_id)' *ngSwitchCase="3">进入课堂</a>
+            </div>
+        </div>
+
+        <div class="trip_line"></div>
+
+        <div class="trip_info" (click)='href(item.i_course_id)'>
+            <p class="f_tm">
+                {{item.s_course_name}}
+            </p>
+            <span style="width: 73px;">        进度：{{item.i_course_time}}课时      </span>
+            <span class="left10" style="width: 121px; white-space:nowrap;overflow:hidden;text-overflow: ellipsis;line-height: 12px;">        主讲： {{item.s_teacher_name}}      </span>
+        </div>
+
+    </div>
+
+
+</div>
+<app-load [getListFlag]="getListFlag"></app-load>

@@ -1,0 +1,89 @@
+/*底部导航*/
+
+.centrality_foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px 0px 8px rgba(108, 150, 211, .1);
+    background: #FFFFFF;
+    left: 0;
+}
+
+
+/*
+.centrality_foot_info {
+    background: #FFFFFF;
+    position: relative;
+    height: 50px;
+} */
+
+.foot {
+    width: 32%;
+    /* position: absolute; */
+    text-align: center;
+    padding-top: 7px;
+    margin: 0 auto;
+    /* line-height: 50px; */
+    display: inline-block;
+    height: 50px;
+}
+
+.dh {
+    font-size: 1.4rem;
+    color: #e1e4ea;
+    display: inline-block;
+    padding-top: 22px;
+}
+
+.my {
+    right: 0;
+}
+
+.learning_situation {
+    left: 34%;
+}
+
+.learning_situation_img {
+    /*line-height: 70px;
+    margin: 0 auto;	*/
+    background: url(../../../../assets/imgs/jz_xq.png) no-repeat center center;
+    background-position: top center;
+    background-size: 25px;
+}
+
+.learning_situation_imgH {
+    background: url(../../../../assets/imgs/jz_xqxz.png) no-repeat;
+    background-position: top center;
+    background-size: 25px;
+    color: #6c96d3;
+}
+
+.schedule_img {
+    /*line-height: 70px;
+    margin: 0 auto;	*/
+    background: url(../../../../assets/imgs/jz_kb.png) no-repeat center center;
+    background-position: top center;
+    background-size: 25px;
+}
+
+.schedule_imgH {
+    background: url(../../../../assets/imgs/jz_kbxz.png) no-repeat;
+    background-position: top center;
+    background-size: 25px;
+    color: #6c96d3;
+}
+
+.my_img {
+    /*line-height: 70px;
+    margin: 0 auto;	*/
+    background: url(../../../../assets/imgs/wd.png) no-repeat center center;
+    background-position: top center;
+    background-size: 25px;
+}
+
+.my_imgH {
+    background: url(../../../../assets/imgs/wdxz.png) no-repeat;
+    background-position: top center;
+    background-size: 25px;
+    color: #6c96d3;
+}

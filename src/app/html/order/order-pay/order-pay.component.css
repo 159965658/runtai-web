@@ -1,0 +1,36 @@
+.or-course {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    color: #353535;
+}
+
+.or-course {
+    box-shadow: 0px 1px 17px 1px rgba(14, 14, 14, 0.2);
+}
+
+.or-info {
+    padding-left: 8%;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.or-info>p {
+    font-size: 1.5rem;
+    margin-top: 2%;
+}
+
+.or-header {
+    font-size: 1.6rem;
+    height: 47px;
+    line-height: 47px;
+    padding-left: 8%;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.or-message {
+    color: #7c7c7c;
+    font-size: 1.4rem;
+    padding: 5% 10%;
+}

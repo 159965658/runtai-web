@@ -1,0 +1,33 @@
+<div class="order-info" *ngFor="let item of courseList">
+    <div class="order-id ant-col-offset-1">
+        订单号：{{item?.i_id}}
+    </div>
+
+    <div class="gutter-box" nz-row [routerLink]="['/courseDetails/',item.i_course_id]">
+
+        <div class="re-img" nz-col [nzSpan]="8" [nzOffset]="1">
+            <img src="{{url+item.s_course_img | myImgDefault}}" appErrorImg>
+            <div class="course-type" *ngIf="item.i_course_type != 1">
+                {{item.i_course_type | mySaleFrom}}
+            </div>
+        </div>
+        <div class="re-content" nz-col [nzSpan]="14" [nzOffset]="1">
+            <h2 class="my-size14">{{item.s_course_name}}</h2>
+            <div class="re-dec">
+                <p>技术服务费
+                    <label>￥{{item.i_course_price == 0 ? '免费' : (item.i_course_price | number:'1.2-2')}}</label>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="order-id my-tright ant-col-offsetright-1" [ngSwitch]="item.i_order_state">
+
+        <div *ngSwitchCase="1">
+            {{item.i_order_state | myOrderState}}
+            <span class="cancelOrder" (click)='cancelPay(item?.i_id)'>取消订单</span>
+            <button class="payBut" (click)='pay(item?.i_id)'>付款</button>
+        </div>
+        <div *ngSwitchDefault> {{item.i_order_state | myOrderState}}</div>
+    </div>
+</div>
+<app-load [getListFlag]='getListFlag'></app-load>

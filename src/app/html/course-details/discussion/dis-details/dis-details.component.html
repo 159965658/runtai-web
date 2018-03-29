@@ -1,0 +1,48 @@
+<app-go-back [titleDetails2]="'讨论区'" [titleDetails]="i_reply"></app-go-back>
+<div class="dis-content clearfix">
+    <div class="dis-headerimg titlemain">
+        <img src="{{url+parentList?.s_reply_head_portrait}}" appErrorImg='s_user'>
+    </div>
+    <div class="dis-body">
+        <h2>{{parentList?.s_moderator}}</h2>
+        <p>{{parentList?.s_review_title}}</p>
+        <div class="dis-time">
+            <p> {{parentList?.d_input_time*1000 | date:'yyyy/MM/dd'}}</p>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="reply">
+    <div class="dis-content clearfix" *ngFor="let item of list">
+        <div class="dis-headerimg">
+            <img src="{{url+item?.s_reply_head_portrait}}" appErrorImg='s_user'>
+        </div>
+        <div class="dis-body">
+            <h2>{{item?.i_reply_name}}</h2>
+            <p>{{item?.s_reply_content}}</p>
+            <div class="dis-time">
+                <p> {{item?.d_reply_time*1000 | date:'yyyy/MM/dd'}}</p>
+                <div>
+                    <i class="iconfont icon-dianzan" style="font-size: 22px;
+                /* height: 15px; */
+                /* width: 18px; */
+                line-height: 10px;
+                vertical-align: sub;" (click)='CourseReviewReplyLike(item?.i_id)'></i> [{{item?.i_reply_point}}]
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-study-list [isScroll]='isScroll' (changeScroll)='changeScroll()'></app-study-list>
+
+<form class="addput" nz-form [formGroup]="formModel" (submit)="submit()" *ngIf="flag">
+    <!-- nz-form [formGroup]="formModel" (submit)="handleCancel($event)" -->
+    <input nz-input [(ngModel)]="inputValue" class="nz-input" placeholder="我要问答" #addInput formControlName='inputValue' />
+    <button nz-button>发送</button>
+    <!-- (ngModelChange)="_console($event)" -->
+</form>
+
+
+<app-loading [isInput]='isInput'></app-loading>

@@ -1,0 +1,34 @@
+<div class="abnormal_attendance_information">
+    <div class="absenteeism" (click)='onClickDom(1)'>
+        <div class="">
+            <div class="absenteeism_info_img" [class.hover]='hoverId == 1'>
+                <img src="../../../../assets/imgs/absenteeism.png" />
+            </div>
+            <p class="f_tittle padding-top10">旷课{{errorCount.absenteeismCount}}</p>
+        </div>
+    </div>
+    <div class="absenteeism" (click)='onClickDom(2)'>
+        <div class="">
+            <div class="absenteeism_info_img" [class.hover]='hoverId == 2'>
+                <img src="../../../../assets/imgs/Late.png" />
+            </div>
+            <p class="f_tittle padding-top10">迟到{{errorCount.lateCount}}</p>
+        </div>
+    </div>
+    <div class="absenteeism" (click)='onClickDom(3)'>
+        <div class="">
+            <div class="absenteeism_info_img" [class.hover]='hoverId == 3'>
+                <img src="../../../../assets/imgs/leave_early.png" />
+            </div>
+            <p class="f_tittle padding-top10">早退{{errorCount.leaveEarlyCount}}</p>
+        </div>
+    </div>
+    <div class="absenteeism" (click)='onClickDom(4)'>
+        <div class="">
+            <div class="absenteeism_info_img" [class.hover]='hoverId == 4'>
+                <img src="../../../../assets/imgs/leakage_sign.png" />
+            </div>
+            <p class="f_tittle padding-top10">漏签{{errorCount.missedSignCount}}</p>
+        </div>
+    </div>
+</div>

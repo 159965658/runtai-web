@@ -1,0 +1,81 @@
+<app-go-back [titleDetails]='titleDetails'></app-go-back>
+<div class="my-body">
+    <div class="de-img">
+        <img src="{{url+courseDetails?.s_course_img}}" appErrorImg>
+        <div class="course-type" *ngIf="courseDetails?.i_course_type != 1">
+            {{courseDetails?.i_course_type | mySaleFrom}}
+        </div>
+        <div nz-row class="img-ab">
+
+            <p nz-col [nzSpan]="13" [nzOffset]="1" style="font-size:1.8rem;color: #fff;">{{courseDetails?.s_course_name}} </p>
+            <div class="img-con" nz-col [nzSpan]="5" [nzOffset]="" *ngIf=" courseDetails?.s_grade != '' ">
+                <i class="iconfont icon-jiantou2 icon-i" nz-col></i>
+                <label class="img-ab-la">{{courseDetails?.s_grade | myGradeSub}}</label>
+            </div>
+            <div class="img-con" nz-col [nzSpan]="  4">
+                <i class="iconfont icon-jiantou2 icon-i icon-i-ye" nz-col></i>
+                <label class="img-ab-la img-ab-la-ye">{{courseDetails?.i_subject | mySubjectType}}</label>
+            </div>
+            <div class="re-dec ant-col-offset-1">
+                技术服务费
+                <label *ngIf="courseDetails?.i_present_price == 0">免费</label>
+                <label *ngIf="courseDetails?.i_present_price != 0"> ￥{{courseDetails?.i_present_price | number:'1.2-2'}}</label>
+                <em *ngIf="courseDetails?.i_present_price != courseDetails?.i_original_price">￥{{courseDetails?.i_original_price | number:'1.2-2'}}</em>
+            </div>
+        </div>
+
+    </div>
+    <div class="details" nz-row [nzGutter]="0">
+        <div nz-col [nzSpan]="12" *ngIf="nzspanNumber == 6" [nzOffset]="1">
+            主讲教师 :
+            <label>{{courseDetails?.s_speaker}}</label>
+        </div>
+        <div nz-col [nzSpan]="nzspanNumber == 6 ? 10 : 23" [nzOffset]="1">
+            开课机构 :
+            <label>{{courseDetails?.s_courseRegion }}</label>
+        </div>
+        <div nz-col [nzOffset]="1">
+            开课时间 :
+            <label>{{ courseDetails?.d_course_time*1000 | date:'yyyy/MM/dd HH:mm' }}-{{courseDetails?.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm'}} ({{courseDetails?.i_course_time}}课时)</label>
+        </div>
+        <div nz-col [nzOffset]="1">
+            报名截止时间 :
+            <label>{{ courseDetails?.d_sign_endtime*1000 | date:'yyyy/MM/dd HH:mm'}}</label>
+        </div>
+
+    </div>
+    <div class="details-height">
+        <div class="titleTab-body">
+            <div nz-row>
+                <div nz-col [nzSpan]="1">
+                </div>
+                <div nz-col [nzSpan]="22" class="titleTab ">
+                    <ul nz-row>
+                        <li nz-col class="my-tcenter ant-col-8" (click)='createComponent(1)' [ngClass]="{'bm-hover': courseService.getnavHover() == 1,'ant-col-6':courseDetails?.i_course_type != 2}">
+                            <label class="titleTab-bm">课程介绍</label>
+                        </li>
+                        <li nz-col class="my-tcenter ant-col-8" (click)='createComponent(2)' [ngClass]="{'bm-hover': courseService.getnavHover() == 2,'ant-col-6':courseDetails?.i_course_type != 2 }">
+                            <label class="titleTab-bm">课程安排</label>
+                        </li>
+                        <li nz-col *ngIf="courseDetails?.i_course_type != 2" class="my-tcenter ant-col-8" (click)='createComponent(3)' [ngClass]="{'bm-hover': courseService.getnavHover() == 3,'ant-col-6':courseDetails?.i_course_type != 2 }">
+                            <label class="titleTab-bm">讨论区</label>
+                        </li>
+                        <li nz-col *ngIf="courseDetails?.i_course_type != 2" class="my-tcenter ant-col-8" (click)='createComponent(4)' [ngClass]="{'bm-hover': courseService.getnavHover() == 4,'ant-col-6':courseDetails?.i_course_type != 2 }">
+                            <label class="titleTab-bm">课程评价</label>
+                        </li>
+                        <li nz-col *ngIf="courseDetails?.i_course_type == 2" class="my-tcenter ant-col-8" (click)='createComponent(5)' [ngClass]="{'bm-hover': courseService.getnavHover() == 5,'ant-col-6':courseDetails?.i_course_type != 2 }">
+                            <label class="titleTab-bm">讲师介绍</label>
+                        </li>
+                    </ul>
+                </div>
+                <div nz-col [nzSpan]="1">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div-body">
+        <router-outlet></router-outlet>
+    </div>
+    <app-course-footer [id]='paramsId'></app-course-footer>
+</div>

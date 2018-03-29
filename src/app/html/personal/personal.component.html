@@ -1,0 +1,91 @@
+<div class="contents">
+    <div class="personal">
+        <div class="personal_title">
+            <ul>
+                <li>
+                    <img src="{{url+user?.s_head_portrait}}" appErrorImg='s_user' width="65px" height="65px" />
+                </li>
+                <li>
+                    <span class="f_tit">
+                            {{user?.UserName}}
+                    </span>
+                </li>
+                <li class="top5">
+                    <span class="f_tit">
+                            ID: {{user?.s_login_account}}
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="personal_info top40">
+        <div class="personal_details">
+            <ul>
+                <li class="navigation">
+                    <div class="order_form" [routerLink]="['/myorder/stay']">
+                        <img src="../../../assets/imgs/dingdan.png" class="alignment" />
+                        <p class="f_form">待支付订单</p>
+                        <a class="f_form">
+                                {{res.bePaidCount}}
+                        </a>
+                    </div>
+                    <div class="order_form_xian"></div>
+                    <div class="order_form" [routerLink]="['/main/study/my-course']" [queryParams]="{id:0}">
+                        <img src="../../../assets/imgs/zaixue.png" />
+                        <p class="f_form">在学课程</p>
+                        <a class="f_form">
+                                {{res.beingCount}}
+                            </a>
+                    </div>
+                    <div class="order_form_xian"></div>
+
+                    <div class="order_form" [routerLink]="['/main/study/my-course']" [queryParams]="{id:1}">
+                        <img src=" ../../../assets/imgs/wancheng.png " />
+                        <p class="f_form ">完成课程</p>
+                        <a class="f_form ">
+                               {{res.finishCount}}
+                        </a>
+                    </div>
+                </li>
+                <li class="list " [routerLink]="[ '/myorder'] ">
+                    <img src="../../../assets/imgs/wodedingdan.png " />
+                    <span class="left8 ">
+                        我的订单
+                    </span>
+                    <img src="../../../assets/imgs/you.png " class="right ">
+                </li>
+                <li class="list " [routerLink]="[ '/main/study/my-course'] ">
+                    <img src="../../../assets/imgs/kecheng.png " class="alignment " />
+                    <span class="left8 ">
+                        我的课程
+                    </span>
+                    <img src="../../../assets/imgs/you.png " class="right ">
+                </li>
+                <li class="list " [routerLink]="[ '/message']">
+                    <img src="../../../assets/imgs/xiaoxi.png " class="alignment " />
+                    <span class="left8 ">
+                        我的消息
+                    </span>
+                    <img src="../../../assets/imgs/you.png " class="right ">
+                </li>
+                <li class="list margin-top10 " [routerLink]="[ '/p-d' ]">
+                    <img src="../../../assets/imgs/geren.png " class="alignment " />
+                    <span class="left8 ">
+                        个人资料
+                    </span>
+                    <img src="../../../assets/imgs/you.png " class="right ">
+                </li>
+                <li class="list margin-top10 border-bottom-right-radius10 center " (click)='loginOut()'>
+                    <a href="javascript:void(0)" class="exit_logon ">
+                        退出登录
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>

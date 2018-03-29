@@ -1,0 +1,360 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    /* font-family: "Microsoft YaHei"; */
+    font-size: 62.5%;
+    font-size: 10px;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    font-size: 62.5% !important;
+    font-size: 10px !important;
+    background-color: #f6f6f6f6;
+}
+
+input,
+button {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.color3535 {
+    color: #353535;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #d9d9d9;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #d9d9d9;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #d9d9d9;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #999;
+}
+
+.my-tleft {
+    text-align: left !important;
+}
+
+.my-tright {
+    text-align: right !important;
+}
+
+.my-tcenter {
+    text-align: center !important;
+}
+
+.my-dark {
+    color: #555555;
+}
+
+.my-size075 {
+    font-size: 0.75rem;
+}
+
+.my-size14 {
+    font-size: 1.4rem;
+}
+
+.my-size13 {
+    font-size: 1.3rem;
+}
+
+.my-size15 {
+    font-size: 1.5rem;
+}
+
+.my-size16 {
+    font-size: 1.6rem;
+}
+
+.my-border-radio {
+    border-radius: 8px;
+}
+
+span {
+    display: inline-block;
+}
+
+.icon-size50 {
+    font-size: 5rem;
+}
+
+.icon-color93 {
+    color: #939393;
+}
+
+.anticon-step-backward1:before {
+    content: "\e712";
+}
+
+:focus {
+    outline: none;
+    border: none;
+}
+
+.ant-input:focus {
+    box-shadow: 0 0 0 0px rgba(16, 142, 233, 0.2) !important;
+    /* border-color: transparent !important;  */
+}
+
+em {
+    text-decoration: line-through;
+    font-style: normal;
+    color: #cbcbcb;
+}
+
+.has {
+    color: #f04134;
+}
+
+.content-body {
+    padding-top: 27px;
+    margin-bottom: 50px;
+    /* overflow-y: scroll;
+  height: 700px; */
+}
+
+.content2 {
+    padding-top: 40px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.titleCourse {
+    font-size: 1.6rem;
+    color: #353535;
+    margin-bottom: 30px;
+}
+
+.ant-col-offsetpad-1 {
+    padding-left: 4.16666667%;
+}
+
+.ant-col-offsetright-1 {
+    padding-right: 4.16666667%;
+}
+
+.price {
+    color: #ff7043;
+}
+
+.ant-calendar-picker-icon,
+.ant-calendar-picker-clear {
+    display: none !important;
+    z-index: 0 !important;
+    visibility: hidden !important;
+}
+
+.ant-calendar-picker-input {
+    height: 51px !important;
+}
+
+nz-datepicker {
+    position: absolute !important;
+    background-color: #fff;
+    top: 0px;
+    opacity: 0;
+    height: 50px;
+}
+
+.left10 {
+    padding-left: 10px;
+}
+
+.left {
+    float: left;
+}
+
+
+/*字体*/
+
+.f_a {
+    padding-top: 5px;
+    font-size: 12px;
+    color: #7c7c7c;
+}
+
+.f_b {
+    font-size: 16px;
+    color: #353535;
+}
+
+.f_c {
+    width: 100%;
+    height: 23PX;
+    font-size: 12px;
+    background: #3497e7;
+    border-radius: 5px;
+    line-height: 23px;
+    margin-top: 3px;
+    display: inline-block;
+    color: #fff;
+}
+
+.f_tm {
+    font-size: 16px;
+    color: #353535;
+}
+
+.f_c a {
+    color: #FFFFFF;
+}
+
+.f_d {
+    width: 100%;
+    color: #353535;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.f_d a {
+    color: #353535;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+/* 
+img::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-top: -.5em;
+    line-height: inherit;
+    z-index: -1;
+} */
+
+.ant-anchor-wrapper {
+    background-color: transparent !important;
+}
+
+.ant-anchor-ink {
+    height: 0px !important;
+}
+
+.ant-anchor-link {
+    line-height: inherit !important;
+}
+
+.content_t {
+    overflow: hidden;
+}
+
+.ant-popover-inner-content {
+    padding: 0px !important;
+}
+
+.contents {
+    height: calc(100% - 50px);
+    background: #f4f6fb;
+    min-width: 300px;
+    max-width: 640px;
+}
+
+.content_t img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.ant-popover-placement-bottom>.ant-popover-content>.ant-popover-arrow {
+    left: 85% !important;
+}
+
+.ant-popover {
+    left: -6px !important;
+    top: -6px !important;
+}
+
+.ant-collapse>.ant-collapse-item,
+.ant-collapse-borderless>.ant-collapse-item>.ant-collapse-content {
+    border: none !important;
+    /* background-color: #f4f6fb!important; */
+}
+
+
+/* .ant-collapse>.ant-collapse-item {
+    padding: 3px 0px;
+} */
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header {
+    padding: 8px 0 8px 32px !important;
+}
+
+.ant-collapse-content>.ant-collapse-content-box {
+    padding-top: 0px !important;
+    padding-bottom: 16px;
+}
+
+.ant-collapse-header {
+    background-color: #fff !important;
+    min-width: 268px;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ant-collapse-borderless>.ant-collapse-item>.ant-collapse-content {
+    background-color: #fff !important;
+}
+
+.ant-collapse {
+    background-color: #f4f6fb !important;
+}
+
+.ant-calendar-input-wrap {
+    display: none;
+}
+
+.ant-collapse-header2 {
+    font-size: 1.5rem;
+    padding-left: 5px;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 10px;
+}
+
+.ant-collapse-content2 {
+    padding: 0px !important;
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        background-color: lightblue;
+    }
+    .ant-col-offset-1 {
+        margin-left: 2% !important;
+    }
+    .ant-col-offsetpad-1 {
+        padding-left: 2% !important;
+    }
+    .ant-col-offsetright-1 {
+        padding-right: 2%;
+    }
+}

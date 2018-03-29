@@ -1,0 +1,55 @@
+<div class="button clearfix">
+    <div class="not_finished" (click)='clickFinished(0)' [ngClass]="{'not_finished_hover':index==0}">
+        <p class="f_bt">
+            未结束
+        </p>
+    </div>
+    <div class="finished" (click)='clickFinished(1)' [ngClass]="{'not_finished_hover':index == 1}">
+        <p class="f_bt">
+            已结束
+        </p>
+    </div>
+</div>
+
+<div class="not_finished_info">
+
+    <div class="in_course" *ngFor="let item of dataList">
+        <div [ngSwitch]="item.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm:ss' | switchDate:item.d_course_time">
+            <div class="in_course_time" *ngSwitchCase="1">
+                <p class="f_a">
+                    {{item.d_course_time*1000 | date:'yyyy/MM/dd' | today}}
+                </p>
+                <p class="f_b">
+                    {{item.d_course_time*1000 | date:'HH:mm' }}
+                </p>
+                <p class="f_d">尚未开始</p>
+            </div>
+            <div class="in_course_time" *ngSwitchCase="3">
+                <div>
+                    <p class="f_a">
+                        {{item.d_course_time*1000 | date:'yyyy/MM/dd' | today}}
+                    </p>
+                    <p class="f_b">
+                        {{item.d_course_time*1000 | date:'HH:mm' }}
+                    </p>
+                </div>
+                <a class="f_c" (click)='hrefCode(item.s_s_web_url,item.i_courseWare_id)'>进入课堂</a>
+            </div>
+            <div class="in_course_time" *ngSwitchCase="2" style="line-height:68px">
+                <p class="f_d">已经结束</p>
+            </div>
+        </div>
+        <div class="in_course_line"></div>
+        <div class="course_info" (click)='href(item.i_course_id)'>
+            <p class="f_tm">
+                {{item.s_course_name}}
+            </p>
+            <span> 进度：{{item.i_course_time}}课时 </span>
+            <span class="left10">主讲： {{item.s_teacher_name}}</span>
+        </div>
+    </div>
+
+</div>
+<app-load [getListFlag]="getListFlag"></app-load>
+<!-- 滚动 -->
+<app-study-list [isScroll]="isScroll" (changeScroll)='_changeScroll()'></app-study-list>

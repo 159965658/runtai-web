@@ -1,0 +1,47 @@
+.title {
+    background: none repeat scroll 0% 0% #FFF;
+    width: 100%;
+    margin-top: 3px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.first_level {
+    padding-left: 10px;
+}
+
+.two_level {
+    padding-left: 30px;
+    height: 37px;
+    line-height: 37px;
+}
+
+.three_level {
+    padding-left: 50px;
+    line-height: 20px;
+    font-size: 1.2rem;
+}
+
+.f_three_click {
+    color: #8992a3;
+}
+
+
+/* .class_data_content {
+    padding-left: 30px;
+} */
+
+.c {
+    padding: 5px 0;
+}
+
+
+/* .ant-collapse-item {
+    background: #f4f6fb !important;
+    margin: 3px 0px;
+} */
+
+.padi {
+    margin: 5px 0px;
+}

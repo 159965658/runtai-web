@@ -1,0 +1,51 @@
+.header {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 15px 0px;
+}
+
+.ant-dropdown-link {
+    font-size: 1.6rem;
+    color: #353535;
+}
+
+.ant-dropdown-menu-item {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.ant-dropdown-menu-item:last-child {
+    border-bottom: none;
+}
+
+.ant-radio-group {
+    float: right;
+}
+
+.ant-radio-button-wrapper {
+    margin: 0 10px;
+    border-radius: 5px !important;
+    border: 1px solid #d9d9d9;
+    transition: none;
+    /* border-left: none; */
+}
+
+.ant-radio-button-wrapper-checked {
+    box-shadow: none !important;
+    border-color: #0e77ca;
+}
+
+.ant-radio-button-wrapper-checked:active {
+    border-color: #0e77ca;
+    box-shadow: 0px 0 0 0 #0e77ca;
+    color: #0e77ca;
+}
+
+.ant-radio-button-wrapper:not(:first-child)::before {
+    /* display: none; */
+    border-radius: 5px;
+    display: none !important;
+}
+
+:host ::ng-deep .ant-affix {
+    right: 0px !important;
+    left: 80% !important;
+}

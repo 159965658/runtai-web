@@ -1,0 +1,15 @@
+.ant-menu-item{
+    color: #353535;
+}
+.ant-menu-item > i{
+    float: right;
+    line-height:inherit;
+}
+.anticon-my-shanchu::before{
+    background: url('../../../assets/imgs/shanchu.png');
+    content: '';
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: 100%;
+}

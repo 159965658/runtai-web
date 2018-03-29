@@ -1,0 +1,39 @@
+<nz-collapseset nzAccordion nzBordered=false class="c">
+
+    <nz-collapse *ngFor="let list of res;index as i" [nzTitle]="list.s_course_name" [nzActive]="i==0" class="padi">
+        <div class="padi">
+            <div *ngIf="list?.wareData&&list.wareData != []">
+                <nz-collapseset nzAccordion nzBordered=false>
+                    <nz-collapse *ngFor="let item of list.wareData | jsonParse" [nzTitle]="item.s_courseware_name">
+
+                        <!-- <div class="two_level f_tittle">
+                    <p> &bull;&nbsp;{{item?.s_courseware_name}}</p>
+                </div> -->
+                        <!-- <div class="three_level f_three_click"> -->
+                        <div class="class_data_content">
+                            <p>时间时段：{{item.d_course_time*1000 | date:'yyyy/MM/dd HH:mm'}} - {{item.d_course_endtime*1000 | date:'HH:mm'}}</p>
+                            <p>预计在线时长：{{item.s_course_time}}min</p>
+                            <p>实际在线时长：{{item.s_actual_time}}min</p>
+                            <div *ngIf="!item.s_Absenteeism else elseBlock">
+                                <p>到课情况：到课 </p>
+                                <p>迟到情况：{{item.s_Late ? '是，迟到'+ item.s_LateTime+'分钟' : '否'}}</p>
+                                <p>早退情况：{{!item.LeaveEarly ? '是，早退'+ item.s_LeaveEarlyTime +'分钟' : '否'}} </p>
+                            </div>
+                            <ng-template #elseBlock>
+                                <p>到课情况：旷课 </p>
+                                <p>迟到情况：- - </p>
+                                <p>早退情况：- - </p>
+                            </ng-template>
+                            <p> 签到情况： {{item.i_signcount}}次，共{{ item.i_Teacher_signCount}}次</p>
+                        </div>
+                        <!-- </div> -->
+                    </nz-collapse>
+                </nz-collapseset>
+            </div>
+        </div>
+    </nz-collapse>
+</nz-collapseset>
+
+<input type="hidden" [(ngModel)]='id' [formControl]="titleId">
+<input type="hidden" [(ngModel)]='pageIndex' [formControl]="pageIndexF">
+<app-load [getListFlag]='getListFlag'></app-load>

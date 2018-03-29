@@ -1,0 +1,82 @@
+.return {
+    position: absolute;
+    left: 15px;
+    top: 22px;
+}
+
+.remind {
+    padding-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cipher_box {
+    text-align: center;
+}
+
+.input_box {
+    padding-left: 10px;
+    margin: 0 auto;
+    height: 40px;
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF;
+    color: #8992a3;
+}
+
+.verification {
+    padding-left: 10px;
+    height: 40px;
+    width: 50%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF
+}
+
+.bind_button {
+    margin-left: 2%;
+    width: 27%;
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.binding {
+    color: #3497E7;
+    border: 1px solid #3497E7;
+    background: #FFFFFF;
+    display: inline-block;
+    line-height: 35px;
+}
+
+.bind_buttond {
+    color: #fff;
+    background-color: #d2d9e7;
+    border: 1px solid #d2d9e7;
+}
+
+.unbound {
+    margin-left: 2%;
+    border: 1px solid #d2d9e7;
+    background: #d2d9e7;
+    color: #FFFFFF;
+}
+
+.determine {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    padding-left: 10px;
+    margin: 10px auto 0 auto;
+    height: 40px;
+    width: 93%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #d2d9e7;
+    border: 1px solid #d2d9e7;
+}
+
+.determinehover {
+    background-color: #3497E7;
+    border: 1px solid #3497E7
+}

@@ -1,0 +1,12 @@
+<div class="course_details" *ngFor="let item of list">
+    <div class="left course_img">
+        <img src="{{url+item.s_course_img}}" appErrorImg>
+    </div>
+    <div class="course_content">
+        <p class="f_tm"> {{item.s_course_name}} </p>
+        <span class="f_course">时间：{{item.d_course_time*1000 | date:'yyyy/MM/dd HH:mm'}} - {{item.d_course_endtime*1000 | date:'HH:mm'}}</span>
+    </div>
+    <div class="course_details_statistics left padding-top10">
+        <app-courser-list-footer [list]='getfooter(item.s_Absenteeism,item.s_Late,item.s_LeaveEarly,item.s_MissedSign,item.s_LateTime,item.s_LeaveEarlyTime)'></app-courser-list-footer>
+    </div>
+</div>

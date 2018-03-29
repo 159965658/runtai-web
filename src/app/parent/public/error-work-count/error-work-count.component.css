@@ -1,0 +1,39 @@
+.abnormal_attendance_information {
+    height: 100px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.absenteeism {
+    width: 25%;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.absenteeism_info {
+    width: 70px;
+    height: 60px;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.absenteeism_info_img {
+    border-radius: 50px;
+    background: #4392fc;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    line-height: 65px;
+    box-shadow: 0px 0px 8px rgba(108, 150, 211, .6);
+}
+
+.hover {
+    background: #a7c2e8;
+}
+
+.padding-top10 {
+    padding-top: 10px;
+}

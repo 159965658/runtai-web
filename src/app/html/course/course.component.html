@@ -1,0 +1,30 @@
+<app-header [msgFlag]='false' [msgLocal2]='true' (changeSearch)='changeSearch($event)'></app-header>
+<div class="content2 color3535">
+    <ul nz-row class="my-tcenter my-size16  bar">
+        <li nz-col [nzSpan]="6" [nzOffset]="0" *ngFor="let item of lilist; index as i" (click)='clickLi(i)' [ngClass]="{'li-hover':liActive.index == (i+1) }">
+            {{item.value}}
+            <i class="anticon anticon-down" [ngClass]="{'anticon-up':liActive.index == (i+1) && ulMenu }"></i>
+        </li>
+        <ul class="subMenu" nz-row [ngClass]="{'subMenuShow':ulMenu}" [ngStyle]="{'height': liActive.menuHeight+'px'}">
+            <li nz-col [nzSpan]=" 23 " [nzOffset]="1 " *ngFor="let item of subValue " [ngClass]="{ 'li-hover':item.isChecked } " (click)="clickSubli(item.value) ">
+                {{item.name}}
+                <i class="anticon anticon-my-checked " *ngIf="item.isChecked "></i>
+            </li>
+        </ul>
+    </ul>
+    <ul nz-row [nzGutter]="0 " class="my-tcenter my-size16 color3535 barTwo ">
+        <li class="li-hoverTwo " nz-col [nzSpan]="5" [nzOffset]="0 " *ngFor="let item of lilistTwo; index as i " (click)='clickLiTwo(i)' [ngClass]="{ 'li-hoverTwo':liActive.indexTwo==( i+1) } ">
+            <span *ngIf="(i == 3) else elseBlock">
+                <i class="iconfont icon-sort-up-blue-copy" style="font-size:20px;"></i>
+                {{item.value}}
+            </span>
+            <ng-template #elseBlock>
+                {{item.value}}
+            </ng-template>
+        </li>
+    </ul>
+</div>
+<div class="content-body " style="padding-top: 122px; ">
+    <app-course-list [courseList]='coursel'></app-course-list>
+    <app-load [getListFlag]='getListFlag'></app-load>
+</div>

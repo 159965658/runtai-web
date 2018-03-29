@@ -1,0 +1,56 @@
+<app-go-back [titleDetails]='"修改密码"'></app-go-back>
+<div class="info">
+    <form class="cipher_box" nz-form [formGroup]='changePassWord' (submit)="onChangeSubmit()">
+        <div nz-form-item>
+            <div nz-form-control [nzValidateStatus]="changePassWord.controls.account">
+                <input class="input_box" placeholder="请输入账号" type="text" formControlName='account'>
+                <div nz-form-explain *ngIf="changePassWord.controls.account.dirty&&changePassWord.controls.account.hasError('required')">请输入账号!</div>
+            </div>
+        </div>
+        <div nz-form-item>
+            <div nz-form-control [nzValidateStatus]="changePassWord.controls.phone">
+                <input class="input_box " placeholder="请输入手机号" type="text" formControlName='phone'>
+                <div nz-form-explain *ngIf="changePassWord.controls.phone.dirty&&changePassWord.controls.phone.hasError('required')">请输入手机号!</div>
+                <div nz-form-explain *ngIf="changePassWord.controls.phone.dirty&&changePassWord.controls.phone.errors">
+                    {{changePassWord.controls.phone.errors.msg.info}}
+                </div>
+
+            </div>
+        </div>
+        <div nz-form-item>
+            <div nz-form-control [nzValidateStatus]="changePassWord.controls.msg">
+                <input class="input_box input_b" placeholder="请输入验证码" type="number" formControlName='msg'>
+                <a class="binding bind_button" [ngClass]="{'bind_buttond':!changePassWord.controls.phone.valid}" (click)='sendMsg()'>
+                    {{sendText}}
+                    </a>
+                <div nz-form-explain *ngIf="changePassWord.controls.msg.dirty&&changePassWord.controls.msg.hasError('required')">请输入验证码!</div>
+                <!-- <div nz-form-explain *ngIf="changePassWord.controls.msg.dirty&&changePassWord.controls.msg.hasError('maxlength')">验证码位数6位!</div> -->
+            </div>
+        </div>
+        <div formGroupName="password">
+            <div nz-form-item>
+                <div nz-form-control [nzValidateStatus]="changePassWord.controls.np">
+                    <input class="input_box" placeholder="输入新密码" type="password" formControlName='np'>
+                    <div nz-form-explain *ngIf="changePassWord.get('password').get('np').dirty&&changePassWord.get('password').get('np').hasError('required')">请输入新密码!</div>
+                    <div nz-form-explain *ngIf="changePassWord.get('password').get('np').dirty&&changePassWord.get('password').get('np').hasError('minlength')">密码位数大于6位!</div>
+                    <div nz-form-explain *ngIf="changePassWord.get('password').get('np').dirty&&changePassWord.get('password').get('np').hasError('pattern')">只能输入英文数字!</div>
+                </div>
+
+            </div>
+            <div nz-form-item>
+                <div nz-form-control [nzValidateStatus]="changePassWord.controls.anp">
+                    <input class="input_box" placeholder="确认新密码" type="password" formControlName='anp'>
+                    <div nz-form-explain *ngIf="changePassWord.controls.password.get('anp').dirty&&changePassWord.get('password').get('anp').hasError('required')">再次输入新密码!</div>
+                    <div nz-form-explain *ngIf="changePassWord.controls.password.get('anp').dirty&&!changePassWord.get('password').get('anp').hasError('passWordValidator')">
+                        {{changePassWord.getError('passValidator','password')?.info}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <input class="determine" value="确定" type="submit" [disabled]='!this.changePassWord.valid' [ngClass]="{'determinedis':!this.changePassWord.valid}">
+    </form>
+
+</div>
+
+<app-loading [isInput]='isInput'></app-loading>

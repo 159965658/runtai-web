@@ -1,0 +1,37 @@
+.or-course,
+.or-user {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    border-bottom: none;
+    color: #353535;
+}
+
+.or-course {
+    box-shadow: 0px -5px 17px 1px rgba(14, 14, 14, 0.2);
+}
+
+.or-header {
+    font-size: 1.6rem;
+    height: 47px;
+    line-height: 47px;
+    padding-left: 8%;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.or-user {
+    margin-top: 10px;
+    box-shadow: 0px 2px 17px 1px rgba(14, 14, 14, 0.2);
+}
+
+.or-user>div:first-child {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.or-user>div {
+    font-size: 1.5rem;
+    height: 50px;
+    line-height: 50px;
+}
+
+.phone {}

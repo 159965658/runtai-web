@@ -1,0 +1,25 @@
+<app-go-back [titleDetails]='"更改手机"'></app-go-back>
+<div class="contents">
+    <!--已解绑界面-->
+    <div class="info">
+        <div class="remind">
+
+            <span class="f_tittle">
+        当前手机号码：{{phone}}
+      </span>
+            <img class="left10" src="../../../../assets/imgs/binding.png" />
+            <span class="f_tittle">
+        已绑定
+      </span>
+        </div>
+        <form class="cipher_box" [formGroup]='formPhone' (submit)="onChangePhone()">
+            <input class="input_box" placeholder="请输入手机号" type="text" formControlName='fphone'>
+            <input class="verification" placeholder="请输入验证码" type="text" formControlName='msg' [disabled]='!formPhone.controls.fphone.valid'>
+            <a class="binding bind_button" [ngClass]="{'bind_buttond':!formPhone.controls.fphone.valid}" (click)='sendMsg()'>
+            {{sendText}}
+            </a>
+            <input class="determine " value="绑定" type="submit" [disabled]='!formPhone.valid' [ngClass]="{'determinehover':formPhone.valid}">
+        </form>
+    </div>
+</div>
+<app-loading [isInput]='isInput'></app-loading>

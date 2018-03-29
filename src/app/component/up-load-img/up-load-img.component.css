@@ -1,0 +1,106 @@
+.example {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+img,
+#main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.img1 {
+    opacity: 0.5;
+}
+
+.img2 {
+    clip: rect(0px, 200px, 200px, 0px);
+    /*所有主流浏览器都支持 clip 属性。(css2)*/
+}
+
+#main {
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+}
+
+
+/*控制点定位 */
+
+.minDiv {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+}
+
+.minDiv.left-up {
+    top: -4px;
+    left: -4px;
+    cursor: nw-resize;
+}
+
+.minDiv.left {
+    top: 50%;
+    margin-top: -4px;
+    left: -4px;
+    cursor: e-resize;
+}
+
+.minDiv.left-down {
+    bottom: -4px;
+    left: -4px;
+    cursor: sw-resize;
+}
+
+.minDiv.top {
+    top: -4px;
+    left: 50%;
+    margin-left: -4px;
+    cursor: n-resize;
+}
+
+.minDiv.right-up {
+    top: -4px;
+    right: -4px;
+    cursor: ne-resize;
+}
+
+.minDiv.right {
+    top: 50%;
+    margin-top: -4px;
+    right: -4px;
+    cursor: e-resize;
+}
+
+.minDiv.right-down {
+    bottom: -4px;
+    right: -4px;
+    cursor: se-resize;
+}
+
+.minDiv.bottom {
+    bottom: -4px;
+    left: 50%;
+    margin-left: -4px;
+    cursor: s-resize;
+}
+
+#preview {
+    position: absolute;
+    width: 642px;
+    height: 644px;
+    top: 100px;
+    left: 670px;
+}
+
+#preview img {
+    position: absolute;
+    clip: rect(0, 200px, 200px, 0);
+}

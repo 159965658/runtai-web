@@ -1,0 +1,12 @@
+<p class="titleCourse">
+    课程介绍
+</p>
+<div class="content_t" [innerHTML]="intro">
+
+</div>
+<p class="titleCourse" style="padding-top:20px;margin-bottom:10px;" *ngIf=" this.type == 2">
+    包含课程
+</p>
+<div *ngIf=" this.type == 2">
+    <app-course-list [courseList]='jsonList'></app-course-list>
+</div>

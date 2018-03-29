@@ -1,0 +1,25 @@
+.t-img {
+    line-height: 0;
+}
+
+.t-img>img {
+    width: 100%;
+}
+
+.t-con {
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 5px;
+}
+
+.t-con>h2 {
+    font-size: 1.2rem;
+}
+
+.t-con>p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #7c7c7c;
+}

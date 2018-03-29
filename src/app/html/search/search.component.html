@@ -1,0 +1,16 @@
+<app-header [msgFlag]='msgFlag' [inputValue]='inputValue' (changeSearch)='changeSearch($event)'></app-header>
+<div>
+    <div nz-row style="padding-top:58px" *ngIf="!contentFlag">
+        <span nz-col [nzSpan]="23" [nzOffset]="1" style="color:#adacac">历史搜索</span>
+        <ul nz-menu>
+            <li nz-menu-item *ngFor="let item of searchCache | mySort:'dateTime' " (click)='SearchLocal(item.value)'>
+                {{item.value}}
+                <i class="anticon anticon-my-shanchu" (click)='removeLocal(item.value)'></i>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="contentFlag" class="" style="padding-top:58px;">
+        <app-course-list [courseList]='coursel'></app-course-list>
+        <app-load [getListFlag]='getAsyncFlag'></app-load>
+    </div>
+</div>

@@ -1,0 +1,145 @@
+.header {
+    background: url(../../../assets/imgs/Personal_background.jpg) no-repeat scroll 0% 0% / 100% auto transparent;
+    padding-bottom: 65px;
+    position: relative;
+}
+
+.h-t {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8rem;
+    padding-top: 10px;
+}
+
+.h-c {
+    margin-top: 32px;
+}
+
+.hed-img {
+    width: 55px;
+    height: 55px;
+    float: left;
+    position: relative;
+}
+
+.hed-user {
+    color: #fff;
+    float: left;
+    margin-top: 10px;
+}
+
+.hed-user>h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.hed-user>h2:first-child {
+    font-size: 1.6rem;
+}
+
+.hed-user span {
+    font-size: 1.4rem;
+}
+
+.address>span {
+    width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.address>span:last-child::before {
+    content: "";
+    background: url(../../../assets/imgs/School.png) no-repeat 100%;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: bottom;
+    margin-left: 5px;
+    margin-right: 7px;
+}
+
+.u-i {
+    position: absolute;
+    width: 100%;
+    top: 183px;
+}
+
+.u-i>.box-a {
+    border-radius: 8px;
+}
+
+.u-i>ul>li {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    background-color: #fff;
+}
+
+.box-a {
+    box-shadow: -8px 0px 4px -4px rgba(0, 0, 0, 0.2), 8px 0px 4px -4px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgb(255, 255, 255), 0px 0px 0px 0px rgb(255, 255, 255);
+    /* background: linear-gradient(to right, red, blue); */
+    /* 标准的语法（必须放在最后） */
+}
+
+.u-i>.box-a>li:first-child {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    position: relative;
+}
+
+.u-i>.box-a>li:first-child::before {
+    content: "";
+    display: inline-block;
+    background-color: #d9d9d9;
+    height: 1px;
+    position: absolute;
+    width: 97%;
+    bottom: 0px;
+    right: 0px;
+}
+
+
+/* .u-i>ul>li:last-child {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+} */
+
+.u-i>ul>li>span {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.u-i>ul>li>span:first-child {
+    text-align: left;
+    width: 20%;
+}
+
+.u-i>ul>li>span:last-child {
+    text-align: right;
+    width: 70%;
+}
+
+.box-b {
+    background-color: #f6f6f6;
+    padding: 10px 0px;
+}
+
+.box-c {
+    text-align: center;
+    color: #7c7c7c;
+    font-size: 1.5rem;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.box-c:last-child {
+    padding-bottom: 0px;
+}
+
+.box-c:last-child>.box-a {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

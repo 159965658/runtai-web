@@ -1,0 +1,17 @@
+<div class="rebody gutter-example">
+    <div nz-row>
+        <div nz-col [nzSpan]="9" [nzOffset]="2" *ngFor="let item of teacherList" style="margin-bottom:20px;" [routerLink]="['/t-details']" [queryParams]="{id:item.i_id}">
+            <div class="t-img">
+                <img src="{{item.s_art_head}}" appErrorImg="s_art_head">
+            </div>
+            <div class="t-con">
+                <h2>{{item.s_real_name}}</h2>
+                <p>{{item.s_highest_title}}</p>
+            </div>
+        </div>
+        <div nz-col [nzSpan]="2">
+
+        </div>
+
+    </div>
+</div>

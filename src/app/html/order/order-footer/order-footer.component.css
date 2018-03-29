@@ -1,0 +1,31 @@
+.footer {
+    height: 50px;
+    background-color: #f6f6f6;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer>button {
+    height: 100%;
+    background-color: #3497e7;
+    width: 100px;
+    outline: none;
+    border: none;
+    /* text-align: right; */
+    float: right;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.footer>label {
+    line-height: 50px;
+    margin-left: 20%;
+    color: #353535;
+    font-size: 1.5rem;
+}
+
+.price {
+    color: #ff7043;
+    font-size: 1.6rem;
+}

@@ -1,0 +1,79 @@
+.bar {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 3px;
+    padding: 8px 0px;
+    position: relative;
+}
+
+.barTwo {
+    padding: 5px 0px;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 1.4rem;
+}
+
+.barTwo>li {
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    height: 27px;
+    line-height: 26px;
+    border: 1px solid transparent;
+}
+
+.li-hoverTwo {
+    background-color: transparent !important;
+    border-color: #3497e8 !important;
+    color: #3497e8;
+}
+
+.anticon-down {
+    margin-left: 2px;
+}
+
+.li-hover {
+    color: #3497e8;
+    /* position: relative; */
+}
+
+.subMenu {
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    transition: all .3s;
+    background: #fff;
+    text-align: left;
+    top: 40px;
+    z-index: 100;
+    width: 100%;
+}
+
+.subMenu>li {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 10px 0px;
+}
+
+.subMenu>li:first-child {
+    border-top: 1px solid #d9d9d9;
+}
+
+.subMenuShow {
+    height: auto;
+    transition: all .3s;
+    overflow-y: scroll;
+}
+
+.anticon-my-checked {
+    float: right;
+    margin-right: 5%;
+    margin-top: 5px;
+}
+
+.anticon-my-checked::before {
+    content: "";
+    background: url(../../../assets/imgs/dg.png) no-repeat;
+    background-size: 100% 100%;
+    width: 15px;
+    height: 15px;
+}

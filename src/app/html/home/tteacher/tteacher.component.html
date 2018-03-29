@@ -1,0 +1,5 @@
+<app-mutual [getListFlag]='getAsyncFlag' (changeNumber)="numberIChange($event)"></app-mutual>
+<div class="content-body">
+    <app-teacher-list [teacherList]='teacherList'></app-teacher-list>
+    <app-load [getListFlag]='getAsyncFlag'></app-load>
+</div>

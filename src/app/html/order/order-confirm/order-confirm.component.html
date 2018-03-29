@@ -1,0 +1,18 @@
+<div class="or-course" #message>
+    <div class="or-header">
+        订单信息
+    </div>
+
+    <app-course-list [courseList]='course'></app-course-list>
+</div>
+<div class="or-user">
+    <div class="ant-col-offsetpad-1">
+        姓名 : {{cacheUserModel.UserName}}
+    </div>
+    <div class="ant-col-offsetpad-1 phone">
+        <form [formGroup]='invPhone'>
+            联系方式 : <input type="text" formControlName='phone' style="height: 50px;border: none;" />
+            <i class="iconfont icon-bianji"></i>
+        </form>
+    </div>
+</div>

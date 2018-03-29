@@ -1,0 +1,5 @@
+<div class="footer">
+
+    <!-- <button [routerLink]="['/order',id]">立即报名</button> -->
+    <button (click)="clickHref()" [disabled]='btnFlag' [ngClass]="{'disabled':btnFlag}">{{buttonValue}}</button>
+</div>

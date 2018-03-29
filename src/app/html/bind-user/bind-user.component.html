@@ -1,0 +1,51 @@
+<div class="my-content">
+    <div class="bar bar-header my-login-header">
+        <div class="title h1">
+            <!-- <img src="../../../assets/imgs/login_logo.png" alt="京客网"> -->
+        </div>
+    </div>
+    <form nz-form [formGroup]="formModel" class="login-form" (submit)="onSubmit()">
+        <div nz-form-item>
+            <div nz-form-control [nzValidateStatus]="formModel.controls.UserName" style="margin-bottom: 10px;">
+                <input nz-input type="text" placeholder="用户名/手机号" formControlName='UserName' class="my-login-input">
+                <div nz-form-explain *ngIf="formModel.controls.UserName.dirty&&formModel.controls.UserName.hasError('required')">请输入用户名!</div>
+            </div>
+        </div>
+        <div nz-form-item style="margin-bottom:0px;">
+
+            <div nz-form-control [nzValidateStatus]="formModel.controls.PassWord">
+                <input nz-input type="password" placeholder="密码" formControlName='PassWord' class="my-login-input">
+                <div nz-form-explain *ngIf="formModel.controls.PassWord.dirty&&formModel.controls.PassWord.hasError('required')">请输入密码!</div>
+                <div nz-form-explain *ngIf="formModel.controls.PassWord.dirty&&formModel.controls.PassWord.hasError('minlength')">密码位数大于4位!</div>
+            </div>
+        </div>
+        <div nz-row>
+
+        </div>
+        <div nz-row>
+            <div class="has">{{errorText}}</div>
+        </div>
+        <div class="button-bar my-login-divbutton">
+            <button class="my-login-button  button button-full button-block">绑定并登录 </button>
+        </div>
+    </form>
+
+    <div class="button-bar my-tcenter">
+        <div class="title my-size14 " nz-row>
+            <!-- <span class="" nz-col [nzSpan]="2"></span>
+            <span class="my-hr" nz-col [nzSpan]="6"></span>
+            <span nz-col [nzSpan]="8">其他登录方式</span>
+            <span class="my-hr" nz-col [nzSpan]="6"></span>
+            <span class="" nz-col [nzSpan]="2"></span> -->
+        </div>
+        <div nz-row>
+            <!-- <span class="" nz-col [nzSpan]="5"></span>
+          <i class="iconfont icon-appxiugaiicon42 icon-size50 icon-color93" nz-col [nzSpan]="4"></i>-->
+            <!-- <span nz-col [nzSpan]="10"></span>
+            <i class="iconfont icon-weixin icon-size50 icon-color93" nz-col [nzSpan]="4" (click)='clickWe()'></i>
+            <span class="" nz-col [nzSpan]="10"></span> -->
+        </div>
+    </div>
+
+</div>
+<!-- <app-load></app-load> -->

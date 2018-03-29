@@ -1,0 +1,88 @@
+<app-go-back [titleDetails]='"信息详情"'></app-go-back>
+<div class="contents">
+    <div class="personal">
+        <div class="personal_title">
+            <ul>
+                <li>
+                    <img src="{{res?.s_head_portrait}}" appErrorImg='s_user' width="65px" height="65px" />
+                </li>
+                <li class="top10">
+                    <span class="f_tit">
+          {{res?.s_real_name}}
+        </span>
+                </li>
+                <li class="top5">
+                    <span class="f_tit">
+          ID:{{res?.s_login_account}}
+        </span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="personal_info top40">
+
+        <div class="personal_details">
+            <ul>
+                <li class="list">
+                    <img src="../../../../assets/imgs/school_hui.png" class="alignment" />
+                    <span class="left8">
+          {{res?.s_school_abbreviation}}
+        </span>
+                    <div class="list50">
+                        <img src="../../../../assets/imgs/grade_hui.png" class="alignment" />
+                        <span class="left8">
+                          {{res?.s_gender | myGradeSub}}
+          </span>
+                    </div>
+
+                </li>
+                <li class="list margin-top10">
+                    <img src="../../../../assets/imgs/Parents_name.png" class="alignment" />
+                    <span class="left8">
+          家长姓名
+        </span>
+                    <span class="right">
+          {{res?.s_parents_name}}
+        </span>
+                </li>
+                <li class="list">
+                    <img src="../../../../assets/imgs/Parent_phone.png" class="alignment" />
+                    <span class="left8">
+          家长手机
+        </span>
+                    <span class="right">
+          {{res?.s_parents_mob}}
+        </span> </li>
+                <li class="list">
+                    <img src="../../../../assets/imgs/e-mail.png" class="alignment" />
+                    <span class="left8">
+          学生邮箱
+        </span>
+                    <span class="right">
+          {{res?.s_email}}
+        </span>
+                </li>
+                <li class="list margin-top10 center" (click)='pop = true;'>
+                    <a href="javascript:void(0)" class="exit_logon">
+          解除关联
+        </a>
+                </li>
+            </ul>
+        </div>
+        <div class="blank"></div>
+    </div>
+
+    <div class="Popup" *ngIf="pop">
+        <div class="Popup_info" style="padding:5px;">
+            <p class="f_Popup_problem">
+                {{l == 1 ? '解绑后将无法收到孩子信息，确认解绑吗？' : ' 确认要解除关联吗？'}}
+
+            </p>
+            <span class="f_Popup_no" (click)='popChild()'>      {{l == 1 ? '先去添加' : '取消'}}    </span>
+            <span class="f_Popup_yes" (click)='confirmRelieve()'>      确认    </span>
+        </div>
+    </div>
+</div>
+<app-loading [isInput]='isInput'></app-loading>

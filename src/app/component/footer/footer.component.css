@@ -1,0 +1,56 @@
+nz-footer {
+  position: fixed;
+  bottom: 0px;
+  /* height: 4.16rem; */
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #a0a0a0;
+  left: 0;
+}
+
+nz-footer > ul > li {
+  height: 49px;
+  padding-top: 3px;
+  line-height: 17px;
+}
+nz-footer > ul > li > label {
+  display: block;
+  color: #000;
+}
+nz-footer > ul > li > div {
+  background-size: 100%;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+}
+
+.sy {
+  background: url(../../../assets/imgs/sy.png) no-repeat center;
+}
+.xk {
+  background: url(../../../assets/imgs/xk.png) no-repeat center;
+}
+.wd {
+  background: url(../../../assets/imgs/wd.png) no-repeat center;
+}
+.xx {
+  background: url(../../../assets/imgs/xx.png) no-repeat center;
+}
+.activeCheck > label,
+.activeCheckxk > label,
+.activeCheckxx > label,
+.activeCheckwd > label {
+  color: #108ee9 !important;
+}
+.activeCheck > .sy {
+  background-image: url(../../../assets/imgs/syxz.png) !important;
+}
+.activeCheckxk > .xk {
+  background-image: url(../../../assets/imgs/xkxz.png) !important;
+}
+.activeCheckxx > .xx {
+  background-image: url(../../../assets/imgs/xxxz.png) !important;
+}
+.activeCheckwd > .wd {
+  background-image: url(../../../assets/imgs/wdxz.png) !important;
+}
