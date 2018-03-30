@@ -13,7 +13,7 @@ export class PersonalComponent implements OnInit {
 
   constructor(private cache: CacheService, private router: Router, private study: StudyService) { }
   user = null;
-  url = environment.pathImg;
+  url = environment.api;
   res = {
     bePaidCount: 0,
     beingCount: 0,

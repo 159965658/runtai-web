@@ -23,7 +23,7 @@ export class PersonalDataComponent implements OnInit {
   ngOnInit() {
     let usermodel = this.cache.getUserModel();
     this.user = usermodel;
-    this.user.s_head_portrait = this.url + this.user.s_head_portrait;
+    this.user.s_head_portrait = this.url2 + this.user.s_head_portrait;
     console.log(this.user);
   }
   fileLoad() {
