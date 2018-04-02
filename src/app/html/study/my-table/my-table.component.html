@@ -5,18 +5,23 @@
         <span class="left10"> {{dateTitle?.week}}	</span>
     </div>
     <div class="trip" *ngFor="let item of dataList">
-
-        <div class="trip_time">
-            <p class="f_b">
-                {{item.d_course_time*1000 | date:'HH:mm' }}
-            </p>
-            <div [ngSwitch]="item.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm:ss' | switchDate:item.d_course_time">
-                <p class="f_d" *ngSwitchCase="1">尚未开始</p>
-                <p class="f_d" *ngSwitchCase="2">已经结束</p>
-                <a class="f_c" (click)='hrefCode(item.s_s_web_url,item.i_courseWare_id)' *ngSwitchCase="3">进入课堂</a>
+        <div *ngIf="(item.i_off_shelf == 1) else elseBlock" class="trip_time">
+            <div class="in_course_time" style="line-height:68px">
+                <p class="f_d">已经停课</p>
             </div>
         </div>
-
+        <ng-template #elseBlock>
+            <div class="trip_time">
+                <p class="f_b">
+                    {{item.d_course_time*1000 | date:'HH:mm' }}
+                </p>
+                <div [ngSwitch]="item.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm:ss' | switchDate:item.d_course_time">
+                    <p class="f_d" *ngSwitchCase="1">尚未开始</p>
+                    <p class="f_d" *ngSwitchCase="2">已经结束</p>
+                    <a class="f_c" (click)='hrefCode(item.s_s_web_url,item.i_courseWare_id)' *ngSwitchCase="3">进入课堂</a>
+                </div>
+            </div>
+        </ng-template>
         <div class="trip_line"></div>
 
         <div class="trip_info" (click)='href(item.i_course_id)'>

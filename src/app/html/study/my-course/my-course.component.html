@@ -14,31 +14,38 @@
 <div class="not_finished_info">
 
     <div class="in_course" *ngFor="let item of dataList">
-        <div [ngSwitch]="item.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm:ss' | switchDate:item.d_course_time">
-            <div class="in_course_time" *ngSwitchCase="1">
-                <p class="f_a">
-                    {{item.d_course_time*1000 | date:'yyyy/MM/dd' | today}}
-                </p>
-                <p class="f_b">
-                    {{item.d_course_time*1000 | date:'HH:mm' }}
-                </p>
-                <p class="f_d">尚未开始</p>
+        <div *ngIf="(item.i_off_shelf == 1) else elseBlock">
+            <div class="in_course_time" style="line-height:68px">
+                <p class="f_d">已经停课</p>
             </div>
-            <div class="in_course_time" *ngSwitchCase="3">
-                <div>
+        </div>
+        <ng-template #elseBlock>
+            <div [ngSwitch]="item.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm:ss' | switchDate:item.d_course_time">
+                <div class="in_course_time" *ngSwitchCase="1">
                     <p class="f_a">
                         {{item.d_course_time*1000 | date:'yyyy/MM/dd' | today}}
                     </p>
                     <p class="f_b">
                         {{item.d_course_time*1000 | date:'HH:mm' }}
                     </p>
+                    <p class="f_d">尚未开始</p>
                 </div>
-                <a class="f_c" (click)='hrefCode(item.s_s_web_url,item.i_courseWare_id)'>进入课堂</a>
+                <div class="in_course_time" *ngSwitchCase="3">
+                    <div>
+                        <p class="f_a">
+                            {{item.d_course_time*1000 | date:'yyyy/MM/dd' | today}}
+                        </p>
+                        <p class="f_b">
+                            {{item.d_course_time*1000 | date:'HH:mm' }}
+                        </p>
+                    </div>
+                    <a class="f_c" (click)='hrefCode(item.s_s_web_url,item.i_courseWare_id)'>进入课堂</a>
+                </div>
+                <div class="in_course_time" *ngSwitchCase="2" style="line-height:68px">
+                    <p class="f_d">已经结束</p>
+                </div>
             </div>
-            <div class="in_course_time" *ngSwitchCase="2" style="line-height:68px">
-                <p class="f_d">已经结束</p>
-            </div>
-        </div>
+        </ng-template>
         <div class="in_course_line"></div>
         <div class="course_info" (click)='href(item.i_course_id)'>
             <p class="f_tm">

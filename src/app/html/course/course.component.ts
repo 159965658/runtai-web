@@ -256,7 +256,7 @@ export class CourseComponent implements OnInit, OnDestroy {
     this.subValue = this.lilist.find(a => a.id == i).subValue;
     const bodyh = document.body.clientHeight || document.documentElement.clientHeight;//浏览器高度
     const ulHeight = 46 * this.subValue.length;
-    if (ulHeight > (bodyh - 50)) {
+    if (ulHeight > (bodyh - 70)) {
       this.liActive.menuHeight = bodyh - (46 * 3);
     }
     else {
