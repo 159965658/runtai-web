@@ -14,4 +14,5 @@ export class GetElectiveCenter extends PageBase {
   public i_orderby:number;
   public i_sale_form:number;
   public courseName:string;
+  public i_orderType:number;
 }

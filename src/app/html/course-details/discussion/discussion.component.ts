@@ -42,6 +42,7 @@ export class DiscussionComponent implements OnInit, AfterViewInit {
     id: 0,
   }
   orderType: number;
+  userType: number = 0;
   ngOnInit() {
     this.courseService.setnavHover(3);
   }
@@ -51,10 +52,8 @@ export class DiscussionComponent implements OnInit, AfterViewInit {
     this.req.id = this.courseService.content.Id;
     this.req.pageIndex = ++this.req.pageIndex;
 
-    this.courseService.GetCourseReviewArea(this.req.id, this.req.pageIndex, this.orderType).subscribe(res => {
-      console.log(res, res.length);
+    this.courseService.GetCourseReviewArea(this.req.id, this.req.pageIndex, this.orderType, this.userType).subscribe(res => {
       this.flag = this.courseService.content.flag;
-      console.log(this.flag);
       this._setCloseLoad(res);
       this._setList(res);
     })
@@ -64,9 +63,9 @@ export class DiscussionComponent implements OnInit, AfterViewInit {
     this.isScroll = res.length > 0 ? true : false;
   }
   _setList(arr) {
-    if (arr.length == 0) { //没有数据
-      return false;
-    }
+    // if (arr.length == 0) { //没有数据
+    //   return false;
+    // }
     this.list = this.req.pageIndex != 1 ? this.list.concat(arr) : arr;
   }
   _getList(): Array<any> {
@@ -140,12 +139,14 @@ export class DiscussionComponent implements OnInit, AfterViewInit {
     }
     this.list.find(res => res.i_id == value.id).i_point++;
   }
-  orderFilter() {
-    console.log('1');
+  orderFilter(i) {
+    this.userType = i;
+    this.req.pageIndex = 0;
+    this.GetCourseReviewArea();
   }
   order(i) {
     this.orderType = i;
     this.req.pageIndex = 0;
-    this.GetCourseReviewArea(); 
+    this.GetCourseReviewArea();
   }
 }

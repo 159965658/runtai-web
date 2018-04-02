@@ -77,3 +77,8 @@
     width: 15px;
     height: 15px;
 }
+
+.icona>i {
+    font-size: 20px;
+    vertical-align: sub;
+}

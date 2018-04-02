@@ -9,11 +9,14 @@
             <li nz-menu-item (click)='order(3)'>点赞数</li>
         </ul>
     </nz-dropdown>
-    <nz-radio-group [nzSize]="'small'">
-        <label nz-radio-button [nzValue]="'A'">
+    <nz-radio-group [nzSize]="'small'" [(ngModel)]="userType">
+        <label nz-radio-button [nzValue]="0" (click)='orderFilter(0)'>
+                    <span>所有人</span>
+                  </label>
+        <label nz-radio-button [nzValue]="2" (click)='orderFilter(2)'>
               <span>教师参与</span>
             </label>
-        <label nz-radio-button [nzValue]="'B'">
+        <label nz-radio-button [nzValue]="1" (click)='orderFilter(1)'>
               <span>我参与</span>
             </label>
     </nz-radio-group>

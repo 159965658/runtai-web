@@ -174,6 +174,7 @@ export class CourseComponent implements OnInit, OnDestroy {
   getListFlag = true; //不显示加载中
   getFlag = true;//false禁止加载
   subscription: any;
+  icon = 0;
   constructor(private courseService: CourseService, private scrollService: ScrollService) { }
 
   ngOnInit() {
@@ -286,9 +287,20 @@ export class CourseComponent implements OnInit, OnDestroy {
     }, 1);
   }
   clickLiTwo(i) {
-    console.log(this.liActive.indexTwo);
     this.liActive.indexTwo = (i + 1);//选中菜单
     this.reqCourse.i_orderby = i;
+
+    if (i == 3) {
+      if (this.icon == 0) {
+        this.reqCourse.i_orderType = 1;
+        this.icon = 1;
+      }
+      else {
+        this.reqCourse.i_orderType = (this.icon - 1);
+        this.icon = (this.icon == 2 ? 1 : 2);
+        console.log((this.icon == 2 ? 1 : 0), this.icon, this.reqCourse.i_orderType);
+      }
+    } else this.icon = this.reqCourse.i_orderType = 0
     this.GetElectiveCenter(true);
   }
   whereMethod(i, value) {

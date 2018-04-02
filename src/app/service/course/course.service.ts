@@ -97,11 +97,14 @@ export class CourseService {
     return this.httpServe
       .httpPost(this.url.GetElectiveCenter, request);
   }
-  GetCourseReviewArea(id: number, pageIndex: number,order:number) { //获取讨论区
+  GetCourseReviewArea(id: number, pageIndex: number, order: number, userType: number) { //获取讨论区
     let request = new GetCourseReviewArea();
     request.i_course_id = id;
     request.pageIndex = pageIndex;
     request.i_orderType = order;
+    request.userType = userType;
+    let user = this.cache.getUserModel();
+    request.i_user_id = user ? user.UserId : 0;
     return this.httpServe
       .httpPost(this.url.GetCourseReviewArea, request);
   }

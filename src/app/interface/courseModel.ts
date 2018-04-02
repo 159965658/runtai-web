@@ -37,6 +37,8 @@ export class GetCourseReviewArea extends PageBase {
   }
   public i_course_id: number; //课程id
   public i_orderType:number;
+  public i_user_id:number;
+  public userType:number;
 }
 
 
