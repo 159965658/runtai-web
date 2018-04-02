@@ -15,7 +15,7 @@
     <ul nz-row [nzGutter]="0 " class="my-tcenter my-size16 color3535 barTwo ">
         <li class="li-hoverTwo " nz-col [nzSpan]="5" [nzOffset]="0 " *ngFor="let item of lilistTwo; index as i " (click)='clickLiTwo(i)' [ngClass]="{ 'li-hoverTwo':liActive.indexTwo==( i+1) } ">
             <span *ngIf="(i == 3) else elseBlock">
-                <i class="iconfont icon-sort-up-blue-copy" style="font-size:20px;"></i>
+                <i class="iconfont icon-sort-up-blue-copy" style="font-size:20px; vertical-align: sub;"></i>
                 {{item.value}}
             </span>
             <ng-template #elseBlock>

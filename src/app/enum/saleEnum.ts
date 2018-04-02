@@ -1,6 +1,6 @@
 export enum SaleEnum {
     
-    Sale0 = '未知',
+    Sale0 = '',
     Sale1 = '一年级',
     Sale2 = '二年级',
     Sale3 = '三年级',

@@ -1,6 +1,5 @@
 .bar {
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #f3f5fb;
     margin-top: 3px;
     padding: 8px 0px;
     position: relative;
@@ -8,18 +7,19 @@
 
 .barTwo {
     padding: 5px 0px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #f3f5fb;
     font-size: 1.4rem;
 }
 
 .barTwo>li {
     margin-left: 2%;
     margin-right: 2%;
-    background-color: #f0f0f0;
+    background-color: #e8ecf3;
     border-radius: 5px;
     height: 27px;
     line-height: 26px;
     border: 1px solid transparent;
+    font-size: 1.3rem;
 }
 
 .li-hoverTwo {

@@ -1,12 +1,12 @@
 .days_select {
     width: 100%;
     height: 100%;
-    background: #FFFFFF;
+
 }
 
 .date {
     height: 37px;
-    width: 95.4%;
+  background: #FFFFFF;
     padding-left: 4.6%;
     line-height: 37px;
     border-bottom: 1px solid #82B7E3;
@@ -18,7 +18,7 @@
     width: 100%;
     height: 78px;
     background: #FFFFFF;
-    border-bottom: 1px solid #ededed;
+    margin-bottom: 2px;
 }
 
 .trip_time {
@@ -27,6 +27,8 @@
     width: 29.9%;
     height: 100%;
     text-align: center;
+    padding-top: 12px;
+
 }
 
 .trip_info {

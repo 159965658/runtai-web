@@ -161,7 +161,7 @@ export class LoginComponent implements OnInit {
     }
     url2 = encodeURIComponent(url2);
     window.location.href =
-      'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2384d45170c515de&redirect_uri=' + url2 + '&response_type=code&scope=snsapi_userinfo&state=a#wechat_redirect';
+      'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + environment.appid + '&redirect_uri=' + url2 + '&response_type=code&scope=snsapi_userinfo&state=a#wechat_redirect';
   }
 }
 //https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxeb4b65b6f630a479&redirect_uri=http%3a%2f%2fijkapp.csruntitan.com%2f%3f%23%2flogin&response_type=code&scope=snsapi_userinfo&state=a#wechat_redirect

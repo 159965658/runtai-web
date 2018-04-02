@@ -7,9 +7,6 @@
     <div class="trip" *ngFor="let item of dataList">
 
         <div class="trip_time">
-            <p class="f_a">
-                {{item.d_course_time*1000 | date:'yyyy/MM/dd' | today}}
-            </p>
             <p class="f_b">
                 {{item.d_course_time*1000 | date:'HH:mm' }}
             </p>

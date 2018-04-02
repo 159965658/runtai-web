@@ -2,13 +2,13 @@
     <div nz-row>
         <div nz-col class="gutter-row" [nzSpan]="24" [nzOffset]="0">
             <div class="gutter-box" nz-row *ngFor="let item of courseList" (click)='href(item.i_course_id?item.i_course_id:item.i_id,item.i_course_type)'>
-                <div class="re-img" nz-col [nzSpan]="8" [nzOffset]="1">
+                <div class="re-img" nz-col [nzSpan]="9" [nzOffset]="1">
                     <img src="{{url+item.s_course_img}}" appErrorImg>
                     <div class="course-type" *ngIf="item.i_course_type != 1">
                         {{item.i_course_type | mySaleFrom}}
                     </div>
                 </div>
-                <div class="re-content" nz-col [nzSpan]="14" [nzOffset]="1">
+                <div class="re-content" nz-col [nzSpan]="13" [nzOffset]="1">
                     <h2 class="my-size14">{{item.s_course_name}}</h2>
                     <div class="re-content-desc">
                         <label for="" *ngIf=" item?.i_grade != '' ">{{item?.i_grade | myGradeSub}}</label>

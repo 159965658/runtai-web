@@ -9,7 +9,7 @@
             <div class="t-info-de">
                 <p>{{teacherDetails?.s_region}}</p>
                 <p>{{teacherDetails?.s_school_abbreviation}} </p>
-                <p>初中 <span>|</span> <span>{{teacherDetails?.s_catholic_discipline}} </span></p>
+                <p>{{teacherDetails?.s_grade | myGradeSub}} <span>{{teacherDetails?.s_catholic_discipline}} </span></p>
             </div>
         </div>
     </div>

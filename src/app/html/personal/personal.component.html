@@ -3,7 +3,7 @@
         <div class="personal_title">
             <ul>
                 <li>
-                    <img src="{{url+user?.s_head_portrait}}" appErrorImg='s_user' width="65px" height="65px" />
+                    <img src="{{url+user?.s_head_portrait}}" appErrorImg='s_user' width="55px" height="55px" />
                 </li>
                 <li>
                     <span class="f_tit">
@@ -11,7 +11,7 @@
                     </span>
                 </li>
                 <li class="top5">
-                    <span class="f_tit">
+                    <span class="f_tit my_id">
                             ID: {{user?.s_login_account}}
                     </span>
                 </li>
@@ -82,7 +82,7 @@
                     </span>
                     <img src="../../../assets/imgs/you.png " class="right ">
                 </li>
-                <li class="list margin-top10 border-bottom-right-radius10 center " (click)='loginOut()'>
+                <li class="list margin-top10 center " (click)='loginOut()'>
                     <a href="javascript:void(0)" class="exit_logon ">
                         退出登录
                     </a>
