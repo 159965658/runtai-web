@@ -114,8 +114,12 @@ export class MyCourseComponent implements OnInit, OnDestroy {
       location.href = url + '?nickname=' + user.UserName + "_" + user.s_login_account;
     });
   }
-  href(id) {
+  href(id, i) {
     // this.course.content.type = type;
+    console.log(i);
+    if (i == 1) {
+      return false;
+    }
     this.router.navigate(['/courseDetails/' + id + '/introduce']);
   }
 

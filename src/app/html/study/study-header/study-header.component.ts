@@ -92,33 +92,7 @@ export class StudyHeaderComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     return { x: x, y: y };
   }
-  getDirection(startx, starty, endx, endy) {
-    var angx = endx - startx;
-    var angy = endy - starty;
-    var result = 0;
 
-    //如果滑动距离太短
-    if (Math.abs(angx) < 2 && Math.abs(angy) < 2) {
-      return result;
-    }
-
-    var angle = this.getAngle(angx, angy);
-    if (angle >= -135 && angle <= -45) {
-      result = 1;
-    } else if (angle > 45 && angle < 135) {
-      result = 2;
-    } else if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
-      result = 3;
-    } else if (angle >= -45 && angle <= 45) {
-      result = 4;
-    }
-
-    return result;
-  }
-  //获得角度
-  getAngle(angx, angy) {
-    return Math.atan2(angy, angx) * 180 / Math.PI;
-  }
 
   clickCalendar() {
     this.calendar = !this.calendar;
@@ -202,7 +176,7 @@ export class StudyHeaderComponent implements OnInit, AfterViewInit, OnDestroy {
     var endx, endy;
     endx = e.changedTouches[0].pageX;
     endy = e.changedTouches[0].pageY;
-    var direction = this.getDirection(this.startx, this.starty, endx, endy);
+    var direction = this.util.getDirection(this.startx, this.starty, endx, endy);
     if (direction == 0) {
       this.daysClick(e, e.target['innerText']);
       return;

@@ -7,7 +7,7 @@ export const environment = {
   production: false, 
   // api: 'http://192.168.1.41:8088/',
   api: 'http://ijkwebapi.csruntitan.com',  
-  pathImg: 'http://192.168.1.41:8088/',
+  pathImg: 'http://ijkeduback.csruntitan.com/',
   //s_domain_name: 'yuming.csruntitan.com',
   s_domain_name: 'hg.csruntitan.com',
   appid: 'wxeb4b65b6f630a479',

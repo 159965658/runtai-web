@@ -6,23 +6,25 @@ export class ScrollService {
 
   constructor() { }
   model = new ScrollModel();
+  hflag = false;
+  cflag = false;
   //model.pageIndex = 1
   ngOnInit() {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     // this.model.pageIndex = 1;
   }
-  setModel(req:ScrollModel){
+  setModel(req: ScrollModel) {
     this.model = req;
   }
   //加载数据
-  getList(){
+  getList() {
     //this.courseService.GetIndexCourse();
   }
-  getModel(){
+  getModel() {
     return this.model;
   }
-  defaultModel(){
+  defaultModel() {
     this.model = new ScrollModel();
     return this.model;
   }

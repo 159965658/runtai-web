@@ -15,13 +15,13 @@ export class CourseComponent implements OnInit, OnDestroy {
   liActive = { index: 0, indexTwo: 1, menuHeight: 0 }
   lilist = [{
     id: 1,
-    value: '区域',
+    value: '范围',
     subValue: [{
-      name: '区域课程',
+      name: '区域',
       value: 2,
       isChecked: true
     }, {
-      name: '全国课程',
+      name: '全国',
       value: 1,
       isChecked: false
     }]
@@ -181,7 +181,7 @@ export class CourseComponent implements OnInit, OnDestroy {
     this.scrollService.defaultModel();
     this.getSublist();
     this.GetElectiveCenter();
-
+    this.switchText(1, 1);
     this.subscription = Observable.fromEvent(window, 'scroll').subscribe((event) => {
       const bodyh = document.body.clientHeight || document.documentElement.clientHeight;//浏览器高度
       const t = document.documentElement.scrollTop || document.body.scrollTop; //滚动距离
@@ -212,7 +212,6 @@ export class CourseComponent implements OnInit, OnDestroy {
   }
   GetElectiveCenter(i: boolean = false) {
     let pageModel = this.scrollService.getModel();
-    console.log(pageModel);
     if (i) {
       pageModel = this.scrollService.defaultModel();
       this.getFlag = true;
@@ -265,13 +264,12 @@ export class CourseComponent implements OnInit, OnDestroy {
     //this.liActive.menuHeight = 46 * this.subValue.length;
   }
   clickSubli(name) {
-
-    console.log(name);
     let isCheckedSub = this.lilist.find(a => a.id == this.liActive.index);
     for (let i in isCheckedSub.subValue) {
       if (isCheckedSub.subValue[i].value == name) {
         isCheckedSub.subValue[i].isChecked = !isCheckedSub.subValue[i].isChecked;
-        this.whereMethod(isCheckedSub.id, isCheckedSub.subValue[i].isChecked ? isCheckedSub.subValue[i].value : 0);
+        let t = isCheckedSub.subValue[i].isChecked ? isCheckedSub.subValue[i].value : 0;
+        this.whereMethod(isCheckedSub.id, t);
         //加载数据
         this.GetElectiveCenter(true);
       }
@@ -289,7 +287,6 @@ export class CourseComponent implements OnInit, OnDestroy {
   clickLiTwo(i) {
     this.liActive.indexTwo = (i + 1);//选中菜单
     this.reqCourse.i_orderby = i;
-
     if (i == 3) {
       if (this.icon == 0) {
         this.reqCourse.i_orderType = 1;
@@ -318,6 +315,31 @@ export class CourseComponent implements OnInit, OnDestroy {
         this.reqCourse.i_subject = value;
         break;
     }
+    this.switchText(i, value);
+  }
+  switchText(i, value) { //切换文字
+    let item = this.lilist.find(a => a.id == i);
+    if (value == 0) {
+      switch (i) {
+        case 1: //区域
+          item.value = '范围';
+          break;
+        case 2: //学段
+          item.value = '学段';
+          break;
+        case 3: //年级
+          item.value = '年级';
+          break;
+        case 4://科目
+          item.value = '科目';
+          break;
+      }
+      //item.value = item.value;
+      return;
+    }
+    let childItem = item.subValue.find(b => b.isChecked);
+    console.log(childItem);
+    item.value = childItem.name;
   }
   changeSearch(value) {
     this.reqCourse.courseName = value;

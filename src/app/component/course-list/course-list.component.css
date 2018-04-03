@@ -4,13 +4,13 @@
 }
 
 .gutter-box {
-  background: #ffffff;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 15px 3% 15px;
-  margin-left: 2%;
-  margin-right: 2%;
-  width: 96%;
+    background: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 15px 3% 15px;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
 }
 
 .re-img {
@@ -19,6 +19,7 @@
     /* height: calc(100vw / 24 * 8 * 0.5714); */
     position: relative;
     min-height: 61.03px;
+    max-height: 80px;
 }
 
 .re-img>img {
