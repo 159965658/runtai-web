@@ -9,7 +9,7 @@ export const environment = {
   api: 'http://ijkwebapi.csruntitan.com',  
   pathImg: 'http://ijkeduback.csruntitan.com/',
   //s_domain_name: 'yuming.csruntitan.com',
-  s_domain_name: 'hg.csruntitan.com',
+  s_domain_name: 'hs.csruntitan.com',
   appid: 'wxeb4b65b6f630a479',
   // course_url:''
 };

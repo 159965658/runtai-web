@@ -5,7 +5,7 @@ import { GetCombinationCourseWareRequest } from '../../../interface/carousel/get
 @Component({
   selector: 'app-arrange',
   templateUrl: './arrange.component.html',
-  styleUrls: ['./arrange.component.css'], 
+  styleUrls: ['./arrange.component.css'],
   // encapsulation: ViewEncapsulation.None
 })
 export class ArrangeComponent implements OnInit {
@@ -26,9 +26,8 @@ export class ArrangeComponent implements OnInit {
           this.type = 2;
           console.log(res);
           setTimeout(() => {
-
             this.changeDomStyle();
-          }, 100);
+          }, 1);
 
         });
       }
