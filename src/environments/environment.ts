@@ -4,12 +4,12 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false, 
+  production: false,
   // api: 'http://192.168.1.41:8088/',
-  api: 'http://ijkwebapi.csruntitan.com',  
-  pathImg: 'http://ijkeduback.csruntitan.com/',
+  api: "http://ijkwebapi.csruntitan.com",
+  pathImg: "http://ijkeduback.csruntitan.com/",
   //s_domain_name: 'yuming.csruntitan.com',
-  s_domain_name: 'hs.csruntitan.com',
-  appid: 'wxeb4b65b6f630a479',
+  s_domain_name: "ijkedu.csruntitan.com",
+  appid: "wxeb4b65b6f630a479"
   // course_url:''
 };

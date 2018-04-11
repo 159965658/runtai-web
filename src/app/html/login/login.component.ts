@@ -1,4 +1,3 @@
-
 import { LoginModel } from "./../../interface/loginModel";
 import { CourseService } from "./../../service/course/course.service";
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
@@ -25,8 +24,8 @@ export class LoginComponent implements OnInit {
   loginModel: Observable<any>;
   errorText = "";
   queryParams = {
-    router: ''
-  }
+    router: ""
+  };
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -35,7 +34,7 @@ export class LoginComponent implements OnInit {
     private cache: CacheService,
     private activatedRouer: ActivatedRoute,
     private pay: PayService
-  ) { }
+  ) {}
   ngOnInit() {
     this.restForm();
     this.activatedRouer.queryParams.subscribe(queryParams => {
@@ -65,8 +64,12 @@ export class LoginComponent implements OnInit {
           return;
         }
 
-        if (res.i_role_permission != 2 && res.i_role_permission != 1 && res.i_role_permission != 0) {
-          this.errorText = '账号不存在';
+        if (
+          res.i_role_permission != 2 &&
+          res.i_role_permission != 1 &&
+          res.i_role_permission != 0
+        ) {
+          this.errorText = "账号不存在";
           this.restForm();
           return;
         }
@@ -109,59 +112,66 @@ export class LoginComponent implements OnInit {
     cacheModel.s_region = jsonModel.s_region;
     cacheModel.s_school_abbreviation = jsonModel.s_school_abbreviation;
     cacheModel.s_study_section = jsonModel.s_study_section;
+    cacheModel.i_invoice_phone = jsonModel.i_invoice_phone;
+    cacheModel.s_domain_name = jsonModel.s_domain_name;
     this.cache.setLocalCache(CacheEnum.loginKey, cacheModel);
     //1.判读是否是家长
     // let url = '' + this.queryParams.router ? '' : this.queryParams.router;
     if (this.queryParams.router) {
-      window.location.href = '/#/' + this.queryParams.router;
+      window.location.href = "/#/" + this.queryParams.router;
       //  this.router.navigate(['order/confirm?id=57']);
       return;
     }
     if (jsonModel.i_role_permission == 0) {
-      this.router.navigate(['/main']);
-    }
-    else if (jsonModel.i_role_permission == 2 || jsonModel.i_role_permission == 1) { //在p-home
-      window.location.href = '/#/p-home';
+      this.router.navigate(["/main"]);
+    } else if (
+      jsonModel.i_role_permission == 2 ||
+      jsonModel.i_role_permission == 1
+    ) {
+      //在p-home
+      window.location.href = "/#/p-home";
     }
   }
   checkedWechat() {
     let weChatCode = this.cache.getSessionCache(CacheEnum.weChat);
-    if (weChatCode) { //是微信授权
+    if (weChatCode) {
+      //是微信授权
       this.cache.removeSessionCache(CacheEnum.weChat);
       console.log(weChatCode);
       this.pay.GetWeixinLogin(weChatCode).subscribe(res => {
         console.log(res);
         if (res.StatusCode == 201) {
-          console.log('没有绑定');
+          console.log("没有绑定");
           //oot8S0pK_-EDwXkh09B3NfMO20Sg
-          this.router.navigate(['/bind'], {
+          this.router.navigate(["/bind"], {
             queryParams: {
               returnUri: this.queryParams.router,
               openId: res.Data
             }
           });
-        }
-        else if (res.StatusCode == 500) {
-
-        }
-        else {
+        } else if (res.StatusCode == 500) {
+        } else {
           this.onBindUser(res);
         }
       });
     }
   }
   clickWe() {
-    let url2 = 'http://ijkapp.csruntitan.com/?#/login'; //http://localhost:4200/#/
+    let url2 = "http://ijkapp.csruntitan.com/?#/login"; //http://localhost:4200/#/
     // let url2 = 'http://localhost:4200/?#/';
-    let uri = '';
+    let uri = "";
     if (this.queryParams.router) {
-      uri = this.queryParams.router
+      uri = this.queryParams.router;
     } else {
-      uri = 'login'
+      uri = "login";
     }
     url2 = encodeURIComponent(url2);
     window.location.href =
-      'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + environment.appid + '&redirect_uri=' + url2 + '&response_type=code&scope=snsapi_userinfo&state=a#wechat_redirect';
+      "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" +
+      environment.appid +
+      "&redirect_uri=" +
+      url2 +
+      "&response_type=code&scope=snsapi_userinfo&state=a#wechat_redirect";
   }
 }
 //https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxeb4b65b6f630a479&redirect_uri=http%3a%2f%2fijkapp.csruntitan.com%2f%3f%23%2flogin&response_type=code&scope=snsapi_userinfo&state=a#wechat_redirect
