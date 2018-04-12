@@ -43,3 +43,7 @@
     padding-left: 10px;
     margin-top: 8px;
 }
+
+.ready::before {
+    height: 0px !important;
+}
