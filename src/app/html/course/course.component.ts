@@ -17,7 +17,7 @@ export class CourseComponent implements OnInit, OnDestroy {
     id: 1,
     value: '范围',
     subValue: [{
-      name: '区域',
+      name: '本地',
       value: 2,
       isChecked: true
     }, {
