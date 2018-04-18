@@ -10,6 +10,7 @@ export const environment = {
   pathImg: "http://ijkeduback.csruntitan.com/",
   //s_domain_name: 'yuming.csruntitan.com',
   s_domain_name: "ijkedu.csruntitan.com",
-  appid: "wxeb4b65b6f630a479"
+  appid: "wxeb4b65b6f630a479",
+  uid: '1000000000'
   // course_url:''
 };

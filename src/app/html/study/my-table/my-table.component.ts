@@ -79,7 +79,10 @@ export class MyTableComponent implements OnInit, OnDestroy, AfterViewInit {
   }
   hrefCode(url, id) {
     this._studyService.UserGenseeBind(id).subscribe(res => {
-      location.href = url + '?nickname=' + this.userName + "_" + this._cacheService.getUserModel().s_login_account;
+      this._studyService.GetToken().subscribe(res => {
+        console.log(res);
+        location.href = url + '?uid=' + res + '&nickname=' + this.userName + "_" + this._cacheService.getUserModel().s_login_account + '&k=' + res;
+      });
     });
   }
   href(id) {

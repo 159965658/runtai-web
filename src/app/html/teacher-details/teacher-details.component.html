@@ -2,14 +2,16 @@
 <div class="t-header">
     <div class="bg-blur" #imgStyle></div>
     <div class="content content-front">
-        <img src="{{url+teacherDetails?.s_teacher_img}}" width="128.5" height="132.5" appErrorImg='s_teacher' />
+        <img src="{{teacherDetails?.s_teacher_img}}" width="128.5" height="132.5" appErrorImg='s_teacher' />
 
         <div class="t-info">
             <p>{{teacherDetails?.s_teacher_name}}</p>
             <div class="t-info-de">
                 <p>{{teacherDetails?.s_region}}</p>
                 <p>{{teacherDetails?.s_school_abbreviation}} </p>
-                <p>{{teacherDetails?.i_study_section | study}} <span>{{teacherDetails?.s_catholic_discipline}} </span></p>
+                <p>{{teacherDetails?.i_study_section | study}}
+                    <span>{{teacherDetails?.s_catholic_discipline}} </span>
+                </p>
             </div>
         </div>
     </div>

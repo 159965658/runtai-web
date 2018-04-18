@@ -111,7 +111,10 @@ export class MyCourseComponent implements OnInit, OnDestroy {
   hrefCode(url, id) {
     let user = this._cacheService.getUserModel();
     this._studyService.UserGenseeBind(id).subscribe(res => {
-      location.href = url + '?nickname=' + user.UserName + "_" + user.s_login_account;
+      this._studyService.GetToken().subscribe(res => {
+        console.log(res);
+        location.href = url + '?uid=' + res + '&nickname=' + user.UserName + "_" + user.s_login_account + '&k=' + res;
+      });
     });
   }
   href(id, i) {

@@ -4,6 +4,7 @@ import { HttpBaseService } from '../../util/http-Base.service';
 import { Urls } from '../url';
 import { Observable } from 'rxjs/Observable';
 import { CacheService } from '../cache/cache.service';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class StudyService {
@@ -55,5 +56,9 @@ export class StudyService {
   UserGenseeBind(i_courseWare_id) {
     let user = this.cache.getUserModel();
     return this.http.httpPost(Urls.UserGenseeBind, { i_courseWare_id: i_courseWare_id, i_users_id: user.UserId });
+  }
+  GetToken() {
+    let user = this.cache.getUserModel();
+    return this.http.httpPost(Urls.GetToken, { uid: environment.uid + user.UserId });
   }
 }

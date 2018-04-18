@@ -29,7 +29,7 @@ export class TeacherDetailsComponent implements OnInit {
     this._teacherService.GetTeacherDetails(this.id)
       .subscribe(res => {
         this.teacherDetails = res;
-        let style = this.teacherDetails.s_teacher_img ? 'url(' + this.url + '' + this.teacherDetails.s_teacher_img + ')' : 'url(../../../assets/imgs/skms2.png)';
+        let style = this.teacherDetails.s_teacher_img ? 'url(' + this.teacherDetails.s_teacher_img + ')' : 'url(../../../assets/imgs/skms2.png)';
         setTimeout(() => {
           this.imgBox.nativeElement['style']['backgroundImage'] = style;
         }, 500)

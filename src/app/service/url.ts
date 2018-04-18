@@ -51,5 +51,6 @@ export const Urls = {
   GetCourseErrorByParent: host + '/WebSite/GetCourseErrorByParent',//获取异常考勤列表
   UserGenseeBind: host + '/WebSite/UserGenseeBind',//添加章节
   GetCourseCalendarByParentRed: host + '/WebSite/GetCourseCalendarByParentRed',//获取图片
+  GetToken: host + '/WebSite/GetToken',//获取token
   // GetCourseResources: host +'/WebSite/GetCourseResources'
 };
