@@ -22,6 +22,8 @@
                 <label *ngIf="courseDetails?.i_present_price != 0"> ￥{{courseDetails?.i_present_price | number:'1.2-2'}}</label>
                 <em *ngIf="courseDetails?.i_present_price != courseDetails?.i_original_price">￥{{courseDetails?.i_original_price | number:'1.2-2'}}</em>
             </div>
+
+            <i class="iconfont icon-weibiaoti-" (click)='fenxFun()'></i>
         </div>
 
     </div>
@@ -78,4 +80,14 @@
         <router-outlet></router-outlet>
     </div>
     <app-course-footer [id]='paramsId'></app-course-footer>
+</div>
+
+
+<div class="fenx" *ngIf="fenx" (click)='fenx = false'>
+    <div style="position: relative">
+        <i class='iconfont icon-iconsfsx'></i>
+        <p class="fenxp">
+            点击此处分享
+        </p>
+    </div>
 </div>

@@ -4,4 +4,5 @@ export enum CacheEnum {
   weChat = 'weChat',
   subject = 'subject',
   childList = 'childList',
+  routerHis = 'routerHis'
 }

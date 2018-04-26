@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CacheService } from '../service/cache/cache.service';
 import { Router } from '@angular/router';
 import { MessageService } from '../service/message.service';
-
+import * as moment from 'moment';
 @Injectable()
 export class UtilMethodService {
 
@@ -254,5 +254,56 @@ export class UtilMethodService {
   //获得角度
   getAngle(angx, angy) {
     return Math.atan2(angy, angx) * 180 / Math.PI;
+  }
+  // 生成签名的时间戳
+  myTimeUnix(): any {
+    //const UnixToDate: any = new Date();
+    let UnixToDate = moment().format('YYYY/MM/DD hh:mm:ss'); //当前时间 
+    const CurTime = Date.parse(new Date(UnixToDate).toString());
+    return CurTime;
+  }
+  // 随机生成字符串
+  getRandomString(len?): any {
+    len = len || 32;
+    const chars = "ABCDEFGHIJKMLNOPQRSTUVWXYZabcdefghijkmlnopqrstuvwxyz0123456789";
+    const maxPos = chars.length;
+    let pwd = '';
+    for (let i = 0; i < len; i++) {
+      pwd += chars.charAt(Math.floor(Math.random() * maxPos));
+    }
+    return pwd;
+  }
+  parseParam(param, key) {
+
+    var paramStr = "";
+
+    if (param instanceof String || param instanceof Number || param instanceof Boolean) {
+
+      paramStr += "&" + key + "=" + encodeURIComponent(param.toString());
+
+    } else {
+      // param.forEach(element => {
+      //   console.log(element);
+      // });
+      for (const k in param) {
+        //  const value = key == null ? k : key + (param instanceof Array ? "[" + k + "]" : "." + k);
+        // console.log(k, param[k]);
+        // if (object.hasOwnProperty(key)) {
+        //   const element = object[key];
+
+        // }
+        paramStr += '&' + k + '=' + param[k];
+      }
+
+      // $.each(param, function (i) {
+
+      //   vark = key == null ? i : key + (paraminstanceof Array ? "[" + i + "]" : "." + i);
+
+      // paramStr += '&' + parseParam(this, k);
+
+    }
+    paramStr = paramStr == "" ? paramStr : '?' + paramStr.substr(1);
+    console.log(paramStr);
+    return paramStr;
   }
 }

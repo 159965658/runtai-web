@@ -4,7 +4,7 @@
 <ul class="t">
     <li *ngFor="let item of arrList" [routerLink]="['/t-details']" [queryParams]="{id:item.i_id}">
         <div class="img-t" appErrorImg="s_art_head">
-            <img src="{{url+item.s_head_portrait}}">
+            <img src="{{item.s_head_portrait}}" appErrorImg='s_teacher'>
         </div>
         <div class="t-text">
             <h2>{{item.s_real_name}}</h2>

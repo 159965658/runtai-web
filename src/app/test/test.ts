@@ -9,7 +9,7 @@ import {
 
 
 export const fadeIn = trigger('fadeIn', [
-    state('in', style({transform: 'translate(0)'})), // 默认平移0
+    state('in', style({ transform: 'translate(0)' })), // 默认平移0
     transition('void => *', [ // 进场动画
         animate(500, keyframes([
             style({ opacity: 0, transform: 'translateX(-100%)', offset: 0 }),
@@ -27,7 +27,25 @@ export const fadeIn = trigger('fadeIn', [
         ]))
     ]),
 ]);
-
+export const fadeInLoad = trigger('fadeIn', [
+    state('in', style({ transform: 'translate(0)' })), // 默认平移0
+    transition('void => *', [ // 进场动画
+        animate(500, keyframes([
+            style({ opacity: 0, transform: 'translateX(-100%)', offset: 0 }),
+            style({ opacity: 0.2, transform: 'translateX(-80%)', offset: 0.2 }),
+            style({ opacity: 0.5, transform: 'translateX(-50%)', offset: 0.5 }),
+            style({ opacity: 0.7, transform: 'translateX(-20%)', offset: 0.7 }),
+            style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 })
+        ]))
+    ]),
+    transition('* => void', [
+        animate(500, keyframes([
+            style({ opacity: 1, transform: 'translateX(0)', offset: 0 }),
+            style({ opacity: 0.5, transform: 'translateX(-25%)', offset: 0.7 }),
+            style({ opacity: 0, transform: 'translateX(-100%)', offset: 1.0 })
+        ]))
+    ]),
+]);
 
 // 定义一个鼠标点击运动的动画
 

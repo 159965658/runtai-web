@@ -1,7 +1,7 @@
-<div class="my-content">
+<!-- <div class="my-content">
     <div class="bar bar-header my-login-header">
         <div class="title h1">
-            <!-- <img src="../../../assets/imgs/login_logo.png" alt="京客网"> -->
+         
         </div>
     </div>
     <form nz-form [formGroup]="formModel" class="login-form" (submit)="onSubmit()">
@@ -33,7 +33,7 @@
 
         </div>
     </form>
-    <!-- 
+     
     <div class="button-bar my-tcenter">
         <div class="title my-size14 " nz-row>
             <span class="" nz-col [nzSpan]="2"></span>
@@ -48,7 +48,57 @@
             <i class="iconfont icon-weixin icon-size50 icon-color93" nz-col [nzSpan]="4" (click)='clickWe()'></i>
             <span class="" nz-col [nzSpan]="10"></span>
         </div>
-    </div> -->
+    </div>  
 
+</div> -->
+
+
+<div class="contents">
+    <form nz-form [formGroup]="formModel" (submit)="onSubmit()">
+        <div class="head">
+            <img class="head_img" src="../../../assets/imgs/land/landing.jpg">
+        </div>
+        <div class="information">
+
+            <div class="information_user" nz-form-item>
+                <div class="information_user_Line" nz-form-control [nzValidateStatus]="formModel.controls.UserName">
+                    <img class="user_name" src="../../../assets/imgs/land/user_name.png">
+                    <input nz-input type="text" class="landing_screen fsize2rem" placeholder="用户名/手机号" formControlName='UserName'>
+                    <div nz-form-explain *ngIf="formModel.controls.UserName.dirty&&formModel.controls.UserName.hasError('required')">请输入用户名!</div>
+                </div>
+            </div>
+            <div class="information_user" nz-form-item>
+                <!-- <div class="information_user_Line">
+                    <img class="user_Password" src="../../../assets/imgs/land/Password.png">
+                    <input class="landing_screen fsize2rem" placeholder="用户名/手机号" type="text" value="">
+                </div> -->
+                <div class="information_user_Line" nz-form-control [nzValidateStatus]="formModel.controls.PassWord">
+                    <img class="user_Password" src="../../../assets/imgs/land/Password.png">
+                    <input nz-input type="password" placeholder="密码" formControlName='PassWord' class="landing_screen fsize2rem">
+                    <div nz-form-explain *ngIf="formModel.controls.PassWord.dirty&&formModel.controls.PassWord.hasError('required')">请输入密码!</div>
+                    <div nz-form-explain *ngIf="formModel.controls.PassWord.dirty&&formModel.controls.PassWord.hasError('minlength')">密码位数大于4位!</div>
+                </div>
+            </div>
+            <div class="information_around">
+                <span class="fsize2rem around" [routerLink]="(['/main'])">
+                     随便逛逛
+                </span>
+                <span class="fsize2rem forget_password" [routerLink]="(['/rest'])">
+                     忘记密码？
+                </span>
+            </div>
+
+        </div>
+        <div class="landing_button">
+            <button class="land fsize2rem">登陆</button>
+            <!-- <div class="other_ways">
+                <span class="fsize2rem other_ways_landing">
+                    其他方式登陆
+                </span>
+            </div>
+            <img class="weixin" src="../../../assets/imgs/land/weixin_logo.png" (click)='clickWe()'> -->
+        </div>
+    </form>
 </div>
 <!-- <app-load></app-load> -->
+<app-loading [isInput]='isLoading'></app-loading>

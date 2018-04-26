@@ -5,10 +5,10 @@
         <span class="left10"> {{dateTitle?.week}}	</span>
     </div>
     <div class="trip" *ngFor="let item of dataList">
-        <div *ngIf="(item.i_off_shelf == 1) else elseBlock" class="trip_time">
-            <div class="in_course_time" style="line-height:68px">
-                <p class="f_d">已经停课</p>
-            </div>
+        <div *ngIf="(item.i_off_shelf == 1) else elseBlock" class="trip_time" style="line-height:51px">
+
+            已经停课
+
         </div>
         <ng-template #elseBlock>
             <div class="trip_time">

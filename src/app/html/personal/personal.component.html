@@ -3,7 +3,7 @@
         <div class="personal_title">
             <ul>
                 <li>
-                    <img src="{{url+user?.s_head_portrait}}" appErrorImg='s_user' width="55px" height="55px" />
+                    <img src="{{user?.s_head_portrait}}" appErrorImg='s_user' width="55px" height="55px" />
                 </li>
                 <li>
                     <span class="f_tit">
@@ -25,7 +25,7 @@
                 <li class="navigation">
                     <div class="order_form" [routerLink]="['/myorder/stay']">
                         <div class="associated_children order">
-                          <img src="../../../assets/imgs/be_paid.png" />
+                            <img src="../../../assets/imgs/be_paid.png" />
                         </div>
                         <p class="f_form">待支付订单</p>
                         <a class="f_form">
@@ -35,7 +35,7 @@
                     <div class="order_form_xian"></div>
                     <div class="order_form" [routerLink]="['/main/study/my-course']" [queryParams]="{id:0}">
                         <div class="children_course order">
-                           <img src="../../../assets/imgs/learning.png" />
+                            <img src="../../../assets/imgs/learning.png" />
                         </div>
                         <p class="f_form">在学课程</p>
                         <a class="f_form">
@@ -46,7 +46,7 @@
 
                     <div class="order_form" [routerLink]="['/main/study/my-course']" [queryParams]="{id:1}">
                         <div class="abnormal_attendance order">
-                          <img src="../../../assets/imgs/complete.png" />
+                            <img src="../../../assets/imgs/complete.png" />
                         </div>
                         <p class="f_form ">完成课程</p>
                         <a class="f_form ">

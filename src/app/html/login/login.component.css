@@ -1,81 +1,181 @@
 .my-content {
-  padding: 0px 5px;
-  background: url(../../../assets/imgs/login.png) no-repeat center;
-  height: 100%;
-  background-size: 101% 101%;
-  -moz-background-size:101% 101%;
-  min-height: 500px;
+    padding: 0px 5px;
+    background: url(../../../assets/imgs/login.png) no-repeat center;
+    height: 100%;
+    background-size: 101% 101%;
+    -moz-background-size: 101% 101%;
+    min-height: 500px;
 }
+
 .my-login-header {
-  padding-top: 50px;
-  margin-bottom: 140px;
-  text-align: center;
+    padding-top: 50px;
+    margin-bottom: 140px;
+    text-align: center;
 }
 
-
-.my-login-input{
-  height: 32px;
-  padding-left: 25px;
-  border-color: #d9d9d9;
-  border-width: 1px;
-  border-style: solid;
+.my-login-input {
+    height: 32px;
+    padding-left: 25px;
+    border-color: #d9d9d9;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .my-login-divbutton {
-  margin: 25px 0px;
+    margin: 25px 0px;
 }
 
 .my-login-button {
-  height: 32px;
-  background-color: #3497e7;
-  color: #fff;
-  font-size: 1.5rem;
-  width: 100%;
-  border: none;
-  border-radius: 8px;
+    height: 32px;
+    background-color: #3497e7;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
 }
 
 .my-hr {
-  height: 1px;
-  background-color: #d9d9d9;
-  padding: 0px 5px;
-  margin: 11px 0px;
+    height: 1px;
+    background-color: #d9d9d9;
+    padding: 0px 5px;
+    margin: 11px 0px;
 }
 
 ::-webkit-input-placeholder {
-  /* WebKit browsers */
-  color: #d9d9d9;
+    /* WebKit browsers */
+    color: #d9d9d9;
 }
 
 :-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #d9d9d9;
+    /* Mozilla Firefox 4 to 18 */
+    color: #d9d9d9;
 }
 
 ::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #d9d9d9;
+    /* Mozilla Firefox 19+ */
+    color: #d9d9d9;
 }
 
 :-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  color: #999;
+    /* Internet Explorer 10+ */
+    color: #999;
 }
 
-
-
-
-
-
 .login-form {
-  max-width: 300px;
-  margin:0 auto;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .login-form-forgot {
-  float: right;
+    float: right;
 }
 
 .login-form-button {
-  width: 100%;
+    width: 100%;
+}
+
+.head_img {
+    width: 100%;
+}
+
+.information {
+    padding-top: 20px;
+}
+
+.landing_button,
+.information_user,
+.information_around {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.information_user {
+    position: relative;
+    margin-top: 25px;
+}
+
+.information_around {
+    position: relative;
+    margin-top: 10px;
+}
+
+.information_user_Line {
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.user_name,
+.user_Password {
+    position: absolute;
+    top: 5px;
+    width: 17px;
+}
+
+.landing_screen {
+    height: 23px;
+    border: 0;
+    cursor: text;
+    width: 85%;
+    margin: 5px 0 10px 15%;
+    outline: none;
+}
+
+.landing_button {
+    padding-top: 65px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.forget_password {
+    position: absolute;
+    right: 0;
+}
+
+.fsize2rem {
+    font-size: 1.5rem;
+}
+
+.around,
+.forget_password,
+.other_ways_landing {
+    color: #868686;
+}
+
+.land {
+    width: 100%;
+    background: #72b2ed;
+    border: 0;
+    height: 40px;
+    border-radius: 50px;
+    color: #ffffff;
+    outline: none;
+}
+
+.land:hover {
+    background: #368ad9;
+    outline: none;
+}
+
+.other_ways {
+    height: 50px;
+    border-bottom: 1px solid #c5c5c5;
+    position: relative;
+}
+
+.other_ways_landing {
+    position: absolute;
+    bottom: -10px;
+    background: #fff;
+    left: 35%;
+    padding: 0 5%;
+}
+
+.weixin {
+    margin-top: 35px;
+    width: 25px;
+}
+
+.contents {
+    height: 100% !important;
+    background: #fff;
 }

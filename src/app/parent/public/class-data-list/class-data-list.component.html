@@ -11,7 +11,7 @@
                 </div> -->
                         <!-- <div class="three_level f_three_click"> -->
                         <div class="class_data_content">
-                            <p>时间时段：{{item.d_course_time*1000 | date:'yyyy/MM/dd HH:mm'}} - {{item.d_course_endtime*1000 | date:'HH:mm'}}</p>
+                            <p>课堂时段：{{item.d_course_time*1000 | date:'yyyy/MM/dd HH:mm'}} - {{item.d_course_endtime*1000 | date:'HH:mm'}}</p>
                             <p>预计在线时长：{{item.s_course_time}}min</p>
                             <p>实际在线时长：{{item.s_actual_time}}min</p>
                             <div *ngIf="!item.s_Absenteeism else elseBlock">

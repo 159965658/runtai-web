@@ -35,14 +35,14 @@ export class AddinputComponent implements OnInit {
     }, 500);
   }
   handleCancel = (e) => {
-    // for (const i in this.formModel.controls) {
-    //   this.formModel.controls[i].markAsDirty();
-    // }
+    //if (this.formModel.valid) {
     this.isInput = false;
     this.changeAddinput.emit(this.inputValue);
+    //   return;
+    // } 
   }
-  handleOk = (e)=>{
-    
+  handleOk = (e) => {
+
   }
 
 }

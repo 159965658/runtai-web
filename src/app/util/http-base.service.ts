@@ -5,9 +5,10 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { MessageService } from '../service/message.service';
 import 'rxjs/add/operator/shareReplay';
+import { UtilMethodService } from "./util-method.service";
 @Injectable()
 export class HttpBaseService {
-  constructor(private http: HttpClient, private _messageService: MessageService) { }
+  constructor(private http: HttpClient, private _messageService: MessageService, private util: UtilMethodService) { }
 
   subjectArr = new Subject<any>();
   httpPost(url: string, options: any, _headers?: any): Observable<any> {
@@ -44,5 +45,11 @@ export class HttpBaseService {
       return subjectArr.asObservable();
     });
     return subjectArr.asObservable();
+  }
+  httpGet(url, req): Observable<any> {
+    this.util.parseParam({ 'name': '2' }, '');
+    const headers = new HttpHeaders().set("Content-Type", "application/json");
+    let subjectArr = new Subject<any>();
+    return this.http.get(url, { headers });
   }
 }

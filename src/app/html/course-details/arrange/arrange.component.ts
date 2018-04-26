@@ -12,7 +12,7 @@ export class ArrangeComponent implements OnInit {
 
   constructor(private courseService: CourseService, private el: ElementRef, private renderer: Renderer) { }
   listModel: any;
-  type = 0;
+  type = 1;
   ngOnInit() {
     setTimeout(() => {
 
@@ -33,6 +33,7 @@ export class ArrangeComponent implements OnInit {
       }
       else {
         this.courseService.GetCourseWare(this.courseService.content.Id).subscribe(res => {
+          this.type = 0;
           this.listModel = res;
         });
       }

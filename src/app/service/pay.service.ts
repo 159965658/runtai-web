@@ -11,10 +11,11 @@ export class PayService {
 
   constructor(private http: HttpClient, private httpPost: HttpBaseService) { }
   WxPay(code: string, id: number) {
+    console.log(code);
     return this.http.get(Urls.WxPay + "?code=" + code + '&order_id=' + id);
   }
   hrefCode(id) {
-    const url2 = encodeURIComponent('http://ijkapp.csruntitan.com/?#/pay?id=' + id);
+    const url2 = encodeURIComponent(environment.wxUri + '/?#/pay?id=' + id);
     window.location.href =
       'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + environment.appid + '&redirect_uri=' + url2 + '&response_type=code&scope=snsapi_base&state=a#wechat_redirect';
   }
@@ -25,5 +26,9 @@ export class PayService {
   }
   GetWeixinBind(openid, loginName, password) {
     return this.httpPost.httpPostf(Urls.GetWeixinBind + '?openid=' + openid + '&loginName=' + loginName + '&password=' + password, {});
+  }
+  //分享
+  GetAcctonToken() {
+    return this.http.post(Urls.GetAcctonToken, {});
   }
 }

@@ -14,5 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private courseServe: CourseService, private scrollService: ScrollService) { }
 
   ngOnInit() {
+
   }
+
 }

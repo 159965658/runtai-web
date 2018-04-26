@@ -94,6 +94,7 @@ import { ShortMessageService } from './service/short-message/short-message.servi
 import { BindUserComponent } from './html/bind-user/bind-user.component';
 import { RestPassWordComponent } from './html/rest-pass-word/rest-pass-word.component';
 import { UpImgComponent } from './html/up-img/up-img.component';
+import { StartRouterService } from './service/start-router.service';
 
 const pipeList = [
   MyAsyncPipe,
@@ -127,7 +128,7 @@ const pipeList = [
     // GoBackComponent,
     MyTimestampPipe,
     // MyGradeSubPipe,
-    MySubjectTypePipe, 
+    MySubjectTypePipe,
     IntroduceComponent,
     ArrangeComponent,
     DiscussionComponent,
@@ -179,7 +180,7 @@ const pipeList = [
   bootstrap: [AppComponent],
   providers: [{ provide: NZ_MESSAGE_CONFIG, useValue: { nzDuration: 3000 } }, MessageService, StudyService,
     OrderService, CourseService, HttpBaseService, ScrollService, CarouselService, UtilMethodService, CacheService, TeacherService,
-    CanLoginActivate, CanIsLoginActivate, CanIsPassWordActivate, NzScrollService, MessageHttpService, PayService, { provide: LocationStrategy, useClass: HashLocationStrategy },
+    CanLoginActivate, CanIsLoginActivate, StartRouterService, CanIsPassWordActivate, NzScrollService, MessageHttpService, PayService, { provide: LocationStrategy, useClass: HashLocationStrategy },
   { provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true }, ChildService, ShortMessageService, CheckSonListActivate, CanIsParentActivate],
   // exports: [
   //   MyGradeSubPipe,

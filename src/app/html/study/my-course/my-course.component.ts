@@ -123,6 +123,7 @@ export class MyCourseComponent implements OnInit, OnDestroy {
     if (i == 1) {
       return false;
     }
+    this._cacheService.setSessionCache(CacheEnum.routerHis, this.router.url);
     this.router.navigate(['/courseDetails/' + id + '/introduce']);
   }
 

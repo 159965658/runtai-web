@@ -11,6 +11,7 @@ import { ObserveEnum } from '../../../enum/ObserveEnum';
 import { UtilMethodService } from '../../../util/util-method.service';
 import { CourseCalendarPhoneSearch } from '../../../interface/study/CourseCalendarPhoneSearch';
 import { Router } from '@angular/router';
+import { CacheEnum } from '../../../enum/cacheEnum';
 @Component({
   selector: 'app-my-table',
   templateUrl: './my-table.component.html',
@@ -86,6 +87,7 @@ export class MyTableComponent implements OnInit, OnDestroy, AfterViewInit {
     });
   }
   href(id) {
+    this._cacheService.setSessionCache(CacheEnum.routerHis, this.router.url);
     // this.course.content.type = type;
     this.router.navigate(['/courseDetails/' + id + '/introduce']);
   }

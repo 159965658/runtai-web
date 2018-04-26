@@ -23,7 +23,7 @@ export class PersonalDataComponent implements OnInit {
   ngOnInit() {
     let usermodel = this.cache.getUserModel();
     this.user = usermodel;
-    this.user.s_head_portrait = this.url2 + this.user.s_head_portrait;
+    this.user.s_head_portrait = this.user.s_head_portrait;
     console.log(this.user);
   }
   fileLoad() {
@@ -43,7 +43,7 @@ export class PersonalDataComponent implements OnInit {
     this.http.post(host + '/WebSite/UploadImage?i_user_id=' + this.user.UserId, formData, { headers }).subscribe(res => {
       this.user.s_head_portrait = res['Data'];
       this.cache.setLocalCache(CacheEnum.loginKey, this.user);
-      this.user.s_head_portrait = this.url2 + this.user.s_head_portrait;
+      this.user.s_head_portrait =  this.user.s_head_portrait;
       console.log(res);
     })
     //const imgEncode = this.util.getBase64Image(fileList[0]);

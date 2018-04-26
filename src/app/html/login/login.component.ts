@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
   queryParams = {
     router: ""
   };
+  isLoading = false;
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -34,7 +35,7 @@ export class LoginComponent implements OnInit {
     private cache: CacheService,
     private activatedRouer: ActivatedRoute,
     private pay: PayService
-  ) {}
+  ) { }
   ngOnInit() {
     this.restForm();
     this.activatedRouer.queryParams.subscribe(queryParams => {
@@ -58,7 +59,9 @@ export class LoginComponent implements OnInit {
       const model = new LoginModel();
       model.s_paddword = this.formModel.value.PassWord;
       model.s_login_account = this.formModel.value.UserName;
+      this.isLoading = true;
       this.courseService.GetLogin(model).subscribe(res => {
+        this.isLoading = false;
         if (res.StatusCode === 500) {
           this.errorText = res.Data;
           return;
@@ -98,7 +101,7 @@ export class LoginComponent implements OnInit {
     cacheModel.s_email = jsonModel.s_email;
     cacheModel.s_gender = jsonModel.s_gender;
     cacheModel.s_grade = jsonModel.s_grade;
-    cacheModel.s_head_portrait = jsonModel.s_head_portrait;
+    //cacheModel.s_head_portrait = jsonModel.s_head_portrait;
     cacheModel.s_highest_title = jsonModel.s_highest_title;
     cacheModel.s_login_account = jsonModel.s_login_account;
     cacheModel.s_nation = jsonModel.s_nation;

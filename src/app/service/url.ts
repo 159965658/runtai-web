@@ -52,5 +52,7 @@ export const Urls = {
   UserGenseeBind: host + '/WebSite/UserGenseeBind',//添加章节
   GetCourseCalendarByParentRed: host + '/WebSite/GetCourseCalendarByParentRed',//获取图片
   GetToken: host + '/WebSite/GetToken',//获取token
+  GetMessageCountRed: host + '/WebSite/GetMessageCountRed',//获取微信端小红点 
+  GetAcctonToken: host + '/WebSite/GetAcctonToken',//获取微信token
   // GetCourseResources: host +'/WebSite/GetCourseResources'
 };

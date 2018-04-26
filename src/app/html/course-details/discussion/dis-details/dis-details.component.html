@@ -40,7 +40,7 @@
 <form class="addput" nz-form [formGroup]="formModel" (submit)="submit()" *ngIf="flag">
     <!-- nz-form [formGroup]="formModel" (submit)="handleCancel($event)" -->
     <input nz-input [(ngModel)]="inputValue" class="nz-input" placeholder="我要问答" #addInput formControlName='inputValue' />
-    <button nz-button>发送</button>
+    <button nz-button class='ant-btn' [disabled]='!this.formModel.valid'>发送</button>
     <!-- (ngModelChange)="_console($event)" -->
 </form>
 

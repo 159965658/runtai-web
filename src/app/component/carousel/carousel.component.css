@@ -1,5 +1,6 @@
 nz-carousel {
     height: auto;
+    min-height: 150px;
     /* margin: 8px 0px; */
     /* margin-top: 37px; */
     padding: 8px 0px;

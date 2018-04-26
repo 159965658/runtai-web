@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CourseService } from '../../../../service/course/course.service';
 import { ActivatedRoute } from '@angular/router';
 import { GetCourseReviewReply } from '../../../../interface/courseModel';
@@ -16,8 +16,11 @@ import { MessageService } from '../../../../service/message.service';
   templateUrl: './dis-details.component.html',
   styleUrls: ['./dis-details.component.css']
 })
-export class DisDetailsComponent implements OnInit {
+export class DisDetailsComponent implements OnInit, OnDestroy {
 
+  ngOnDestroy(): void {
+    //this.cache.removeSessionCache('c');
+  }
   constructor(private message: MessageService, private _courseService: CourseService, private activeRoute: ActivatedRoute, private fb: FormBuilder, private cache: CacheService, private scroll: NzScrollService) { }
   private req = new GetCourseReviewReply();
   list = new Array();
@@ -38,7 +41,8 @@ export class DisDetailsComponent implements OnInit {
       this.GetCourseReviewAreaDetails();
       setTimeout(() => {
         this.GetCourseReviewReply();
-        this.flag = this._courseService.content.flag;
+        const gs = this.cache.getSessionCache('c');
+        this.flag = gs == null ? false : gs;
       }, 500);
     });
     this.formModel = this.fb.group({

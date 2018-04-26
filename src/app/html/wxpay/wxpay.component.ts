@@ -32,7 +32,10 @@ export class WxpayComponent implements OnInit {
           if (typeof window['WeixinJSBridge'] == "undefined") { this.onPay(); }
           else
             this.onBridgeReady(this.res);
-        }, error => { alert('服务器出现错误，请稍后再试'); this.router.navigate(['/myorder']); });
+        }, error => {
+          alert(error);
+          this.router.navigate(['/myorder']);
+        });
       })
       //   alert(id+","+cache);
       // setTimeout(() => {

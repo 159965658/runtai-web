@@ -1,7 +1,7 @@
 <div class="reply">
     <div class="dis-content clearfix" *ngFor="let item of list">
         <div class="dis-headerimg">
-            <img src="{{url+item?.s_appraise_head_portrait}}" appErrorImg='s_user'>
+            <img src="{{item?.s_appraise_head_portrait}}" appErrorImg='s_user'>
         </div>
         <div class="dis-body">
             <h2>{{item?.i_appraise_name}}</h2>

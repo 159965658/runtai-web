@@ -1,16 +1,15 @@
 .days_select {
     width: 100%;
     height: 100%;
-
 }
 
 .date {
     height: 37px;
-  background: #FFFFFF;
+    background: #FFFFFF;
     padding-left: 4.6%;
     line-height: 37px;
     border-bottom: 1px solid #82B7E3;
-    font-size: 0.75em;
+    font-size: 1.4rem;
     color: #3497E7;
 }
 
@@ -28,7 +27,6 @@
     height: 100%;
     text-align: center;
     padding-top: 12px;
-
 }
 
 .trip_info {

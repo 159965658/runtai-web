@@ -6,7 +6,7 @@
     </span>
     </div>
     <div nz-col [nzSpan]="3" [nzOffset]="2">
-        <i *ngIf="msgLocal" [routerLink]="[ '/message']" class="anticon anticon-my-message" style="font-size: 2rem;margin-top: 9px;"></i>
+        <i *ngIf="msgLocal" [routerLink]="[ '/message']" class="anticon anticon-my-message " [ngClass]="{'my-message':message}" style="font-size: 2rem;margin-top: 9px;"></i>
         <span class="searchCen" *ngIf="!msgLocal" (click)="goBack()">取消</span>
     </div>
 </div>

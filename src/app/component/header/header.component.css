@@ -38,4 +38,16 @@
     height: 15px;
     background: url(../../../assets/imgs/pl.png);
     background-size: 100%;
+    position: relative;
+}
+
+.my-message::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    right: -2px;
 }

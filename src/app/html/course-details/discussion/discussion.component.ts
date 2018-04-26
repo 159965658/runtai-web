@@ -78,7 +78,7 @@ export class DiscussionComponent implements OnInit, AfterViewInit {
   onChange(status: boolean) {
     console.log(status);
   }
-  affixClick(e) {
+   affixClick(e) {
     this.isAffix = false;
     this.input = true;
     this.childAddInput._inputFocus();

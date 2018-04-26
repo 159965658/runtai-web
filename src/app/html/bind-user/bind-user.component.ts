@@ -30,7 +30,7 @@ export class BindUserComponent implements OnInit {
     private cache: CacheService,
     private activatedRouer: ActivatedRoute,
     private pay: PayService
-  ) {}
+  ) { }
   ngOnInit() {
     this.restForm();
     this.activatedRouer.queryParams.subscribe(queryParams => {
@@ -94,7 +94,7 @@ export class BindUserComponent implements OnInit {
           cacheModel.s_email = jsonModel.s_email;
           cacheModel.s_gender = jsonModel.s_gender;
           cacheModel.s_grade = jsonModel.s_grade;
-          cacheModel.s_head_portrait = jsonModel.s_head_portrait;
+          //  cacheModel.s_head_portrait = jsonModel.s_head_portrait;
           cacheModel.s_highest_title = jsonModel.s_highest_title;
           cacheModel.s_login_account = jsonModel.s_login_account;
           cacheModel.s_nation = jsonModel.s_nation;

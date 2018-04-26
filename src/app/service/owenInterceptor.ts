@@ -16,7 +16,7 @@ import { environment } from "../../environments/environment";
 
 @Injectable()
 export class NoopInterceptor implements HttpInterceptor {
-  constructor(private cache: CacheService, private message: MessageService) {}
+  constructor(private cache: CacheService, private message: MessageService) { }
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
@@ -45,9 +45,10 @@ export class NoopInterceptor implements HttpInterceptor {
       const id = userModel.UserId;
       newReq.body["i_users_id"] = id;
     }
-    newReq.body["s_domain_name"] = userModel
-      ? userModel.s_domain_name
-      : environment.s_domain_name;
+    if (newReq.body)
+      newReq.body["s_domain_name"] = userModel
+        ? userModel.s_domain_name
+        : environment.s_domain_name;
     return next.handle(newReq);
   }
 }
