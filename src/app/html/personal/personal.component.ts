@@ -26,12 +26,12 @@ export class PersonalComponent implements OnInit {
   }
   GetUserStatistics() {
     this.study.GetUserStatistics().subscribe(res => {
-      console.log(res);
+   
       this.res = res;
     });
   }
   loginOut() {
-    console.log('退出登录');
+  
     this.cache.removeUserModel();//退出登录
     this.router.navigate(['/login']);
   }

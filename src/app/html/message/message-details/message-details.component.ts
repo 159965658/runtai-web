@@ -25,7 +25,7 @@ export class MessageDetailsComponent implements OnInit, AfterViewInit {
   }
   GetMessage() {
     this.message.GetMessageDetails(this.id).subscribe(res => {
-      console.log(res);
+     
       this.model = res;
     })
   }

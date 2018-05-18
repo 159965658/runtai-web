@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { CacheService } from "../../../service/cache/cache.service";
 import { CourseDetailsModel } from "../../../interface/courseModel";
 import { CacheEnum } from "../../../enum/cacheEnum";
-import { OnDestroy } from "@angular/core/src/metadata/lifecycle_hooks";
+import { OnDestroy, AfterViewInit } from "@angular/core/src/metadata/lifecycle_hooks";
 import { Subscription } from "rxjs";
 import { OrderService } from "../../../service/order/order.service";
 import { IndexHuiKuan } from "../../../interface/order/index-hui-kuan";
@@ -28,11 +28,16 @@ import { PhoneValidator } from "../../../Validator/phone-validator";
   entryComponents: [MessageComponent],
   styleUrls: ["./order-confirm.component.css"]
 })
-export class OrderConfirmComponent implements OnInit, OnDestroy {
+export class OrderConfirmComponent implements OnInit, OnDestroy, AfterViewInit {
+  ngAfterViewInit(): void {
+    this.searchInput.nativeElement.focus();
+  }
+  @ViewChild('searchInput') searchInput;
   //inputModel: any;
   course = [];
   courseId: any;
   subscribeObject: Subscription;
+
   constructor(
     private fb: FormBuilder,
     private _router: Router,
@@ -41,7 +46,7 @@ export class OrderConfirmComponent implements OnInit, OnDestroy {
     private courseService: CourseService,
     private activaRouter: ActivatedRoute,
     private cacheService: CacheService
-  ) {}
+  ) { }
   cacheUserModel = new CacheUserModel();
   invPhone: FormGroup;
   inputModel = {
@@ -86,7 +91,7 @@ export class OrderConfirmComponent implements OnInit, OnDestroy {
     // cacheUserModel = userModel;
     let req = new IndexHuiKuan();
     req.i_users_id = this.cacheUserModel.UserId;
-    console.log(this.invPhone.get("phone").value, this.invPhone);
+  
     if (!this.invPhone.valid) {
       this._messageService.setMessage({
         error: "error",

@@ -27,7 +27,7 @@ export class OrderPayComponent implements OnInit, OnDestroy {
   subscribeObject: Subscription;
   ngOnInit() {
     this.activaRouter.queryParams.subscribe(params => this.orderId = params.orderId);
-    console.log(this.orderId);
+   
     this.GetCourseOrder();
     //监控路由出口发出来的数据
     this.subscribeObject = this._courseService.getOrderConfirm().subscribe(res => {

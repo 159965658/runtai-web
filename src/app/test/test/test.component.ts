@@ -36,7 +36,7 @@ export class TestComponent implements OnInit {
     this.pflag = !this.pflag
   }
   start(): void {
-    console.log('开始运动');
+   
     if (this._isTrue) {
       this.boxState = 'right';
     } else {

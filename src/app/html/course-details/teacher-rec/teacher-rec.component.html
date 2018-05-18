@@ -1,6 +1,3 @@
-<p class="titleCourse">
-    讲师介绍
-</p>
 <ul class="t">
     <li *ngFor="let item of arrList" [routerLink]="['/t-details']" [queryParams]="{id:item.i_id}">
         <div class="img-t" appErrorImg="s_art_head">

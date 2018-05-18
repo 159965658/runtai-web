@@ -15,7 +15,7 @@ export class MessageComponent implements OnInit, OnDestroy {
   subscribeObject: Subscription
   ngOnInit() {
     this.subscribeObject = this._messageService.getMessage().subscribe(res => {
-      console.log(res);
+     // console.log(res);
       if (res.message == 'Unknown Error') {
         res.message = '请求不流畅，请刷新后再试。';
       }

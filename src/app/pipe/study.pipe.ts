@@ -8,7 +8,7 @@ export class StudyPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     if (value == null) return;
-    console.log(value);
+  
     // if (typeof value === 'number') {
     //   return StudySectionEnum['Sale' + value];
     // }

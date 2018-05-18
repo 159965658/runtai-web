@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.restForm();
     this.activatedRouer.queryParams.subscribe(queryParams => {
-      console.log(queryParams);
+      
       this.queryParams.router = queryParams.router;
     });
     //检测 是否是微信授权
@@ -140,11 +140,11 @@ export class LoginComponent implements OnInit {
     if (weChatCode) {
       //是微信授权
       this.cache.removeSessionCache(CacheEnum.weChat);
-      console.log(weChatCode);
+     
       this.pay.GetWeixinLogin(weChatCode).subscribe(res => {
-        console.log(res);
+        
         if (res.StatusCode == 201) {
-          console.log("没有绑定");
+         
           //oot8S0pK_-EDwXkh09B3NfMO20Sg
           this.router.navigate(["/bind"], {
             queryParams: {

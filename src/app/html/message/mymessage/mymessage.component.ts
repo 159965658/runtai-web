@@ -22,7 +22,7 @@ export class MymessageComponent implements OnInit, AfterViewInit {
   }
   GetMessageList() {
     this._message.GetMessageList().subscribe(res => {
-      console.log(res);
+      
       this.messageList = res;
       this.isLoading = false;
     })

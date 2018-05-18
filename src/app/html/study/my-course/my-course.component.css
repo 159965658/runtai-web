@@ -77,15 +77,14 @@
 /*分类页面*/
 
 .button {
-    margin: 2%;
-    width: 96%;
-    /* height: 50%; */
-    background: #FFFFFF;
-    border-radius: 8px;
-    position: absolute;
-    box-shadow: 1PX 1PX 5px #c0c0c0;
-    top: 50px;
-    height: 40px;
+  margin: 2%;
+  width: 96%;
+  background: #FFFFFF;
+  border-radius: 8px;
+  position: absolute;
+  box-shadow: 0 5px 5px rgba(108, 150, 211, 0.2);
+  top: 63px;
+  height: 35px;
 }
 
 .f_bt {
@@ -105,7 +104,7 @@
 /*未结束*/
 
 .not_finished {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 14%;
     float: left;
     width: 36%;
@@ -130,7 +129,7 @@
 /*已结束*/
 
 .finished {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 14%;
     float: left;
     width: 36%;
@@ -280,5 +279,4 @@
 
 .not_finished_info {
     margin-top: 25px;
-    background-color: #f6f6f6;
 }

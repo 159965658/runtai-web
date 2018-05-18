@@ -198,7 +198,7 @@ export class CourseComponent implements OnInit, OnDestroy {
     this.courseService.getSubjectCache().subscribe(list => {
       let subList = this.lilist.find(p => p.id == 4);
       subList.subValue = [];
-      console.log(this.lilist);
+     // console.log(this.lilist);
       list.forEach(item => {
         subList.subValue.push({ isChecked: false, value: item.i_id, name: item.s_name })
         // item.s_name = ;
@@ -230,6 +230,7 @@ export class CourseComponent implements OnInit, OnDestroy {
         console.log("没有数据");
         this.getFlag = false;//禁止加载
         if (pageModel.pageIndex == 1) {
+          window.scrollTo(0, 0);
           this.coursel = res;
         }
         return;
@@ -237,6 +238,7 @@ export class CourseComponent implements OnInit, OnDestroy {
 
       this.scrollService.setModel(pageModel);
       if (pageModel.pageIndex == 1) {
+        window.scrollTo(0, 0);
         this.coursel = res;
         return;
       }
@@ -295,7 +297,7 @@ export class CourseComponent implements OnInit, OnDestroy {
       else {
         this.reqCourse.i_orderType = (this.icon - 1);
         this.icon = (this.icon == 2 ? 1 : 2);
-        console.log((this.icon == 2 ? 1 : 0), this.icon, this.reqCourse.i_orderType);
+      //  console.log((this.icon == 2 ? 1 : 0), this.icon, this.reqCourse.i_orderType);
       }
     } else this.icon = this.reqCourse.i_orderType = 0
     this.GetElectiveCenter(true);
@@ -338,12 +340,12 @@ export class CourseComponent implements OnInit, OnDestroy {
       return;
     }
     let childItem = item.subValue.find(b => b.isChecked);
-    console.log(childItem);
+    
     item.value = childItem.name;
   }
   changeSearch(value) {
     this.reqCourse.courseName = value;
     this.GetElectiveCenter(true);
-    console.log(value);
+    
   }
 }

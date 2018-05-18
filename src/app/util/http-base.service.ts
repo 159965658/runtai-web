@@ -35,6 +35,9 @@ export class HttpBaseService {
       if (jsonRes['StatusCode'] == 500) {
         // jsonRes = {StatusCode == 500, Data: jsonRes.Data}
         this._messageService.setMessage({ error: 'error', message: jsonRes['Data'] });
+        //jsonRes['StatusCode'] = 200;
+        jsonRes = [];
+        return subjectArr.next(jsonRes)
       }
       else if (jsonRes['StatusCode'] == 200) {
         jsonRes = JSON.parse(jsonRes['Data']);

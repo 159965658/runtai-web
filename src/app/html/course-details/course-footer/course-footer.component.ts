@@ -25,7 +25,7 @@ export class CourseFooterComponent implements OnInit {
     })
   }
   GetButtonValue() {//获取按钮状态 
-    console.log(this.router.url);
+   // console.log(this.router.url);
     let user = this.cache.getUserModel();
     if (!user)
       return;

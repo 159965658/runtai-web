@@ -26,7 +26,7 @@ export class AddinputComponent implements OnInit {
     });
   }
   _console(value) {
-    console.log(value);
+    //console.log(value);
   }
   _inputFocus() {
     this.isInput = true;
@@ -35,9 +35,21 @@ export class AddinputComponent implements OnInit {
     }, 500);
   }
   handleCancel = (e) => {
+    this.isInput = false;
     //if (this.formModel.valid) {
+
+    //   return;
+    // } 
+  }
+  handleCancelC = () => {
+
+    // if (e) {
     this.isInput = false;
     this.changeAddinput.emit(this.inputValue);
+    this.inputValue = null;
+    //}
+    //if (this.formModel.valid) {
+
     //   return;
     // } 
   }

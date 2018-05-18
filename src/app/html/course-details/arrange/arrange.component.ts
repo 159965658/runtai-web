@@ -24,7 +24,7 @@ export class ArrangeComponent implements OnInit {
         this.courseService.GetCombinationCourseWare(req).subscribe(res => {
           this.listModel = res;
           this.type = 2;
-          console.log(res);
+         // console.log(res);
           setTimeout(() => {
             this.changeDomStyle();
           }, 1);
@@ -37,7 +37,7 @@ export class ArrangeComponent implements OnInit {
           this.listModel = res;
         });
       }
-      console.log(window.document.querySelector('.ant-collapse-header'));
+    //  console.log(window.document.querySelector('.ant-collapse-header'));
     }, 1000);
 
     this.courseService.setnavHover(2);

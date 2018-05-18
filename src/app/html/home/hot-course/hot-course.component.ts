@@ -27,7 +27,7 @@ export class HotCourseComponent implements OnInit {
     const getModel = this.scrollService.getModel();
     req.pageIndex = getModel.pageIndex + 1;
     this.courseService.GetIndexCourse(req).subscribe(res => {
-      console.log(res);
+     console.log(res,res.length,this.coursel);
       this.getAsyncFlag = true; 
       if (res.length == 0) {
         return;

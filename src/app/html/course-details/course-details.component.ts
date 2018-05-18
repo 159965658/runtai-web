@@ -57,7 +57,7 @@ export class CourseDetailsComponent implements OnInit, AfterContentInit, OnDestr
   fenxFun() {
     this.fenx = true;
     this.$subFenx = this.startInit.getsubFenx().subscribe(res => {
-      console.log(res);
+     // console.log(res);
       if (res) {
 
       }
@@ -82,9 +82,9 @@ export class CourseDetailsComponent implements OnInit, AfterContentInit, OnDestr
       this.courseService.setDetails(res.s_course_details);
       this.courseService.content.type = this.courseDetails.i_course_type;
       this.courseService.content.flag = this.courseDetails.flag;
-      console.log(this.courseService.content.flag);
+      //console.log(this.courseService.content.flag);
       this.cache.setSessionCache('c', this.courseDetails.flag);
-      console.log(this.courseDetails);
+      //console.log(this.courseDetails);
       //开启分享模式
       this.startInit.weixinInit(this.courseDetails);
       if (this.courseDetails.i_course_type == 2) {

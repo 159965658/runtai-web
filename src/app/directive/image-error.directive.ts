@@ -22,7 +22,7 @@ export class ImageErrorDirective {
     }
     else if (this.errorImagSrc == 's_teacher') {
       event.src = this.elementRef.nativeElement.baseURI + '/assets/imgs/skms2.png'
-      console.log(this.elementRef);
+     // console.log(this.elementRef);
     }
     else if (!this.errorImagSrc) {
       event.src = this.elementRef.nativeElement.baseURI + '/assets/imgs/course.png'

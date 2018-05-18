@@ -30,7 +30,7 @@ export class IntroduceComponent implements OnInit, OnDestroy {
     Observable.merge(this.route.queryParams).subscribe(res => {
       // !res.id ? : this.courserService.content.Id = res.id;
       this.type = this.courserService.content.type = res.type
-      console.log(res.type);
+     // console.log(res.type);
       if (res.type == 2) {
         this.getSwitch();
       }
@@ -57,7 +57,7 @@ export class IntroduceComponent implements OnInit, OnDestroy {
     let req = new CourseDetailsModel();
     req.i_course_id = this.courserService.content.Id;
     this.courserService.GetCombinationCourse(req).subscribe(res => {
-      console.log(res);
+    //  console.log(res);
       this.jsonList = JSON.parse(res.s_pack_course);
 
       // console.log(this.jsonList);

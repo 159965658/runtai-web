@@ -27,6 +27,6 @@ export class DataMoreComponent implements OnInit, AfterViewInit {
   endList($event) {
     if ($event < 10)
       this.asyncFlag = false;
-    console.log($event);
+    
   }
 }

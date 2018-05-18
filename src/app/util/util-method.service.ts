@@ -29,7 +29,7 @@ export class UtilMethodService {
       let url = ['/p-home/main', '/p-home/love'];
       let jsPath = window.location.href;
       let urrf = false;
-      console.log(jsPath, this.router.url);
+      //console.log(jsPath, this.router.url);
       url.forEach(element => { //是否有登录控制
         if (this.router.url == element) {
           urrf = true;
@@ -42,7 +42,7 @@ export class UtilMethodService {
       }
     }
     else {
-      console.log('允许');
+      //console.log('允许');
       // this.router.navigate([route['_routerState'].url]);
       return true;
     }
@@ -53,7 +53,7 @@ export class UtilMethodService {
     }
     let into = this.isUserView(userModel);
 
-    console.log(into);
+    //console.log(into);
     if (into == 2) { //允许操作
       return true;
     }
@@ -108,25 +108,25 @@ export class UtilMethodService {
       if (type) {
         if (type === 'one') {
           changeDate = formatDate(new Date().getTime() + (1000 * 3600 * 24 * range));
-          console.log(changeDate);
+          //console.log(changeDate);
         }
         if (type === 'more') {
           if (range < 0) {
             for (let i = Math.abs(range); i >= 0; i--) {
               resultArr.push(formatDate(new Date().getTime() + (-1000 * 3600 * 24 * i)));
-              console.log(resultArr);
+              //console.log(resultArr);
             }
           } else {
             for (let i = 1; i <= range; i++) {
               resultArr.push(formatDate(new Date().getTime() + (1000 * 3600 * 24 * i)));
-              console.log(resultArr);
+              //console.log(resultArr);
             }
           }
 
         }
       } else {
         changeDate = formatDate(new Date().getTime() + (1000 * 3600 * 24 * range));
-        console.log(changeDate);
+        //console.log(changeDate);
       }
     }
     return changeDate;
@@ -172,7 +172,7 @@ export class UtilMethodService {
   isUserView(userModel): number { //判断是否允许家长访问该页面
     let jsPath = window.location.href;
     let index = jsPath.indexOf('p-home');
-    console.log(userModel.i_role_permission);
+    //console.log(userModel.i_role_permission);
     if (userModel.i_role_permission == 2 && index > -1) { //家长登录 ，家长的页面
       return 2;
     }
@@ -283,11 +283,11 @@ export class UtilMethodService {
 
     } else {
       // param.forEach(element => {
-      //   console.log(element);
+      //   //console.log(element);
       // });
       for (const k in param) {
         //  const value = key == null ? k : key + (param instanceof Array ? "[" + k + "]" : "." + k);
-        // console.log(k, param[k]);
+        // //console.log(k, param[k]);
         // if (object.hasOwnProperty(key)) {
         //   const element = object[key];
 
@@ -303,7 +303,7 @@ export class UtilMethodService {
 
     }
     paramStr = paramStr == "" ? paramStr : '?' + paramStr.substr(1);
-    console.log(paramStr);
+    //console.log(paramStr);
     return paramStr;
   }
 }

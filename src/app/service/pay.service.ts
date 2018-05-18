@@ -11,7 +11,7 @@ export class PayService {
 
   constructor(private http: HttpClient, private httpPost: HttpBaseService) { }
   WxPay(code: string, id: number) {
-    console.log(code);
+   
     return this.http.get(Urls.WxPay + "?code=" + code + '&order_id=' + id);
   }
   hrefCode(id) {

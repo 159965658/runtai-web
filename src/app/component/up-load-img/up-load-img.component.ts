@@ -54,7 +54,7 @@ export class UpLoadImgComponent implements OnInit, AfterViewInit {
   }
   bandInit() {
     let box = this.getBox(), control = this.control;
-    console.log(box);
+    //console.log(box);
     let th = this;
     Observable.fromEvent(box, 'mousedown').subscribe((e) => {
       if (this.flag) {
@@ -88,7 +88,7 @@ export class UpLoadImgComponent implements OnInit, AfterViewInit {
 
     this.box.style.left = addX + this.oldX + 'px';
     this.box.style.top = addY + this.oldY + 'px';
-    console.log(this.img.nativeElement.height, this.pic.height);
+   // console.log(this.img.nativeElement.height, this.pic.height);
     //设置选择区域不超过图片大小
     this.caculateP();
     if (this.pTop < 0) {
@@ -155,7 +155,7 @@ export class UpLoadImgComponent implements OnInit, AfterViewInit {
         this.moveDown(e);
         break;
       default:
-        console.warn('error');
+       // console.warn('error');
     }
   }
   //四个方向的处理函数
@@ -431,7 +431,7 @@ export class UpLoadImgComponent implements OnInit, AfterViewInit {
       left = box.offsetLeft,
       right = left + box.clientWidth,
       down = top + box.clientHeight;
-    console.log(this.previewImg);
+    //console.log(this.previewImg);
     this.previewImg.style.clip = 'rect(' + top + 'px,' + right + 'px,' + down + 'px,' + left + 'px)';
     this.previewImg.style.left = -left + 'px';
     this.previewImg.style.top = -top + 'px';

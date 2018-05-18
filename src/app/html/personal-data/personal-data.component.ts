@@ -24,7 +24,7 @@ export class PersonalDataComponent implements OnInit {
     let usermodel = this.cache.getUserModel();
     this.user = usermodel;
     this.user.s_head_portrait = this.user.s_head_portrait;
-    console.log(this.user);
+   
   }
   fileLoad() {
     let dom = this.el.nativeElement.querySelector('.upload');
@@ -39,12 +39,12 @@ export class PersonalDataComponent implements OnInit {
     const headers = new HttpHeaders();
     headers.append("Content-Type", 'multipart/form-data');
     headers.append('Accept', 'application/json');
-    console.log(formData.get('file'));
+   
     this.http.post(host + '/WebSite/UploadImage?i_user_id=' + this.user.UserId, formData, { headers }).subscribe(res => {
       this.user.s_head_portrait = res['Data'];
       this.cache.setLocalCache(CacheEnum.loginKey, this.user);
       this.user.s_head_portrait =  this.user.s_head_portrait;
-      console.log(res);
+  
     })
     //const imgEncode = this.util.getBase64Image(fileList[0]);
     // this.isInput = true;

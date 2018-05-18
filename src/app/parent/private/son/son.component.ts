@@ -18,7 +18,7 @@ export class SonComponent implements OnInit {
     res.subscribe(res => {
       this.child.childList = res.length;
       this.res = res;
-      console.log(res);
+    
     })
   }
 

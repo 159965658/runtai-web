@@ -34,7 +34,7 @@ export class BindUserComponent implements OnInit {
   ngOnInit() {
     this.restForm();
     this.activatedRouer.queryParams.subscribe(queryParams => {
-      console.log(queryParams);
+     // console.log(queryParams);
       this.queryParams.returnUri = queryParams.returnUri;
       this.queryParams.openId = queryParams.openId;
     });
@@ -60,7 +60,7 @@ export class BindUserComponent implements OnInit {
           model.s_paddword
         )
         .subscribe(res => {
-          console.log(res);
+         // console.log(res);
           if (res.StatusCode === 500) {
             this.errorText = res.Data;
             return;

@@ -1,6 +1,6 @@
 .footer {
     height: 50px;
-    background-color: #f6f6f6;
+    background-color: #FFFFFF;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -20,7 +20,7 @@
 
 .footer>label {
     line-height: 50px;
-    margin-left: 20%;
+    margin-left: 5%;
     color: #353535;
     font-size: 1.5rem;
 }

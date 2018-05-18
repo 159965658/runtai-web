@@ -29,12 +29,12 @@ export class OrderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     //监控路由出口发出来的数据
     this.subscribObject = this.courseService.getDetails().subscribe(res => {
-      console.log(res);
+     
       this.inputModel = res;
     });
   }
   orderConfirm() {
-    console.log(this.inputModel.butTxt)
+   
     if (this.inputModel.butTxt == '提交订单')
       this.courseService.setOrderConfirm(1);
     if(this.inputModel.butTxt == '支付订单')

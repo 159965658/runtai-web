@@ -6,6 +6,12 @@ html {
     font-size: 10px;
 }
 
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+    /* background-color: #F5F5F5; */
+}
+
 body {
     font-family: "Microsoft YaHei";
     font-size: 62.5% !important;
@@ -342,6 +348,13 @@ img::after {
 
 .ant-collapse-content2 {
     padding: 0px !important;
+}
+
+.ovf>p,
+.ovf {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 320px) {

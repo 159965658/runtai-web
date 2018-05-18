@@ -28,10 +28,10 @@ export class OrderListComponent implements OnInit, OnDestroy {
   url = environment.pathImg;
   ngOnInit() {
     this.router.params.subscribe(res => {
-      console.log(res);
+    
     })
     this.init(); 
-    console.log(WeiXin, window['WeixinJSBridge']);
+   
  
 
   }
@@ -41,7 +41,7 @@ export class OrderListComponent implements OnInit, OnDestroy {
     this.subjectTion = this._orderService.GetSubjectOrderList().subscribe((res) => {
       setTimeout(() => {
         this._orderService.GetCourseOrderList(res).subscribe(r => {
-          console.log(r);
+        
           this.courseList = r;
         });
         this.getListFlag = true;
@@ -57,7 +57,7 @@ export class OrderListComponent implements OnInit, OnDestroy {
     this._orderService.CancelHuikuan(id).subscribe(res => {
       //this.init();
       if (res == true || res == 'true') {
-        console.log(res);
+       
         //  this.courseList = this._orderService.GetCourseOrderList(res);
         this.courseList.find(p => p.i_id == id).i_order_state = 3;
       }

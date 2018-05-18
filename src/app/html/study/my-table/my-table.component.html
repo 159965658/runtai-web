@@ -2,7 +2,7 @@
 <div class="days_select">
     <div class="date">
         <span>{{dateTitle?.date}} </span>
-        <span class="left10"> {{dateTitle?.week}}	</span>
+        <span class="left10"> {{dateTitle?.week}} </span>
     </div>
     <div class="trip" *ngFor="let item of dataList">
         <div *ngIf="(item.i_off_shelf == 1) else elseBlock" class="trip_time" style="line-height:51px">
@@ -24,12 +24,13 @@
         </ng-template>
         <div class="trip_line"></div>
 
-        <div class="trip_info" (click)='href(item.i_course_id)'>
-            <p class="f_tm">
+        <div class="trip_info ovf" (click)='href(item.i_course_id)'>
+            <p class="f_tm ">
                 {{item.s_course_name}}
             </p>
-            <span style="width:105px;">        进度：{{item.i_course_endtime}}/{{item.i_course_time}}课时      </span>
-            <span class="left10" style="width: 100px; white-space:nowrap;overflow:hidden;text-overflow: ellipsis;line-height: 12px;">        主讲： {{item.s_teacher_name}}      </span>
+            <span style="width:105px;"> 进度：{{item.i_course_endtime}}/{{item.i_course_time}}课时 </span>
+            <span class="left10" style="width: 100px; white-space:nowrap;overflow:hidden;text-overflow: ellipsis;line-height: 12px;">
+        主讲： {{item.s_teacher_name}} </span>
         </div>
 
     </div>

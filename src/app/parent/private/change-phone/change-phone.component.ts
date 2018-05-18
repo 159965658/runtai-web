@@ -40,7 +40,7 @@ export class ChangePhoneComponent implements OnInit, OnDestroy {
       fphone: new FormControl('', [Validators.required, PhoneValidator]),
       msg: new FormControl('', [Validators.required])
     });
-    console.log(this.formPhone);
+   
   }
   sendMsg() {
     if (!this.formPhone.controls.fphone.valid) {
@@ -61,14 +61,14 @@ export class ChangePhoneComponent implements OnInit, OnDestroy {
   postSendMsg() {
     this.sendText = '正在发送';
     let phone = this.formPhone.controls.fphone.value
-    console.log(phone, this.shortMsg);
+   
     this.shortMsg.SendShort(phone).subscribe(res => {
-      console.log(res);
+   
       this.shortMsgCode = res;
     });
   }
   onChangePhone() {
-    console.log(this.formPhone.valid, this.formPhone.get('msg').value);
+   
     this.isInput = true;
     if (this.formPhone.get('msg').value != this.shortMsgCode) {
       setTimeout(() => {

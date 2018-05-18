@@ -15,7 +15,7 @@ export class TeacherRecComponent implements OnInit {
   ngOnInit() {
     this.courserService.setnavHover(5);
     this.courserService.GetCourseTeacher().subscribe(res => {
-      console.log(res);
+    //  console.log(res);
       this.arrList = res;
     })
   }

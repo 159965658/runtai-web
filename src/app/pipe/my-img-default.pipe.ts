@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 export class MyImgDefaultPipe implements PipeTransform {
 
   transform(value: any, args?: any, args2?: any): any {
-    console.log(value);
+  
     return (value === "" || value === null) ? args : environment.pathImg + value;
   }
 

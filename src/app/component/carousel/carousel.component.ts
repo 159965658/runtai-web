@@ -95,7 +95,7 @@ export class CarouselComponent implements OnInit, OnDestroy, AfterViewInit {
 
   nzSlickNext() {
     //切换下一张
-    console.log(this.carouselView);
+   // console.log(this.carouselView);
     this.carouselView.nzSlickNext();
   }
   nzSlickPrev() {
@@ -113,7 +113,7 @@ export class CarouselComponent implements OnInit, OnDestroy, AfterViewInit {
           this.url = "http://ijkapp.csruntitan.com";
           this.array = [{s_picture_url:"/assets/sideimgs/1.jpg"}, {s_picture_url:"/assets/sideimgs/2.jpg"}];
         }
-        console.log(this.array);
+       // console.log(this.array);
       });
     const th = this;
     Observable.fromEvent(window, "scroll").subscribe(event => {

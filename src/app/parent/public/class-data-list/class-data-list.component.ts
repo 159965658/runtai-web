@@ -30,7 +30,7 @@ export class ClassDataListComponent implements OnInit, AfterViewInit {
       this.GetSonCourseStatistics(); 
     });
     this.pageIndexF.valueChanges.subscribe(res => {
-      console.log(res); 
+  
       this.GetSonCourseStatistics();
     });
   }
@@ -46,7 +46,7 @@ export class ClassDataListComponent implements OnInit, AfterViewInit {
         this.res = [];
         return;
       }
-      console.log(res);
+    
       this.getListFlag = true;
       this.res = req.pageIndex > 1 ? this.res.concat(res) : res;
       this.dataLength.emit(res.length);

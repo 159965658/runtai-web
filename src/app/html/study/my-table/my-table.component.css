@@ -31,7 +31,7 @@
 
 .trip_info {
     margin-left: 4.6%;
-    float: left;
+    /* float: left; */
     padding-top: 14px;
     line-height: 25px;
 }

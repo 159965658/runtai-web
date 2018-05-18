@@ -58,7 +58,7 @@ export class MyTableComponent implements OnInit, AfterViewInit, OnDestroy {
     let endTime = (new Date(date + " 23:59:00").valueOf() / 1000).toString();
 
     this.child.GetCourseCalendarByParentRed(id, beginTime, endTime).subscribe(res => {
-      console.log(res);
+     
       this.setChildCount(res,beginDate);
     })
   }
@@ -74,7 +74,7 @@ export class MyTableComponent implements OnInit, AfterViewInit, OnDestroy {
       }
       this.childCount.push(model);
     }
-    console.log(this.childCount);
+   
     //  this.getChildCount();
   }
   getChildCount(id) {
@@ -91,7 +91,7 @@ export class MyTableComponent implements OnInit, AfterViewInit, OnDestroy {
         return;
       }
       this.childList = res;
-      console.log(this.childList);
+   
       this.childHoverText = { id: this.childList[0].i_id, name: this.childList[0].s_real_name };
       this.GetCourseCalendarByParent();
       // this.getCourseCalendarByParentRed();
@@ -236,7 +236,7 @@ export class MyTableComponent implements OnInit, AfterViewInit, OnDestroy {
   defaultDay(day = this.dateArr.date + '/' + this.dateArr.day) {
     let date = moment(day), befarDate = moment(this.dateArr.date + '/' + this.dateArr.day), nowM = date.month(),
       nowY = date.year(), dateMonth = befarDate.month(), dateY = befarDate.year();
-    console.log(day);
+   
     this.getCourseCalendarByParentRed(date.format('YYYY/MM/DD'));
     if (dateY != nowY || dateMonth != nowM) {
       this.setDay(date.format('YYYY/MM/DD'));
@@ -282,7 +282,7 @@ export class MyTableComponent implements OnInit, AfterViewInit, OnDestroy {
     req.startTime = (begindate.valueOf() / 1000).toString();
     req.endTime = (enddate.valueOf() / 1000).toString();
     this.course.GetCourseCalendarByParent(req).subscribe(res => {
-      console.log(res);
+    
       this.list = res;
       this.getListFlag = true;
     });

@@ -49,7 +49,7 @@ export class HeaderComponent implements OnInit {
   goBack() {
     this.msgLocal = !this.msgLocal;
     this.msgFlag = !this.msgFlag;
-    history.back();
+    this.router.navigate(['/main/home/rcourse']);
   }
 
   getRed() {
@@ -59,9 +59,10 @@ export class HeaderComponent implements OnInit {
       return false;
     }
     this.shortMessage.GetMessageCountRed(userId).subscribe(res => {
-      if (res.Data > 0) {
+      if (res > 0) {
         this.message = true;
       }
+     // console.log(res.Data,this.message);
     });
   }
 }

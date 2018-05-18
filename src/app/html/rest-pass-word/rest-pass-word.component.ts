@@ -32,9 +32,7 @@ export class RestPassWordComponent implements OnInit {
     //  console.log(this.changePassWord);
     //console.log(this.changePassWord.get('password').get('np'));
   }
-  sendMsg() {
-
-    console.log(this.changePassWord, this.changePassWord.controls.phone.hasError('PhoneValidator'));
+  sendMsg() { 
     if (!this.changePassWord.controls.phone.valid) {
       return;
     }

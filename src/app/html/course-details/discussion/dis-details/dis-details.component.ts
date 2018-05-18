@@ -33,7 +33,7 @@ export class DisDetailsComponent implements OnInit, OnDestroy {
   i_reply = ""
   flag = true;
   ngOnInit() {
-    console.log('parent' + this.isScroll);
+   // console.log('parent' + this.isScroll);
     this.isScroll = true;
     this.req.pageIndex = 0;
     this.activeRoute.queryParams.subscribe(res => {
@@ -85,6 +85,7 @@ export class DisDetailsComponent implements OnInit, OnDestroy {
     if (this.inputValue.trim()) {
       this._setInput(true);
       this.CourseReviewReplyAdd();
+      this.inputValue = '';
     }
   }
   CourseReviewReplyAdd() {

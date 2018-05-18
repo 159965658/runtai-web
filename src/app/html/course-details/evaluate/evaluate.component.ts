@@ -35,7 +35,7 @@ export class EvaluateComponent implements OnInit {
     this.courseService.GetCourseAppraiseList(this.req).subscribe(res => {
       this._setList(res);
       this.flag = this.courseService.content.flag;
-      console.log(this.flag);
+     // console.log(this.flag);
       this.load = true;
     });
   }
@@ -44,7 +44,7 @@ export class EvaluateComponent implements OnInit {
   }
   changeScroll() {
     let s = this.list.length >= this.req.pageIndex * this.req.pageSize ? this.GetCourseAppraiseList() : false;
-    console.log(s);
+   // console.log(s);
   }
   changeInput(value) {
     this.isAffix = true;

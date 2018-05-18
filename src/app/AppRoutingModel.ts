@@ -44,7 +44,7 @@ const appMyChildMessage: Routes = [
   { path: 'mes-details', component: MessageDetailsComponent }//消息详情
 ]
 const appMyStudyChild: Routes = [
-  { path: '', redirectTo: 'table', pathMatch: 'full' },
+  { path: '', redirectTo: 'my-course', pathMatch: 'full' },
   { path: 'table', component: MyTableComponent }, //我的课表
   { path: 'my-course', component: MyCourseComponent },//我的课程 
 ]

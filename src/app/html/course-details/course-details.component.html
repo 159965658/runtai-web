@@ -7,12 +7,12 @@
         </div>
         <div nz-row class="img-ab">
 
-            <p nz-col [nzSpan]="13" [nzOffset]="1" style="font-size:1.8rem;color: #fff;">{{courseDetails?.s_course_name}} </p>
+            <p nz-col [nzSpan]="15" [nzOffset]="1" style="font-size:1.4rem;color: #fff;width: 70%;">{{courseDetails?.s_course_name}} </p>
             <div class="img-con" nz-col [nzSpan]="5" [nzOffset]="" *ngIf=" courseDetails?.s_grade != '' ">
                 <i class="iconfont icon-jiantou2 icon-i" nz-col></i>
                 <label class="img-ab-la">{{courseDetails?.s_grade | myGradeSub}}</label>
             </div>
-            <div class="img-con" nz-col [nzSpan]="  4">
+            <div class="img-con" nz-col [nzSpan]="4">
                 <i class="iconfont icon-jiantou2 icon-i icon-i-ye" nz-col></i>
                 <label class="img-ab-la img-ab-la-ye">{{courseDetails?.i_subject | mySubjectType}}</label>
             </div>
@@ -27,22 +27,22 @@
         </div>
 
     </div>
-    <div class="details" nz-row [nzGutter]="0">
-        <div nz-col [nzSpan]="12" *ngIf="nzspanNumber == 6" [nzOffset]="1">
+    <div class="details" style="background: #fff;padding: 8px 0;margin-top: 5px;" nz-row [nzGutter]="0">
+        <div nz-col [nzSpan]="10" *ngIf="nzspanNumber == 6" [nzOffset]="1">
             主讲教师 :
             <label>{{courseDetails?.s_speaker}}</label>
         </div>
-        <div nz-col [nzSpan]="nzspanNumber == 6 ? 10 : 23" [nzOffset]="1">
+        <div nz-col [nzSpan]="nzspanNumber == 6 ? 12 : 23" [nzOffset]="1">
             开课机构 :
             <label>{{courseDetails?.s_courseRegion }}</label>
         </div>
         <div nz-col [nzOffset]="1">
             开课时间 :
-            <label>{{ courseDetails?.d_course_time*1000 | date:'yyyy/MM/dd HH:mm' }}-{{courseDetails?.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm'}} ({{courseDetails?.i_course_time}}课时)</label>
+            <label>{{ courseDetails?.d_course_time*1000 | date:'MM/dd HH:mm' }}-{{courseDetails?.d_course_endtime*1000 | date:'yyyy/MM/dd HH:mm'}} ({{courseDetails?.i_course_time}}课时)</label>
         </div>
         <div nz-col [nzOffset]="1">
             报名截止时间 :
-            <label>{{ courseDetails?.d_sign_endtime*1000 | date:'yyyy/MM/dd HH:mm'}}</label>
+            <label>{{ courseDetails?.d_sign_endtime*1000 | date:'MM/dd HH:mm'}}</label>
         </div>
 
     </div>
