@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>京课</title>
+    <title>京课网</title>
     <base href="/">
     <link rel="stylesheet" href="./assets/fonts/iconfont.css">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
@@ -23,7 +23,7 @@
         width: 100%;
         position: relative;
         overflow: hidden;
-        min-height:320px;
+        min-height: 320px;
     }
     
     .load-main>.loadcon {
@@ -42,8 +42,6 @@
         overflow: hidden;
     }
     
-  
-    
     .load-container {
         /* border: 1px solid rgba(255, 255, 255, 0.2); */
         width: 240px;
@@ -54,7 +52,6 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
- 
     
     .load6 .loader {
         font-size: 90px;
@@ -67,34 +64,28 @@
         position: relative;
         -webkit-animation: load6 2s infinite ease;
         animation: load6 2s infinite ease;
-         -webkit-transform: translateZ(0);
-   -moz-transform: translateZ(0);
-   -ms-transform: translateZ(0);
-   -o-transform: translateZ(0);
-   transform: translateZ(0);
-     -webkit-backface-visibility: hidden;
-   -moz-backface-visibility: hidden;
-   -ms-backface-visibility: hidden;
-   backface-visibility: hidden;
- 
-   -webkit-perspective: 1000;
-   -moz-perspective: 1000;
-   -ms-perspective: 1000;
-   perspective: 1000;
-         -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
-          box-shadow: -0.11em -0.83em 0 -0.4em rgba(16, 60, 99, 0.28), 
-            -0.11em -0.83em 0 -0.42em rgba(16, 60, 99, 0.28), 
-            -0.11em -0.83em 0 -0.44em rgba(16, 60, 99, 0.28), 
-            -0.11em -0.83em 0 -0.46em rgba(16, 60, 99, 0.28), 
-            -0.11em -0.83em 0 -0.477em rgba(16, 60, 99, 0.28);
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -moz-perspective: 1000;
+        -ms-perspective: 1000;
+        perspective: 1000;
+        -webkit-transform: rotate(1deg);
+        transform: rotate(1deg);
+        box-shadow: -0.11em -0.83em 0 -0.4em rgba(16, 60, 99, 0.28), -0.11em -0.83em 0 -0.42em rgba(16, 60, 99, 0.28), -0.11em -0.83em 0 -0.44em rgba(16, 60, 99, 0.28), -0.11em -0.83em 0 -0.46em rgba(16, 60, 99, 0.28), -0.11em -0.83em 0 -0.477em rgba(16, 60, 99, 0.28);
     }
     
     @-webkit-keyframes load6 {
         0% {
             -webkit-transform: rotate(1deg);
             transform: rotate(1deg);
-          
         }
         5%,
         95% {
@@ -117,7 +108,6 @@
         0% {
             -webkit-transform: rotate(1deg);
             transform: rotate(1deg);
-          
         }
         5%,
         95% {
@@ -151,7 +141,7 @@
                 </div>
                 <div class="load-container load6">
                     <div class="loader">Loading...</div>
-                </div> 
+                </div>
             </div>
 
         </div>
@@ -164,21 +154,21 @@
     console.log(useragent);
 
     //alert(useragent);
-    window.onerror = function (message, url, lineNo, columnNo, error){
-        alert(messag);
-        alert(url);
-        alert(lineNo);
-              alert(columnNo);
-                 alert(error);
-    }
-    // if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
-    //     // 这里警告框会阻塞当前页面继续加载
-    //     alert('您必须使用微信内置浏览器访问本页面！');
-    //     // 以下代码是用javascript强行关闭当前页面
-    //     var opened = window.open('about:blank', '_self');
-    //     opened.opener = null;
-    //     opened.close();
-    // }
-
+    window.onerror = function(message, url, lineNo, columnNo, error) {
+            alert(messag);
+            alert(url);
+            alert(lineNo);
+            alert(columnNo);
+            alert(error);
+        }
+        // if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        //     // 这里警告框会阻塞当前页面继续加载
+        //     alert('您必须使用微信内置浏览器访问本页面！');
+        //     // 以下代码是用javascript强行关闭当前页面
+        //     var opened = window.open('about:blank', '_self');
+        //     opened.opener = null;
+        //     opened.close();
+        // }
 </script>
+
 </html>

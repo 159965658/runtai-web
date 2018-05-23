@@ -19,7 +19,7 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = '京课';
+  title = '京课网';
   constructor(private cahce: CacheService, private course: CourseService, private start: StartRouterService, private router: Router) {
     this.course.getSubjectCache().subscribe(subject => { });
   }
